@@ -103,10 +103,13 @@ function renderQuestion(questionData) {
 // --- BƯỚC 1: XỬ LÝ KHI CHỌN ĐÁP ÁN (CHƯA QUA CÂU) ---
 function handleAnswer(optionIndex) {
     const list = currentPhase === 1 ? initialQuestions : currentScenarioList;
-    const choice = list[currentQuestionIndex].options[optionIndex];
+    const currentQ = list[currentQuestionIndex];
+    const choice = currentQ.options[optionIndex];
 
-    // 1. Lưu tạm điểm số, chưa cộng ngay
-    pendingStats = choice.stats;
+    // 1. Cộng điểm NGAY LẬP TỨC (Không chờ chọn lý do nữa)
+    playerStats.knowledge += (choice.stats.knowledge || 0);
+    playerStats.social += (choice.stats.social || 0);
+    playerStats.impact += (choice.stats.impact || 0);
 
     // 2. Disable các nút để không chọn lại
     const buttons = document.querySelectorAll('.option-btn');
@@ -119,79 +122,56 @@ function handleAnswer(optionIndex) {
     selectedBtn.style.opacity = '1';
     selectedBtn.style.borderColor = '#fca311'; // Màu vàng cam
 
-    // 3. Hiện Icon Chatbot ở góc phải
-    const chatTrigger = document.getElementById('chatbot-trigger');
-    chatTrigger.classList.remove('d-none');
-    
-    // 4. Chuẩn bị nội dung cho Chatbot
-    renderChat(list[currentQuestionIndex]);
+    // 3. Hiện Chatbot NGAY LẬP TỨC để giải thích
+    showExplanation(choice.explanation || choice.message || "Ghi nhận quan điểm của bạn.");
 }
 
-// --- LOGIC CHATBOT ---
-function toggleChat() {
+// --- HÀM HIỂN THỊ GIẢI THÍCH (Thay thế cho renderChat cũ) ---
+function showExplanation(explanationText) {
     const modal = document.getElementById('chatbot-modal');
-    // Nếu đang ẩn thì hiện (bỏ d-none), đang hiện thì ẩn (thêm d-none)
-    if (modal.classList.contains('d-none')) {
-        modal.classList.remove('d-none');
-        modal.classList.add('animate-pop'); // Thêm hiệu ứng
-    } else {
-        modal.classList.add('d-none');
-    }
-}
-
-function renderChat(questionData) {
     const chatContent = document.getElementById('chat-content');
     
-    // Lấy danh sách lý do (Nếu trong data chưa có reasonings, dùng mảng mặc định để tránh lỗi)
-    const reasons = questionData.reasonings || [
-        { text: "Vì đó là điều hợp lý nhất.", bonus: { knowledge: 1 } },
-        { text: "Vì tôi cảm thấy nên làm vậy.", bonus: { social: 1 } }
-    ];
-
+    // Tạo nội dung Chatbot: Lời giải thích + Nút Tiếp tục
     chatContent.innerHTML = `
-        <div class="msg-robot">
-            <strong><i class="bi bi-lightbulb"></i> Trợ lý:</strong><br>
-            Căn cứ vào đâu bạn đưa ra lựa chọn này? Hãy giải thích quan điểm của bạn.
+        <div class="msg-robot animate-pop">
+            <strong><i class="bi bi-lightbulb-fill text-warning"></i> Trợ lý Tư tưởng phân tích:</strong><br>
+            <div class="mt-2 text-light-50" style="text-align: justify; line-height: 1.5;">
+                ${explanationText}
+            </div>
         </div>
-        <div class="mt-3">
-            ${reasons.map((r, idx) => `
-                <button class="btn-reason" onclick="confirmReasoning(${idx})">
-                    ${idx + 1}. ${r.text}
-                </button>
-            `).join('')}
+        
+        <div class="mt-3 text-end">
+            <button class="btn btn-warning btn-sm rounded-pill fw-bold px-4 shadow" onclick="nextQuestion()">
+                Tiếp tục <i class="bi bi-arrow-right"></i>
+            </button>
         </div>
     `;
+
+    // Hiện Chatbot
+    modal.classList.remove('d-none');
+    modal.classList.add('animate-pop');
+    
+    // Hiện icon trigger (để đẹp thôi, không cần bấm)
+    document.getElementById('chatbot-trigger').classList.remove('d-none');
 }
 
-// --- BƯỚC 2: XÁC NHẬN LÝ DO -> CỘNG ĐIỂM -> QUA CÂU ---
-function confirmReasoning(reasonIndex) {
-    const list = currentPhase === 1 ? initialQuestions : currentScenarioList;
-    const currentQ = list[currentQuestionIndex];
-    
-    // Lấy bonus từ lý do (nếu có)
-    const reasons = currentQ.reasonings || [{ bonus: {} }, { bonus: {} }];
-    const bonus = reasons[reasonIndex].bonus || {};
-
-    // 1. Cộng tổng điểm (Điểm đáp án + Điểm lý do)
-    if (pendingStats) {
-        playerStats.knowledge += (pendingStats.knowledge || 0) + (bonus.knowledge || 0);
-        playerStats.social += (pendingStats.social || 0) + (bonus.social || 0);
-        playerStats.impact += (pendingStats.impact || 0) + (bonus.impact || 0);
-    }
-
-    // 2. Ẩn Chat
-    toggleChat();
+// --- HÀM CHUYỂN CÂU HỎI (Được gọi khi bấm nút "Tiếp tục") ---
+function nextQuestion() {
+    // 1. Ẩn Chatbot
+    document.getElementById('chatbot-modal').classList.add('d-none');
     document.getElementById('chatbot-trigger').classList.add('d-none');
 
-    // 3. Chuyển câu hỏi (Logic cũ)
+    const list = currentPhase === 1 ? initialQuestions : currentScenarioList;
+
+    // 2. Tăng index
     currentQuestionIndex++;
+
+    // 3. Kiểm tra xem còn câu hỏi không
     if (currentQuestionIndex < list.length) {
-        // Delay 1 chút cho mượt
-        setTimeout(() => {
-            renderQuestion(list[currentQuestionIndex]);
-        }, 300);
+        renderQuestion(list[currentQuestionIndex]);
     } else {
-        if (currentPhase === 1) showPhase1ResultSelection();
+        // Hết câu hỏi -> Chuyển màn
+        if (currentPhase === 1) showPhase1ResultSelection(); // Gọi hàm chọn nghề mới
         else showFinalEnding();
     }
 }

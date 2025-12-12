@@ -6,50 +6,69 @@ const initialQuestions = [
         id: 1,
         title: "Tình huống 1: Bản chất con người",
         content: "Đại dịch bùng phát, lương thực khan hiếm. Hàng xóm già yếu đang thiếu thuốc. Bạn sẽ làm gì?",
-        source: "Lý luận: Con người là thực thể thống nhất giữa mặt sinh vật và mặt xã hội (Trang 471).",
+        source: "Lý luận: Con người là thực thể thống nhất giữa mặt sinh vật và mặt xã hội (Trang 465).",
         options: [
-            { text: "Giữ cho mình. 'Quy luật sinh tồn là trên hết'.", stats: { knowledge: 1, social: -2, impact: 0 } },
-            { text: "Chia sẻ và kêu gọi xóm giềng giúp đỡ nhau.", stats: { knowledge: 0, social: 2, impact: 1 } },
-            { text: "Nghiên cứu phương án phân phối khoa học để đề xuất.", stats: { knowledge: 3, social: 0, impact: 1 } }
-        ],
-        // [MỚI] Các lựa chọn giải thích cho Chatbot
-        reasonings: [
-            { text: "Tôi tin rằng bản năng sinh tồn là quan trọng nhất.", bonus: { social: -1 } },
-            { text: "Con người cần nương tựa vào nhau để tồn tại.", bonus: { social: 1, impact: 1 } },
-            { text: "Chỉ có khoa học mới giải quyết được gốc rễ vấn đề.", bonus: { knowledge: 1 } }
+            { 
+                text: "Giữ cho mình. 'Quy luật sinh tồn là trên hết'.", 
+                stats: { knowledge: 3, social: -6, impact: 0 },
+                explanation: "Bạn đang tuyệt đối hóa phương diện sinh học (bản năng sinh tồn). Tuy nhiên, theo triết học Mác - Lênin: 'Con người là tổng hòa các quan hệ xã hội'. Tách rời cá nhân khỏi xã hội là một sai lầm về mặt phương pháp luận (Trang 466)."
+            },
+            { 
+                text: "Chia sẻ và kêu gọi xóm giềng giúp đỡ nhau.", 
+                stats: { knowledge: 0, social: 6, impact: 3 },
+                explanation: "Rất tốt. Bạn đã thể hiện đúng bản chất xã hội của con người. Sức mạnh của cộng đồng sẽ giúp từng cá nhân tồn tại tốt hơn. Đây là biểu hiện của tính nhân loại cao cả (Trang 467)."
+            },
+            { 
+                text: "Nghiên cứu phương án phân phối khoa học để đề xuất.", 
+                stats: { knowledge: 9, social: 0, impact: 3 },
+                explanation: "Bạn sử dụng tư duy lý tính (đặc trưng của con người) để cải biến hoàn cảnh. Con người không chỉ thích nghi thụ động mà còn chủ động cải tạo điều kiện sinh tồn."
+            }
         ]
     },
     {
         id: 2,
         title: "Tình huống 2: Quan hệ Cá nhân và Tập thể",
         content: "Bạn giỏi nhất nhóm, nhưng các thành viên khác làm chậm tiến độ. Bạn chọn:",
-        source: "Lý luận: Tránh khuynh hướng cực đoan (Trang 469).",
+        source: "Lý luận: Tránh khuynh hướng cực đoan trong quan hệ cá nhân - xã hội (Trang 469).",
         options: [
-            { text: "Tách ra làm riêng cho nhanh.", stats: { knowledge: 2, social: -2, impact: 0 } },
-            { text: "Làm giúp phần của họ để cả nhóm cùng qua môn.", stats: { knowledge: -1, social: 3, impact: 0 } },
-            { text: "Tổ chức lại quy trình, phân công người giỏi kèm người yếu.", stats: { knowledge: 1, social: 2, impact: 3 } }
-        ],
-        reasonings: [
-            { text: "Hiệu quả công việc phải đặt lên hàng đầu.", bonus: { impact: 1 } },
-            { text: "Tôi coi trọng tình cảm bạn bè hơn điểm số.", bonus: { social: 1 } },
-            { text: "Sức mạnh tập thể lớn hơn tổng số cá nhân cộng lại.", bonus: { social: 1, knowledge: 1 } }
+            { 
+                text: "Tách ra làm riêng cho nhanh.", 
+                stats: { knowledge: 6, social: -6, impact: 0 },
+                explanation: "Cảnh báo: Bạn đang rơi vào chủ nghĩa cá nhân cực đoan. Giáo trình (Trang 469) chỉ rõ: 'Nếu đặt cá nhân lên trên xã hội... thì đều sai lầm và dẫn đến hệ lụy khó lường'."
+            },
+            { 
+                text: "Làm giúp phần của họ để cả nhóm cùng qua môn.", 
+                stats: { knowledge: -3, social: 9, impact: 0 },
+                explanation: "Bạn đề cao tập thể nhưng lại triệt tiêu tính năng động của các cá nhân khác. Xã hội phát triển cần sự nỗ lực của từng cá thể."
+            },
+            { 
+                text: "Tổ chức lại quy trình, phân công người giỏi kèm người yếu.", 
+                stats: { knowledge: 3, social: 6, impact: 9 },
+                explanation: "Chính xác. Đây là sự kết hợp hài hòa: 'Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển của tất cả'. Bạn có tố chất lãnh đạo."
+            }
         ]
     },
-    // ... (Các câu hỏi 3, 4, 5 bạn tự thêm trường reasonings tương tự nhé)
     {
         id: 3,
         title: "Tình huống 3: Nguồn gốc Lịch sử",
         content: "Theo bạn, yếu tố nào quyết định sự phát triển của đất nước?",
         source: "Lý luận: Vai trò của Quần chúng nhân dân (Trang 473).",
         options: [
-            { text: "Do các vĩ nhân, lãnh đạo kiệt xuất dẫn dắt.", stats: { knowledge: 1, social: -1, impact: 2 } },
-            { text: "Do người lao động sản xuất của cải vật chất hàng ngày.", stats: { knowledge: 1, social: 3, impact: 0 } },
-            { text: "Do sự phát triển tất yếu của khoa học kỹ thuật.", stats: { knowledge: 3, social: 0, impact: 1 } }
-        ],
-        reasonings: [
-            { text: "Lịch sử cần những cá nhân kiệt xuất định hướng.", bonus: { impact: 1 } },
-            { text: "Cơm áo gạo tiền do dân làm ra mới là gốc.", bonus: { social: 2 } },
-            { text: "Công nghệ thay đổi phương thức sản xuất.", bonus: { knowledge: 1 } }
+            { 
+                text: "Do các vĩ nhân, lãnh đạo kiệt xuất dẫn dắt.", 
+                stats: { knowledge: 3, social: -3, impact: 6 },
+                explanation: "Đây là quan điểm Duy tâm về lịch sử (Trang 470). Lãnh tụ có vai trò quan trọng, nhưng 'cách mạng là sự nghiệp của quần chúng'. Tuyệt đối hóa lãnh tụ dẫn đến tệ sùng bái cá nhân."
+            },
+            { 
+                text: "Do người lao động sản xuất của cải vật chất hàng ngày.", 
+                stats: { knowledge: 3, social: 9, impact: 0 },
+                explanation: "Chính xác. 'Quần chúng nhân dân là lực lượng sản xuất cơ bản, là người sáng tạo chân chính ra lịch sử' (Trang 473)."
+            },
+            { 
+                text: "Do sự phát triển tất yếu của khoa học kỹ thuật.", 
+                stats: { knowledge: 9, social: 0, impact: 3 },
+                explanation: "Khoa học kỹ thuật là động lực quan trọng, nhưng chủ thể nắm giữ và sử dụng nó vẫn là con người (quần chúng nhân dân)."
+            }
         ]
     },
     {
@@ -58,84 +77,58 @@ const initialQuestions = [
         content: "Thấy ông chủ giàu có chèn ép người lao động nghèo, bạn sẽ:",
         source: "Lý luận: Tính giai cấp và tính nhân loại (Trang 467).",
         options: [
-            { text: "Im lặng, đó là quy luật thị trường.", stats: { knowledge: 0, social: -2, impact: -1 } },
-            { text: "Viết bài phân tích lên mạng xã hội.", stats: { knowledge: 3, social: 1, impact: 1 } },
-            { text: "Tập hợp người lao động đấu tranh đòi quyền lợi.", stats: { knowledge: 0, social: 2, impact: 3 } }
-        ],
-        reasonings: [
-            { text: "Không nên can thiệp vào chuyện người khác.", bonus: { social: -1 } },
-            { text: "Dùng lý luận để thức tỉnh công lý.", bonus: { knowledge: 1 } },
-            { text: "Đấu tranh thực tiễn mới đem lại thay đổi.", bonus: { impact: 2 } }
+            { 
+                text: "Im lặng, đó là quy luật thị trường.", 
+                stats: { knowledge: 0, social: -6, impact: -3 },
+                explanation: "Bạn đang lờ đi 'tính giai cấp' trong các quan hệ xã hội. Trong xã hội có phân chia giai cấp, thái độ trung lập thực chất là ủng hộ giai cấp thống trị."
+            },
+            { 
+                text: "Viết bài phân tích lên mạng xã hội.", 
+                stats: { knowledge: 9, social: 3, impact: 3 },
+                explanation: "Bạn sử dụng vũ khí lý luận để đấu tranh tư tưởng. Đây là một hình thức đấu tranh giai cấp quan trọng."
+            },
+            { 
+                text: "Tập hợp người lao động đấu tranh đòi quyền lợi.", 
+                stats: { knowledge: 0, social: 6, impact: 9 },
+                explanation: "Hành động thực tiễn! Bạn đang tham gia trực tiếp vào phong trào quần chúng để giải quyết mâu thuẫn giai cấp."
+            }
         ]
     },
     {
         id: 5,
         title: "Tình huống 5: Xuất hiện Lãnh tụ",
         content: "Tổ chức đang hoảng loạn, mất phương hướng. Bạn sẽ:",
-        source: "Lý luận: Lãnh tụ xuất hiện từ phong trào quần chúng (Trang 476).",
+        source: "Lý luận: Lãnh tụ xuất hiện từ phong trào quần chúng (Trang 475).",
         options: [
-            { text: "Chờ xem có ai tài giỏi đứng ra không.", stats: { knowledge: 0, social: -1, impact: -1 } },
-            { text: "Tự tìm đường thoát thân cho mình trước.", stats: { knowledge: 2, social: -3, impact: 0 } },
-            { text: "Đứng lên trấn an, vạch kế hoạch và phân công nhiệm vụ.", stats: { knowledge: 2, social: 2, impact: 4 } }
-        ],
-        reasonings: [
-            { text: "Tôi không đủ bản lĩnh để dẫn đầu.", bonus: { impact: -1 } },
-            { text: "Thân ai nấy lo.", bonus: { social: -1 } },
-            { text: "Hoàn cảnh lịch sử đòi hỏi phải có người đứng ra.", bonus: { impact: 2 } }
+            { 
+                text: "Chờ xem có ai tài giỏi đứng ra không.", 
+                stats: { knowledge: 0, social: -3, impact: -3 },
+                explanation: "Thụ động. Lãnh tụ không tự nhiên sinh ra, mà xuất hiện từ nhu cầu của phong trào quần chúng (Trang 475)."
+            },
+            { 
+                text: "Tự tìm đường thoát thân cho mình trước.", 
+                stats: { knowledge: 6, social: -9, impact: 0 },
+                explanation: "Ích kỷ. Bạn tách rời lợi ích cá nhân khỏi lợi ích tập thể."
+            },
+            { 
+                text: "Đứng lên trấn an, vạch kế hoạch và phân công nhiệm vụ.", 
+                stats: { knowledge: 6, social: 6, impact: 12 },
+                explanation: "Tuyệt vời. 'Khi lịch sử đặt ra những nhiệm vụ cần giải quyết... thì từ trong quần chúng sẽ xuất hiện những lãnh tụ' (Trang 475). Bạn chính là nhân tố đó."
+            }
         ]
     }
 ];
 
 // 2. DANH SÁCH 8 NGHỀ NGHIỆP (ĐÃ CẬP NHẬT ĐỦ)
 const careers = [
-    { 
-        id: "leader", 
-        name: "Nhà Lãnh đạo", 
-        description: "Cần trí tuệ vạch chiến lược và ảnh hưởng để dẫn dắt phong trào.", 
-        statsReq: { knowledge: 9, social: 6, impact: 9 } // Gốc: 3, 2, 3
-    },
-    { 
-        id: "tech", 
-        name: "Công nghệ / Kỹ thuật", 
-        description: "Đại diện Lực lượng sản xuất. Tư duy logic, đôi khi độc lập.", 
-        statsReq: { knowledge: 9, social: 3, impact: 6 } // Gốc: 3, 1, 2
-    },
-    { 
-        id: "worker", 
-        name: "Lao động Sản xuất", 
-        description: "Sức mạnh nằm ở tính tập thể và trực tiếp tạo ra của cải.", 
-        statsReq: { knowledge: 3, social: 9, impact: 6 } // Gốc: 1, 3, 2
-    },
-    { 
-        id: "educator", 
-        name: "Nhà Giáo dục", 
-        description: "Tri thức uyên thâm và khả năng truyền đạt, kết nối con người.", 
-        statsReq: { knowledge: 9, social: 9, impact: 3 } // Gốc: 3, 3, 1
-    },
-    { 
-        id: "healthcare", 
-        name: "Nhân viên Y tế", 
-        description: "Cần chuyên môn nhưng quan trọng nhất là tính nhân loại.", 
-        statsReq: { knowledge: 6, social: 9, impact: 6 } // Gốc: 2, 3, 2
-    },
-    { 
-        id: "public_servant", 
-        name: "Cán bộ / Công chức", 
-        description: "Người điều phối xã hội, cần sự khéo léo và hòa hợp lợi ích.", 
-        statsReq: { knowledge: 6, social: 9, impact: 3 } // Gốc: 2, 3, 1
-    },
-    { 
-        id: "artist", 
-        name: "Nghệ sĩ / Sáng tạo", 
-        description: "Thiên về cái 'Tôi' độc đáo và tư duy trừu tượng.", 
-        statsReq: { knowledge: 9, social: 3, impact: 6 } // Gốc: 3, 1, 2
-    },
-    { 
-        id: "activist", 
-        name: "Nhà Hoạt động Xã hội", 
-        description: "Tập hợp quần chúng và hành động quyết liệt thay đổi thực tại.", 
-        statsReq: { knowledge: 3, social: 9, impact: 9 } // Gốc: 1, 3, 3
-    }
+    { id: "leader", name: "Nhà Lãnh đạo", description: "Cần trí tuệ vạch chiến lược và ảnh hưởng để dẫn dắt phong trào.", statsReq: { knowledge: 15, social: 10, impact: 20 } },
+    { id: "tech", name: "Công nghệ / Kỹ thuật", description: "Đại diện Lực lượng sản xuất. Tư duy logic sắc bén.", statsReq: { knowledge: 20, social: 5, impact: 10 } },
+    { id: "worker", name: "Lao động Sản xuất", description: "Sức mạnh nằm ở tính tập thể và trực tiếp tạo ra của cải.", statsReq: { knowledge: 5, social: 20, impact: 10 } },
+    { id: "educator", name: "Nhà Giáo dục", description: "Tri thức uyên thâm và khả năng truyền đạt, kết nối con người.", statsReq: { knowledge: 18, social: 15, impact: 5 } },
+    { id: "healthcare", name: "Nhân viên Y tế", description: "Cần chuyên môn nhưng quan trọng nhất là tính nhân loại.", statsReq: { knowledge: 10, social: 18, impact: 10 } },
+    { id: "public_servant", name: "Cán bộ / Công chức", description: "Người điều phối xã hội, cần sự khéo léo và hòa hợp lợi ích.", statsReq: { knowledge: 10, social: 15, impact: 8 } },
+    { id: "artist", name: "Nghệ sĩ / Sáng tạo", description: "Thiên về cái 'Tôi' độc đáo và tư duy trừu tượng.", statsReq: { knowledge: 15, social: 5, impact: 10 } },
+    { id: "activist", name: "Nhà Hoạt động Xã hội", description: "Tập hợp quần chúng và hành động quyết liệt thay đổi thực tại.", statsReq: { knowledge: 8, social: 15, impact: 18 } }
 ];
 
 // 3. KỊCH BẢN CHUYÊN MÔN (PHASE 2 - ĐỦ 8 NGHỀ)
