@@ -88,14 +88,54 @@ const initialQuestions = [
 
 // 2. DANH SÁCH 8 NGHỀ NGHIỆP (ĐÃ CẬP NHẬT ĐỦ)
 const careers = [
-    { id: "leader", name: "Nhà Lãnh đạo", description: "Người dẫn dắt phong trào, thống nhất ý chí quần chúng.", statsReq: { impact: 7, social: 5 } },
-    { id: "tech", name: "Chuyên gia Công nghệ", description: "Đại diện lực lượng sản xuất tiên tiến.", statsReq: { knowledge: 8, impact: 2 } },
-    { id: "worker", name: "Lao động Sản xuất", description: "Lực lượng cơ bản sáng tạo ra lịch sử.", statsReq: { social: 6, impact: 2 } },
-    { id: "public_servant", name: "Cán bộ Quản lý", description: "Người điều phối lợi ích xã hội.", statsReq: { social: 7, knowledge: 4 } },
-    { id: "healthcare", name: "Nhân viên Y tế", description: "Hiện thân của tính nhân loại và đạo đức.", statsReq: { social: 8, knowledge: 5 } },
-    { id: "educator", name: "Nhà Giáo dục", description: "Người tác động vào ý thức xã hội.", statsReq: { knowledge: 7, social: 6 } },
-    { id: "artist", name: "Nghệ sĩ Sáng tạo", description: "Phản ánh đời sống tinh thần của thời đại.", statsReq: { knowledge: 6, impact: 1 } },
-    { id: "activist", name: "Nhà Hoạt động Xã hội", description: "Người đấu tranh trực diện cho công bằng.", statsReq: { impact: 8, social: 6 } }
+    { 
+        id: "leader", 
+        name: "Nhà Lãnh đạo", 
+        description: "Cần trí tuệ vạch chiến lược và ảnh hưởng để dẫn dắt phong trào.", 
+        statsReq: { knowledge: 9, social: 6, impact: 9 } // Gốc: 3, 2, 3
+    },
+    { 
+        id: "tech", 
+        name: "Công nghệ / Kỹ thuật", 
+        description: "Đại diện Lực lượng sản xuất. Tư duy logic, đôi khi độc lập.", 
+        statsReq: { knowledge: 9, social: 3, impact: 6 } // Gốc: 3, 1, 2
+    },
+    { 
+        id: "worker", 
+        name: "Lao động Sản xuất", 
+        description: "Sức mạnh nằm ở tính tập thể và trực tiếp tạo ra của cải.", 
+        statsReq: { knowledge: 3, social: 9, impact: 6 } // Gốc: 1, 3, 2
+    },
+    { 
+        id: "educator", 
+        name: "Nhà Giáo dục", 
+        description: "Tri thức uyên thâm và khả năng truyền đạt, kết nối con người.", 
+        statsReq: { knowledge: 9, social: 9, impact: 3 } // Gốc: 3, 3, 1
+    },
+    { 
+        id: "healthcare", 
+        name: "Nhân viên Y tế", 
+        description: "Cần chuyên môn nhưng quan trọng nhất là tính nhân loại.", 
+        statsReq: { knowledge: 6, social: 9, impact: 6 } // Gốc: 2, 3, 2
+    },
+    { 
+        id: "public_servant", 
+        name: "Cán bộ / Công chức", 
+        description: "Người điều phối xã hội, cần sự khéo léo và hòa hợp lợi ích.", 
+        statsReq: { knowledge: 6, social: 9, impact: 3 } // Gốc: 2, 3, 1
+    },
+    { 
+        id: "artist", 
+        name: "Nghệ sĩ / Sáng tạo", 
+        description: "Thiên về cái 'Tôi' độc đáo và tư duy trừu tượng.", 
+        statsReq: { knowledge: 9, social: 3, impact: 6 } // Gốc: 3, 1, 2
+    },
+    { 
+        id: "activist", 
+        name: "Nhà Hoạt động Xã hội", 
+        description: "Tập hợp quần chúng và hành động quyết liệt thay đổi thực tại.", 
+        statsReq: { knowledge: 3, social: 9, impact: 9 } // Gốc: 1, 3, 3
+    }
 ];
 
 // 3. KỊCH BẢN CHUYÊN MÔN (PHASE 2 - ĐỦ 8 NGHỀ)

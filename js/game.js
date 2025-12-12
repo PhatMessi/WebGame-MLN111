@@ -191,37 +191,96 @@ function confirmReasoning(reasonIndex) {
             renderQuestion(list[currentQuestionIndex]);
         }, 300);
     } else {
-        if (currentPhase === 1) showPhase1Result();
+        if (currentPhase === 1) showPhase1ResultSelection();
         else showFinalEnding();
     }
 }
 
 // --- (CÁC HÀM showPhase1Result, showFinalEnding, getCareerName GIỮ NGUYÊN) ---
-function showPhase1Result() {
-    let bestCareer = careers[0];
-    let minDiff = 9999;
-    careers.forEach(career => {
-        let diff = 0;
-        if (career.statsReq.knowledge) diff += Math.abs(playerStats.knowledge - career.statsReq.knowledge);
-        if (career.statsReq.social) diff += Math.abs(playerStats.social - career.statsReq.social);
-        if (career.statsReq.impact) diff += Math.abs(playerStats.impact - career.statsReq.impact);
-        if (diff < minDiff) { minDiff = diff; bestCareer = career; }
+function showPhase1ResultSelection() {
+    const container = document.getElementById('game-container');
+    
+    // 1. Tính điểm phù hợp cho TẤT CẢ các nghề
+    // Công thức: Difference = |Player_K - Job_K| + |Player_S - Job_S| + |Player_I - Job_I|
+    // Difference càng NHỎ thì càng PHÙ HỢP.
+    const scoredCareers = careers.map(career => {
+        const diffK = Math.abs(playerStats.knowledge - career.statsReq.knowledge);
+        const diffS = Math.abs(playerStats.social - career.statsReq.social);
+        const diffI = Math.abs(playerStats.impact - career.statsReq.impact);
+        const totalDiff = diffK + diffS + diffI;
+        
+        // Tính % phù hợp (giả định sai số tối đa khoảng 20 điểm)
+        const matchPercent = Math.max(0, 100 - (totalDiff * 5)); 
+
+        return { ...career, diff: totalDiff, match: matchPercent };
     });
-    assignedCareerId = bestCareer.id;
+
+    // 2. Sắp xếp theo độ phù hợp (diff tăng dần) và lấy Top 4
+    scoredCareers.sort((a, b) => a.diff - b.diff);
+    const top4Careers = scoredCareers.slice(0, 4);
+
+    // 3. Render giao diện chọn nghề
+    let cardsHTML = top4Careers.map(c => `
+        <div class="col-md-6 mb-4">
+            <div class="glass-card p-4 h-100 hover-scale text-start position-relative border-secondary" style="transition:0.3s">
+                <div class="d-flex justify-content-between mb-2">
+                    <h4 class="text-warning mb-0 font-heading">${c.name}</h4>
+                    <span class="badge bg-success bg-opacity-25 text-success border border-success">${Math.round(c.match)}% Phù hợp</span>
+                </div>
+                <p class="text-white-50 small mb-3" style="min-height: 40px">${c.description}</p>
+                
+                <div class="d-flex gap-2 mb-4 small text-light opacity-75">
+                    <span><i class="bi bi-cpu"></i> ${c.statsReq.knowledge}</span>
+                    <span><i class="bi bi-people"></i> ${c.statsReq.social}</span>
+                    <span><i class="bi bi-lightning"></i> ${c.statsReq.impact}</span>
+                </div>
+
+                <button onclick="selectCareer('${c.id}')" class="btn btn-outline-warning w-100 rounded-pill fw-bold">
+                    CHỌN CON ĐƯỜNG NÀY
+                </button>
+            </div>
+        </div>
+    `).join('');
+
+    container.innerHTML = `
+        <div class="container animate-pop">
+            <div class="text-center mb-5">
+                <span class="badge border border-info text-info mb-2 px-3 py-2 rounded-pill ls-2">PHÂN CÔNG LAO ĐỘNG</span>
+                <h2 class="display-5 fw-bold text-white font-heading">LỰA CHỌN CỦA LỊCH SỬ</h2>
+                <p class="text-light-50 mx-auto" style="max-width: 700px;">
+                    "Dựa trên năng lực (Cái Riêng) và nhu cầu thời đại (Cái Chung), đây là 4 vị trí phù hợp nhất để bạn đóng góp cho xã hội. Hãy chọn một."
+                </p>
+                <div class="mt-3">
+                    <small class="text-white-50 border border-secondary px-3 py-1 rounded-pill">
+                        Chỉ số hiện tại: 🧠 ${playerStats.knowledge} | 🤝 ${playerStats.social} | ⚡ ${playerStats.impact}
+                    </small>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                ${cardsHTML}
+            </div>
+        </div>
+    `;
+}
+
+function selectCareer(careerId) {
+    assignedCareerId = careerId;
+    
+    // Tìm thông tin nghề để hiển thị thông báo chuyển cảnh
+    const career = careers.find(c => c.id === careerId);
+    
     const container = document.getElementById('game-container');
     container.innerHTML = `
-        <div class="glass-card text-center p-5 animate-pop border-top border-warning border-5">
-            <h4 class="text-white-50 mb-3">KẾT THÚC GIAI ĐOẠN NHẬN THỨC</h4>
-            <div class="mb-4"><i class="bi bi-person-badge text-warning display-1"></i></div>
-            <h2 class="display-4 fw-bold text-white mb-2">${bestCareer.name}</h2>
-            <p class="lead text-light mb-4 px-md-5">${bestCareer.description}</p>
-            <div class="alert alert-dark d-inline-block px-4 py-2 mb-4 border border-secondary rounded-pill">
-                <small>Dựa trên chỉ số: 🧠 ${playerStats.knowledge} | 🤝 ${playerStats.social} | ⚡ ${playerStats.impact}</small>
-            </div>
-            <div class="d-flex justify-content-center gap-3">
-                <button class="btn btn-outline-light btn-lg px-4 rounded-pill" onclick="backToIntro()">Menu</button>
-                <button class="btn btn-warning btn-lg px-5 py-3 rounded-pill fw-bold shadow-lg" onclick="startPhase2()">TIẾP TỤC <i class="bi bi-arrow-right"></i></button>
-            </div>
+        <div class="glass-card text-center p-5 animate-fade-in" style="margin-top: 10vh;">
+            <div class="mb-4"><i class="bi bi-check-circle-fill text-success display-1"></i></div>
+            <h2 class="text-white mb-3">BẠN ĐÃ TRỞ THÀNH: <br><span class="text-warning display-4 font-heading">${career.name.toUpperCase()}</span></h2>
+            <p class="lead text-white-50 mb-5">
+                "Bây giờ, hãy dùng vai trò này để giải quyết các mâu thuẫn thực tiễn."
+            </p>
+            <button class="btn btn-primary-glow btn-lg px-5 py-3 rounded-pill fw-bold" onclick="startPhase2()">
+                BƯỚC VÀO THỰC TIỄN (PHASE 2) <i class="bi bi-arrow-right"></i>
+            </button>
         </div>
     `;
 }
