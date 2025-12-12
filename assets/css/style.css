@@ -1,0 +1,398 @@
+/* --- 1. GLOBAL SETTINGS --- */
+:root {
+    --primary-color: #e63946; /* Đỏ Mác-Lênin hiện đại */
+    --accent-color: #fca311;  /* Vàng cam nổi bật */
+    --dark-bg: #14213d;       /* Xanh đen vũ trụ */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* Background Gradients động */
+.bg-game {
+    background: radial-gradient(circle at top right, #2b2d42, #000000);
+    position: relative;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); /* Ảnh nền vũ trụ/kết nối */
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    padding-top: 80px; /* Tránh header */
+}
+
+/* --- 2. HEADER & NAV --- */
+.navbar-glass {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 1000;
+}
+
+.font-heading { font-family: var(--font-heading); letter-spacing: -0.5px; }
+
+.btn-nav {
+    background: transparent;
+    color: rgba(255,255,255,0.6);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-nav:hover, .btn-nav.active {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* --- 3. GLASS CARD (THẺ GAME) --- */
+.glass-card {
+    background: rgba(20, 20, 20, 0.6); /* Nền đen trong suốt */
+    backdrop-filter: blur(20px);        /* Mờ hậu cảnh */
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* --- 4. TEXT & BUTTONS --- */
+.text-transparent-gradient {
+    background: linear-gradient(to right, #ffffff, #a8a8a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary-glow {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
+    transition: all 0.3s;
+}
+.btn-primary-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(230, 57, 70, 0.8);
+}
+
+/* --- 5. GAME UI ELEMENTS (Cần khớp với JS) --- */
+.game-question-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(252, 163, 17, 0.3);
+}
+
+/* Option Buttons (Nút lựa chọn) */
+.btn-option-modern {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #eee;
+    text-align: left;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+}
+
+.btn-option-modern:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color);
+    transform: translateX(5px); /* Hiệu ứng đẩy sang phải */
+    color: #fff;
+}
+
+.option-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Dashboard Stats (Thanh chỉ số) */
+.stats-bar-modern {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-pill {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Màu riêng cho từng chỉ số */
+.stat-pill.know { border-color: #00b4d8; color: #90e0ef; box-shadow: 0 0 10px rgba(0, 180, 216, 0.2); }
+.stat-pill.soc { border-color: #2a9d8f; color: #9ef01a; box-shadow: 0 0 10px rgba(42, 157, 143, 0.2); }
+.stat-pill.imp { border-color: #f48c06; color: #ffba08; box-shadow: 0 0 10px rgba(244, 140, 6, 0.2); }
+
+/* Animation */
+.animate-fade-in { animation: fadeIn 0.8s ease-out; }
+.animate-pop { animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes popIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+/* --- HOME PAGE STYLES --- */
+
+/* Hiệu ứng bóng đổ chữ */
+.text-shadow {
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+/* Icon tròn trong phần Features */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng nhấc thẻ lên khi di chuột */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1); /* Sáng hơn chút */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.hover-lift:hover .icon-circle {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Hiệu ứng mũi tên nảy ở Hero */
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}
+}
+
+/* --- DOCS PDF VIEWER STYLES --- */
+
+/* Đảm bảo trang Docs chiếm full chiều cao để đọc cho sướng */
+#view-docs {
+    height: 100vh;
+    overflow: hidden; /* Ẩn thanh cuộn của web, chỉ dùng thanh cuộn của PDF */
+}
+
+/* Tinh chỉnh iframe trên mobile */
+@media (max-width: 768px) {
+    #view-docs .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Trên điện thoại, PDF viewer cần chiều cao cố định để không bị lỗi */
+    #view-docs .glass-card {
+        height: 80vh !important; 
+    }
+}
+
+/* --- GAME LANDING STYLES --- */
+
+/* Hiệu ứng khoảng cách chữ */
+.ls-2 { letter-spacing: 2px; }
+
+/* Icon tròn trong thẻ hướng dẫn */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng Hover cho thẻ kính */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    background: rgba(40, 40, 40, 0.7);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: var(--accent-color);
+}
+
+.hover-lift:hover .icon-circle {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Hiệu ứng nút Start lớn */
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+.hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(252, 163, 17, 0.6);
+}
+
+/* Nền trong suốt cho thanh HUD khi chơi game */
+.bg-game-transparent {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 20px 20px;
+}
+
+/* ... (Code cũ giữ nguyên) ... */
+
+/* --- [NEW] CHATBOT STYLES --- */
+
+/* 1. Nút Chat tròn góc phải */
+#chatbot-trigger {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2000;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#chatbot-trigger:active {
+    transform: scale(0.9);
+}
+
+.chat-icon-circle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2b2d42, #14213d);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(252, 163, 17, 0.4);
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+/* Số thông báo đỏ */
+.badge-counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    animation: pulse 1s infinite;
+}
+
+/* 2. Khung Chat Window */
+#chatbot-modal {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 2000;
+    width: 350px;
+    max-width: 90%;
+}
+
+.chat-window {
+    background: rgba(10, 10, 10, 0.95) !important; /* Đậm hơn nền game */
+    border: 1px solid var(--accent-color);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+.chat-header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.chat-body {
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Tin nhắn của Robot */
+.msg-robot {
+    background: rgba(252, 163, 17, 0.1); /* Màu cam nhạt */
+    border-left: 3px solid var(--accent-color);
+    padding: 10px;
+    border-radius: 4px;
+    color: #eee;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Các nút lựa chọn giải thích */
+.btn-reason {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #ccc;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-reason:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: var(--accent-color);
+    color: #fff;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
