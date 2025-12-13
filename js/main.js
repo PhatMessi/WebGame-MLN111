@@ -21,34 +21,43 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // HÀM CHUYỂN TAB
+// [THAY THẾ] Hàm chuyển Tab có tích hợp xác nhận thoát game
 function switchTab(tabName) {
-    // 1. Ẩn TẤT CẢ các view cũ đi
+    
+    // 1. KIỂM TRA: Có đang chơi game không?
+    const gameContainer = document.getElementById('game-container');
+    const isGameViewActive = !document.getElementById('view-game').classList.contains('d-none');
+    const isPlaying = gameContainer && !gameContainer.classList.contains('d-none');
+
+    // Nếu đang chơi mà bấm chuyển tab (bấm nút Menu)
+    if (isGameViewActive && isPlaying) {
+        // [SỬA]: Gọi Modal đẹp thay vì confirm()
+        if (typeof openConfirmModal === 'function') {
+            openConfirmModal();
+            return; // Dừng lại, chờ người dùng chọn trong Modal
+        }
+    }
+
+    // 2. LOGIC CHUYỂN TAB (Giữ nguyên)
     views.forEach(view => {
         const el = document.getElementById(`view-${view}`);
         if (el) {
-            el.classList.add('d-none'); // Thêm class ẩn
-            el.classList.remove('animate-fade-in'); // Reset animation
+            el.classList.add('d-none'); 
+            el.classList.remove('animate-fade-in'); 
         }
     });
 
-    // 2. Hiện view được chọn
     const selectedView = document.getElementById(`view-${tabName}`);
     if (selectedView) {
-        selectedView.classList.remove('d-none'); // Bỏ class ẩn
-        
-        // Kỹ thuật trick để reset animation (giúp hiệu ứng hiện ra mượt mà mỗi lần bấm)
+        selectedView.classList.remove('d-none'); 
         void selectedView.offsetWidth; 
         selectedView.classList.add('animate-fade-in');
-    } else {
-        console.error(`Lỗi: Không tìm thấy ID "view-${tabName}" trong HTML!`);
     }
 
-    // 3. Cập nhật trạng thái nút Active (Dùng data-tab cho chuẩn xác)
+    // Cập nhật trạng thái nút Active
     const navButtons = document.querySelectorAll('.btn-nav');
     navButtons.forEach(btn => {
         btn.classList.remove('active');
-        
-        // So sánh data-tab của nút với tab đang mở
         if (btn.getAttribute('data-tab') === tabName) {
             btn.classList.add('active');
         }

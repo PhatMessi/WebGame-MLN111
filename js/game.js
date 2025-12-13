@@ -10,6 +10,15 @@ let playerStats = { knowledge: 0, social: 0, impact: 0 };
 // Biến tạm để lưu lựa chọn ở Bước 1
 let pendingStats = null; 
 
+function confirmQuitGame() {
+    // Hiện hộp thoại xác nhận
+    if (confirm("Bạn đang chơi trò này, bạn có chắc chắn muốn thoát?")) {
+        backToIntro(); // Nếu chọn OK thì gọi hàm quay về màn hình chính
+        return true;
+    }
+    return false; // Nếu chọn Cancel thì không làm gì
+}
+
 // --- KHỞI ĐỘNG GAME ---
 function startGame() {
     document.getElementById('intro-screen').classList.add('d-none');
@@ -45,7 +54,7 @@ function backToIntro() {
 
 // --- HIỂN THỊ CÂU HỎI ---
 function renderQuestion(questionData) {
-    // Ẩn Chatbot mỗi khi sang câu mới
+    // Ẩn Chatbot
     document.getElementById('chatbot-trigger').classList.add('d-none');
     document.getElementById('chatbot-modal').classList.add('d-none');
 
@@ -66,7 +75,8 @@ function renderQuestion(questionData) {
             <div class="d-flex justify-content-between align-items-center mb-3 border-bottom border-secondary pb-2">
                 <div class="d-flex align-items-center">
                     <button class="btn btn-sm btn-outline-secondary me-3 border-0 rounded-circle text-white-50" 
-                            onclick="backToIntro()"><i class="bi bi-arrow-left fs-5"></i></button>
+                            onclick="openConfirmModal()"><i class="bi bi-arrow-left fs-5"></i></button>
+                    
                     <span class="text-warning text-uppercase fw-bold small ls-2">${phaseTitle}</span>
                 </div>
                 <span class="badge bg-secondary rounded-pill">Câu ${currentQuestionIndex + 1}/${totalQuestions}</span>
@@ -308,4 +318,34 @@ function showFinalEnding() {
 function getCareerName() {
     const c = careers.find(x => x.id === assignedCareerId);
     return c ? c.name.toUpperCase() : 'NHIỆM VỤ';
+}
+
+// --- [NEW] XỬ LÝ CUSTOM MODAL ---
+
+// 1. Mở Modal
+function openConfirmModal() {
+    const modal = document.getElementById('confirm-modal');
+    if (modal) modal.classList.remove('d-none');
+}
+
+// 2. Đóng Modal (Khi bấm "Ở lại")
+function closeConfirmModal() {
+    const modal = document.getElementById('confirm-modal');
+    if (modal) modal.classList.add('d-none');
+}
+
+// 3. Xử lý khi bấm nút "Thoát Game" trong Modal
+function processExitGame() {
+    closeConfirmModal(); // Đóng modal
+    backToIntro();       // Gọi hàm quay về màn hình Intro
+    
+    // Đảm bảo giao diện chuyển về tab Game (trường hợp bấm từ thanh Menu)
+    // Lưu ý: switchTab nằm bên main.js, nhưng ta có thể thao tác DOM trực tiếp để an toàn
+    document.querySelectorAll('.view-section').forEach(el => el.classList.add('d-none'));
+    document.getElementById('view-game').classList.remove('d-none');
+    
+    // Reset active nav button
+    document.querySelectorAll('.btn-nav').forEach(btn => btn.classList.remove('active'));
+    const gameBtn = document.querySelector('button[data-tab="game"]');
+    if(gameBtn) gameBtn.classList.add('active');
 }
