@@ -52,6 +52,9 @@ function switchTab(tabName) {
         selectedView.classList.remove('d-none'); 
         void selectedView.offsetWidth; 
         selectedView.classList.add('animate-fade-in');
+        if (tabName === 'lesson') {
+            renderLessonSidebar();
+        }
     }
 
     // Cập nhật trạng thái nút Active
@@ -108,3 +111,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// --- FILE: js/main.js (Thêm vào cuối file) ---
+
+// HÀM RENDER DANH SÁCH BÀI HỌC
+function renderLessonSidebar() {
+    const sidebarList = document.getElementById('lesson-sidebar-list');
+    if (!sidebarList || typeof textbookData === 'undefined') return;
+
+    sidebarList.innerHTML = ''; // Xóa cũ
+
+    textbookData.forEach((lesson, index) => {
+        // Tạo thẻ div cho từng mục bài học
+        const item = document.createElement('div');
+        item.className = `lesson-nav-item ${index === 0 ? 'active' : ''}`; // Mặc định chọn bài đầu tiên
+        item.onclick = () => selectLesson(index); // Gắn sự kiện click
+        
+        item.innerHTML = `
+            <div class="fw-bold">${lesson.title}</div>
+        `;
+        
+        sidebarList.appendChild(item);
+    });
+
+    // Mặc định hiển thị bài đầu tiên
+    if (textbookData.length > 0) {
+        displayLessonContent(0);
+    }
+}
+
+// 2. Hàm Xử lý khi bấm vào Sidebar
+function selectLesson(index) {
+    // Cập nhật giao diện Sidebar (Active class)
+    const items = document.querySelectorAll('.lesson-nav-item');
+    items.forEach((item, i) => {
+        if (i === index) item.classList.add('active');
+        else item.classList.remove('active');
+    });
+
+    // Hiển thị nội dung
+    displayLessonContent(index);
+}
+
+// 3. Hàm Hiển thị nội dung sang cột bên phải
+function displayLessonContent(index) {
+    const contentArea = document.getElementById('lesson-content-area');
+    const lesson = textbookData[index];
+
+    if (!lesson) return;
+
+    // Hiệu ứng fade nhẹ khi chuyển bài
+    contentArea.style.opacity = '0';
+    
+    setTimeout(() => {
+        contentArea.innerHTML = lesson.content;
+        contentArea.style.opacity = '1';
+    }, 200);
+}

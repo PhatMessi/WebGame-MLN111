@@ -259,51 +259,97 @@ const finalEndings = {
 // --- DỮ LIỆU GIÁO TRÌNH (TEXTBOOK DATA) ---
 const textbookData = [
     {
-        id: "chuong1",
-        title: "Chương 1: Khái luận về Triết học",
+        id: "bai1",
+        title: "Khái niệm Cá nhân và Xã hội",
         content: `
-            <h3 class="text-warning border-bottom border-secondary pb-2 mb-4">I. TRIẾT HỌC VÀ VẤN ĐỀ CƠ BẢN</h3>
-            <p><strong>1. Khái lược về triết học:</strong> Triết học là hệ thống quan điểm lý luận chung nhất về thế giới và vị trí con người trong thế giới đó.</p>
-            <p><strong>2. Vấn đề cơ bản:</strong> Vấn đề cơ bản lớn của mọi triết học, đặc biệt là triết học hiện đại, là vấn đề quan hệ giữa tư duy và tồn tại (giữa ý thức và vật chất).</p>
-            <div class="alert alert-dark border border-warning mt-3">
-                <i class="bi bi-lightbulb text-warning"></i> <strong>Lưu ý:</strong> Đây là cơ sở để phân chia thành Chủ nghĩa Duy vật và Chủ nghĩa Duy tâm.
-            </div>
-        `
-    },
-    {
-        id: "chuong2",
-        title: "Chương 2: Chủ nghĩa Duy vật Biện chứng",
-        content: `
-            <h3 class="text-warning border-bottom border-secondary pb-2 mb-4">I. VẬT CHẤT VÀ Ý THỨC</h3>
-            <h5 class="text-info">1. Vật chất</h5>
-            <p>"Vật chất là một phạm trù triết học dùng để chỉ thực tại khách quan được đem lại cho con người trong cảm giác..." - V.I. Lênin.</p>
-            <h5 class="text-info mt-4">2. Nguồn gốc của Ý thức</h5>
-            <p>Ý thức có hai nguồn gốc: <strong>Nguồn gốc tự nhiên</strong> (bộ óc người và thế giới khách quan) và <strong>Nguồn gốc xã hội</strong> (lao động và ngôn ngữ).</p>
-        `
-    },
-    {
-        id: "chuong3",
-        title: "Chương 3: CN Duy vật Lịch sử (Cốt lõi Game)",
-        content: `
-            <h3 class="text-warning border-bottom border-secondary pb-2 mb-4">CON NGƯỜI VÀ XÃ HỘI</h3>
+            <h2 class="content-title">Khái niệm Cơ bản</h2>
             
-            <div class="card bg-transparent border-success mb-4">
-                <div class="card-body">
-                    <h5 class="card-title text-success"><i class="bi bi-quote"></i> Bản chất con người</h5>
-                    <p class="card-text fst-italic">"Trong tính hiện thực của nó, bản chất con người là tổng hòa những quan hệ xã hội." (C. Mác)</p>
-                    <small class="text-muted">-> Đây là cơ sở cho chỉ số <strong>Social (Hợp tác)</strong> trong game.</small>
-                </div>
+            <div class="content-section-title">1. Cá nhân</div>
+            <div class="content-highlight-box">
+                <p>Cá nhân là con người cụ thể, sống trong những điều kiện lịch sử – xã hội nhất định.</p>
             </div>
-
-            <h5 class="text-info mt-4">1. Cá nhân và Xã hội</h5>
-            <p>Con người vừa là thực thể tự nhiên (sinh học), vừa là thực thể xã hội. Không thể tách rời cá nhân khỏi xã hội. Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển của tất cả.</p>
-
-            <h5 class="text-info mt-4">2. Vai trò của Quần chúng nhân dân & Lãnh tụ</h5>
             <ul>
-                <li><strong>Quần chúng nhân dân:</strong> Là người sáng tạo chân chính ra lịch sử, là lực lượng sản xuất cơ bản.</li>
-                <li><strong>Lãnh tụ:</strong> Là người dẫn dắt, định hướng phong trào, nhưng phải từ phong trào quần chúng mà ra.</li>
+                <li>Mang những đặc điểm sinh học và xã hội riêng.</li>
+                <li>Không tồn tại biệt lập ngoài xã hội.</li>
             </ul>
-            <p class="text-warning">-> Logic này quyết định True Ending của game: Lãnh tụ không được tách rời quần chúng.</p>
+
+            <div class="content-section-title">2. Xã hội</div>
+            <div class="content-highlight-box">
+                <p>Xã hội là tổng thể các mối quan hệ xã hội giữa con người với con người.</p>
+            </div>
+            <ul>
+                <li>Bao gồm các quan hệ kinh tế, chính trị, văn hóa, xã hội.</li>
+                <li>Là môi trường tồn tại và phát triển của cá nhân.</li>
+            </ul>
+        `
+    },
+    {
+        id: "bai2",
+        title: "Mối quan hệ biện chứng",
+        content: `
+            <h2 class="content-title">Quan hệ Cá nhân - Xã hội</h2>
+            <p class="fst-italic text-warning mb-3">Triết học Mác – Lênin khẳng định đây là mối quan hệ hai chiều, tác động qua lại lẫn nhau.</p>
+
+            <div class="content-section-title">1. Xã hội là điều kiện tồn tại của Cá nhân</div>
+            <p>Cá nhân chỉ có thể hình thành và phát triển trong xã hội. Tách khỏi xã hội, cá nhân không thể tồn tại như một con người đúng nghĩa.</p>
+            <p><strong>Ví dụ:</strong> Ngôn ngữ, tri thức, khoa học, đạo đức, pháp luật... đều là sản phẩm của đời sống xã hội. Một sinh viên muốn phát triển cần có nhà trường, thầy cô, giáo trình....</p>
+
+            <div class="content-section-title">2. Cá nhân là động lực phát triển của Xã hội</div>
+            <p>Xã hội không tồn tại bên ngoài con người mà được tạo nên từ hoạt động của các cá nhân. Lao động, sáng tạo của mỗi cá nhân góp phần thúc đẩy kinh tế, khoa học - công nghệ.</p>
+            <p><strong>Ví dụ:</strong> Một kỹ sư công nghệ xây dựng phần mềm giúp nâng cao hiệu quả sản xuất, góp phần phát triển kinh tế xã hội.</p>
+
+            <div class="content-section-title">3. Quan hệ lợi ích</div>
+            <div class="content-highlight-box">
+                <p>Lợi ích cá nhân và lợi ích xã hội thống nhất nhưng không đồng nhất.</p>
+            </div>
+            <ul>
+                <li><strong>Lợi ích cá nhân:</strong> Nhu cầu, mong muốn chính đáng của mỗi người.</li>
+                <li><strong>Lợi ích xã hội:</strong> Lợi ích chung của cộng đồng, quốc gia, dân tộc.</li>
+            </ul>
+            <p>Muốn xã hội phát triển bền vững cần: Cá nhân tôn trọng lợi ích xã hội và Xã hội tạo điều kiện cho cá nhân phát triển.</p>
+        `
+    },
+    {
+        id: "bai3",
+        title: "Vai trò Quần chúng nhân dân",
+        content: `
+            <h2 class="content-title">Quần chúng nhân dân</h2>
+            
+            <div class="content-section-title">Định nghĩa</div>
+            <p>Quần chúng nhân dân là những giai cấp, tầng lớp xã hội đông đảo; là lực lượng trực tiếp hoặc gián tiếp sản xuất của cải vật chất, tham gia hoạt động chính trị - xã hội và sáng tạo giá trị tinh thần.</p>
+            <p class="text-info"><i class="bi bi-info-circle"></i> Họ không phải là "đám đông vô tổ chức", mà là chủ thể lịch sử có ý thức và lợi ích giai cấp.</p>
+
+            <div class="content-section-title">Vai trò quyết định lịch sử</div>
+            <ol>
+                <li><strong>Sáng tạo của cải vật chất:</strong> Là lực lượng lao động chủ yếu, quyết định sự tồn tại và phát triển của xã hội. (Ví dụ: Nông dân, công nhân ).</li>
+                <li><strong>Quyết định các cuộc cách mạng:</strong> Là lực lượng quyết định thành bại. Không có sự tham gia của quần chúng, cách mạng không thể thắng lợi. (Ví dụ: Cách mạng Tháng Tám 1945 thành công nhờ sự vùng dậy của toàn dân ).</li>
+                <li><strong>Sáng tạo giá trị tinh thần:</strong> Văn hóa, ngôn ngữ, phong tục, nghệ thuật dân gian.... (Ví dụ: Ca dao, tục ngữ phản ánh trí tuệ và đời sống lao động).</li>
+            </ol>
+        `
+    },
+    {
+        id: "bai4",
+        title: "Vai trò của Lãnh tụ",
+        content: `
+            <h2 class="content-title">Lãnh tụ trong Lịch sử</h2>
+
+            <div class="content-section-title">Khái niệm Lãnh tụ</div>
+            <div class="content-highlight-box">
+                <p>Lãnh tụ là cá nhân kiệt xuất trong lịch sử, đại diện cho lợi ích căn bản của giai cấp, dân tộc.</p>
+            </div>
+            <p><strong>Năng lực cần có:</strong> Nhận thức đúng quy luật lịch sử, đề ra đường lối đúng đắn, và có khả năng tổ chức, dẫn dắt quần chúng.</p>
+
+            <div class="content-section-title">Vai trò của Lãnh tụ</div>
+            <ul>
+                <li>Định hướng mục tiêu, đường lối cách mạng.</li>
+                <li>Tập hợp, tổ chức, giáo dục quần chúng.</li>
+                <li>Kết nối sức mạnh của quần chúng thành hành động thống nhất.</li>
+            </ul>
+            <p><strong>Ví dụ:</strong> Chủ tịch Hồ Chí Minh đã tìm ra con đường cứu nước đúng đắn và lãnh đạo nhân dân Việt Nam giành độc lập.</p>
+            
+            <div class="alert alert-warning mt-3">
+                <i class="bi bi-exclamation-triangle-fill"></i> <strong>Lưu ý:</strong> Lãnh tụ không thể thay thế quần chúng. Vai trò lãnh tụ chỉ phát huy khi gắn bó với nhân dân.
+            </div>
         `
     }
 ];

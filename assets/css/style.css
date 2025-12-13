@@ -559,3 +559,158 @@ body {
     background-attachment: fixed; /* Hiệu ứng ảnh đứng yên khi cuộn */
     overflow: hidden;
 }
+
+/* --- FILE: assets/css/style.css (Thêm vào cuối file) --- */
+
+/* CSS CHO TRANG BÀI HỌC */
+
+/* Giới hạn số dòng mô tả trong thẻ card */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Định dạng nội dung chi tiết bài học (được inject từ data.js) */
+.lesson-text-content h3 {
+    color: var(--accent-color); /* Màu vàng cam */
+    font-family: var(--font-heading);
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+
+.lesson-text-content h5 {
+    color: #00b4d8; /* Màu xanh cyan */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.lesson-text-content p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.lesson-text-content ul {
+    background: rgba(255,255,255,0.05);
+    padding: 20px 20px 20px 40px;
+    border-radius: 12px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.lesson-text-content strong {
+    color: #fff;
+}
+
+/* --- FILE: assets/css/style.css (Thêm vào cuối file) --- */
+
+/* Class mới cho Banner trang Bài Học */
+.lesson-hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full màn hình giống Home */
+    margin-left: calc(-50vw + 50%); /* Kỹ thuật bung full chiều ngang */
+    margin-top: -80px; /* Đẩy lên trùm qua thanh menu */
+    
+    /* Ảnh nền: Lênin diễn thuyết (OIP.webp) */
+    background-image: url('../images/LyLuan2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Hiệu ứng Parallax đứng yên khi cuộn */
+    overflow: hidden;
+    
+    /* Flexbox để căn giữa nội dung */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- [BỔ SUNG] STYLE CHO TRANG BÀI HỌC KIỂU MỚI --- */
+
+/* 1. Nút trong Sidebar (Giống các thẻ đỏ trong hình) */
+.lesson-nav-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.lesson-nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+/* Trạng thái đang chọn (Màu đỏ giống hình) */
+.lesson-nav-item.active {
+    background: linear-gradient(135deg, #a71d2a, #d90429); /* Màu đỏ đậm */
+    color: white;
+    border-color: #ff4d6d;
+    box-shadow: 0 4px 15px rgba(217, 4, 41, 0.4);
+    font-weight: bold;
+}
+
+.lesson-nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: #fff;
+}
+
+/* Trạng thái status (Chưa học/Đã học) */
+.lesson-status {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+.lesson-nav-item.active .lesson-status {
+    color: #ffcccb;
+}
+
+/* 2. Nội dung bài học (Bên phải) */
+.content-highlight-box {
+    background: rgba(255, 243, 205, 0.1); /* Màu vàng nhạt trong suốt */
+    border-left: 5px solid #ffc107;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    color: #ffda6a; /* Chữ vàng sáng cho dễ đọc trên nền tối */
+}
+
+.content-title {
+    color: var(--accent-color);
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 1rem;
+}
+
+.content-section-title {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+}
+
+.lesson-img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin: 15px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
