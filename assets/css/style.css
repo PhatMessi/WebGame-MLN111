@@ -517,3 +517,45 @@ body {
     .hero-title { font-size: 2.2rem; }
     .hero-section { background-attachment: scroll; }
 }
+
+/* --- [BỔ SUNG] GAME BANNER STYLES --- */
+.game-banner-wrapper {
+    max-width: 800px; /* Giới hạn chiều rộng ảnh cho đỡ bị to quá khổ */
+    margin: 0 auto;   /* Căn giữa */
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden; /* Cắt phần ảnh thừa nếu bo góc */
+    box-shadow: 0 0 30px rgba(252, 163, 17, 0.2); /* Hiệu ứng tỏa sáng màu vàng cam */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-banner-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng zoom nhẹ khi di chuột vào ảnh */
+.game-banner-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* --- FILE: assets/css/style.css (Thêm vào cuối file) --- */
+
+/* Class mới cho Banner trang Game (tương tự .hero-section của trang Home) */
+.game-hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Chiếm trọn màn hình */
+    margin-left: calc(-50vw + 50%); /* Kỹ thuật bung full chiều ngang */
+    margin-top: -80px; /* Đẩy lên trùm qua thanh menu */
+    
+    /* Đường dẫn ảnh Trái đất của bạn */
+    background-image: url('../images/Celebrating.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Hiệu ứng ảnh đứng yên khi cuộn */
+    overflow: hidden;
+}
