@@ -34,7 +34,7 @@ const initialQuestions = [
             { 
                 text: "Tách ra làm riêng cho nhanh.", 
                 stats: { knowledge: 6, social: -6, impact: 0 },
-                explanation: "Cảnh báo: Bạn đang rơi vào chủ nghĩa cá nhân cực đoan. Giáo trình (Trang 469) chỉ rõ: 'Nếu đặt cá nhân lên trên xã hội... thì đều sai lầm và dẫn đến hệ lụy khó lường'."
+                explanation: "Bạn đang rơi vào chủ nghĩa cá nhân cực đoan. Giáo trình (Trang 469) chỉ rõ: 'Nếu đặt cá nhân lên trên xã hội... thì đều sai lầm và dẫn đến hệ lụy khó lường'."
             },
             { 
                 text: "Làm giúp phần của họ để cả nhóm cùng qua môn.", 
