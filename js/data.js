@@ -262,75 +262,87 @@ const textbookData = [
         id: "bai1",
         title: "Khái niệm Cá nhân và Xã hội",
         content: `
-            <h2 class="content-title">Khái niệm Cơ bản</h2>
+            <h2 class="content-title">1. Khái niệm Cơ bản</h2>
             
-            <div class="content-section-title">1. Cá nhân</div>
+            <div class="content-section-title">Cá nhân</div>
             <div class="content-highlight-box">
-                <p>Cá nhân là con người cụ thể, sống trong những điều kiện lịch sử – xã hội nhất định.</p>
+                <p>Cá nhân là con người cụ thể sống trong một xã hội nhất định và được phân biệt với các cá thể khác thông qua những cái riêng, cái đơn nhất, đặc thù của cá thể (kinh nghiệm, tâm lý, trí tuệ...).</p>
             </div>
-            <ul>
-                <li>Mang những đặc điểm sinh học và xã hội riêng.</li>
-                <li>Không tồn tại biệt lập ngoài xã hội.</li>
-            </ul>
+            <p><strong>Đặc điểm:</strong> Được quy định bởi những điều kiện sống và đặc điểm sinh học riêng biệt.</p>
 
             <div class="text-center my-3">
-                <img src="assets/images/LyLuan.jpg" class="lesson-img" alt="Hình ảnh các nhà kinh điển Mác-Lênin">
+                <img src="assets/images/LyLuan.jpg" class="lesson-img" alt="Cá nhân trong xã hội">
                 <p class="small text-white-50 fst-italic mt-1">Các nhà kinh điển của chủ nghĩa Mác - Lênin đại diện cho những cá nhân kiệt xuất.</p>
             </div>
 
-            <div class="content-section-title">2. Xã hội</div>
-            <div class="content-highlight-box">
-                <p>Xã hội là tổng thể các mối quan hệ xã hội giữa con người với con người.</p>
+            <div class="p-3 bg-dark border border-secondary rounded mt-2">
+                <strong>Ví dụ:</strong> Một sinh viên FPT (cá nhân) có mã số sinh viên riêng, tính cách riêng, đang học tập và rèn luyện trong môi trường Đại học FPT.
             </div>
-            <ul>
-                <li>Bao gồm các quan hệ kinh tế, chính trị, văn hóa, xã hội.</li>
-                <li>Là môi trường tồn tại và phát triển của cá nhân.</li>
-            </ul>
+
+            <div class="content-section-title">Xã hội</div>
+            <div class="content-highlight-box">
+                <p>Xã hội do các cá nhân cụ thể hợp thành. Mỗi cá nhân là một phần tử của xã hội, sống và hoạt động trong xã hội đó.</p>
+            </div>
 
             <div class="text-center my-3">
                 <img src="assets/images/XaHoi.jpg" class="lesson-img" alt="Hình ảnh các nhà kinh điển Mác-Lênin">
                 <p class="small text-white-50 fst-italic mt-1"></p>
             </div>
+            
+            <div class="p-3 bg-dark border border-secondary rounded mt-2">
+                <strong>Ví dụ:</strong> Trường Đại học (xã hội thu nhỏ) được tạo thành từ hàng ngàn sinh viên, giảng viên và cán bộ nhân viên. Không có những con người này thì không có trường Đại học.
+            </div>
         `
     },
     {
         id: "bai2",
-        title: "Mối quan hệ biện chứng",
+        title: "Mối quan hệ biện chứng Cá nhân - Xã hội",
         content: `
-            <h2 class="content-title">Quan hệ Cá nhân - Xã hội</h2>
-            <p class="fst-italic text-warning mb-3">Triết học Mác – Lênin khẳng định đây là mối quan hệ hai chiều, tác động qua lại lẫn nhau.</p>
+            <h2 class="content-title">2. Mối quan hệ biện chứng</h2>
+            <p class="fst-italic text-warning mb-3">Cá nhân và xã hội có mối quan hệ biện chứng với nhau, trong đó xã hội giữ vai trò quyết định.</p>
 
-            <div class="content-section-title">1. Xã hội là điều kiện tồn tại của Cá nhân</div>
-            <p>Cá nhân chỉ có thể hình thành và phát triển trong xã hội. Tách khỏi xã hội, cá nhân không thể tồn tại như một con người đúng nghĩa.</p>
-            <p><strong>Ví dụ:</strong> Ngôn ngữ, tri thức, khoa học, đạo đức, pháp luật... đều là sản phẩm của đời sống xã hội. Một sinh viên muốn phát triển cần có nhà trường, thầy cô, giáo trình....</p>
+            <div class="content-section-title">Vai trò quyết định của Xã hội</div>
+            <div class="text-center my-3">
+                <img src="assets/images/ab.png" class="lesson-img" alt="Sự gắn kết cá nhân và tập thể">
+            </div>
+            <p>Cá nhân và xã hội có mối quan hệ biện chứng với nhau, trong đó xã hội giữ vai trò quyết định vì:</p>
+            <ul>
+                <li>Sự tồn tại của cá nhân không thể tách rời xã hội.</li>
+                <li>Nhu cầu và lợi ích cá nhân được thể hiện thông qua các quan hệ xã hội (QHXH).</li>
+                <li>Qua QHXH, sức mạnh cá nhân mới được phát huy.</li>
+            </ul>
 
             <div class="text-center my-3">
                 <img src="assets/images/Celebrating.jpg" class="lesson-img" alt="Sự gắn kết cá nhân và tập thể">
                 <p class="small text-white-50 fst-italic mt-1">Sự gắn kết hữu cơ giữa cá nhân (Lãnh tụ) và tập thể (Quần chúng) tạo nên sức mạnh xã hội.</p>
             </div>
 
-            <div class="content-section-title">2. Cá nhân là động lực phát triển của Xã hội</div>
-            <p>Xã hội không tồn tại bên ngoài con người mà được tạo nên từ hoạt động của các cá nhân. Lao động, sáng tạo của mỗi cá nhân góp phần thúc đẩy kinh tế, khoa học - công nghệ.</p>
-            <p><strong>Ví dụ:</strong> Một kỹ sư công nghệ xây dựng phần mềm giúp nâng cao hiệu quả sản xuất, góp phần phát triển kinh tế xã hội.</p>
-
-            <div class="text-center my-3">
-                <img src="assets/images/DongLucPhatTrien.jpg" class="lesson-img" alt="Sự gắn kết cá nhân và tập thể">
-                <p class="small text-white-50 fst-italic mt-1"></p>
+            <div class="p-3 bg-dark border border-secondary rounded mt-2">
+                <strong>Ví dụ:</strong> Mạng xã hội (XH) tạo nền tảng kết nối. Nếu không có cộng đồng người dùng, một tài khoản Facebook cá nhân sẽ trở nên vô nghĩa.
             </div>
 
-            <div class="content-section-title">3. Quan hệ lợi ích</div>
-            <div class="content-highlight-box">
-                <p>Lợi ích cá nhân và lợi ích xã hội thống nhất nhưng không đồng nhất.</p>
+            <div class="content-section-title">Vai trò của Cá nhân</div>
+            <div class="text-center my-3">
+                <img src="assets/images/ba.png" class="lesson-img" alt="Sự gắn kết cá nhân và tập thể">
             </div>
             <ul>
-                <li><strong>Lợi ích cá nhân:</strong> Nhu cầu, mong muốn chính đáng của mỗi người.</li>
-                <li><strong>Lợi ích xã hội:</strong> Lợi ích chung của cộng đồng, quốc gia, dân tộc.</li>
+                <li>Lợi ích là nền tảng của mối quan hệ giữa cá nhân và xã hội.</li>
+                <li>Xã hội càng phát triển thì mỗi cá nhân càng có điều kiện được đáp ứng những nhu cầu chính đáng.</li>
+                <li>Nhân cách cá nhân phát triển góp phần vào sự phát triển của xã hội.</li>
             </ul>
-            <p>Muốn xã hội phát triển bền vững cần: Cá nhân tôn trọng lợi ích xã hội và Xã hội tạo điều kiện cho cá nhân phát triển.</p>
 
             <div class="text-center my-3">
                 <img src="assets/images/QuanHeLoiIch.jpg" class="lesson-img" alt="Sự gắn kết cá nhân và tập thể">
                 <p class="small text-white-50 fst-italic mt-1"></p>
+            </div>
+
+            <div class="content-section-title">Ý nghĩa nghiên cứu</div>
+            <div class="content-highlight-box">
+                <p>Cần tránh hai khuynh hướng cực đoan:</p>
+                <ol>
+                    <li>Tuyệt đối hóa lợi ích cá nhân, phủ nhận lợi ích tập thể (Chủ nghĩa cá nhân).</li>
+                    <li>Nhân danh lợi ích tập thể để phủ nhận lợi ích chính đáng của cá nhân (Thủ tiêu động lực).</li>
+                </ol>
             </div>
         `
     },
@@ -338,63 +350,88 @@ const textbookData = [
         id: "bai3",
         title: "Vai trò Quần chúng nhân dân",
         content: `
-            <h2 class="content-title">Quần chúng nhân dân</h2>
+            <h2 class="content-title">3. Vai trò Quần chúng nhân dân (QCND)</h2>
             
-            <div class="content-section-title">Định nghĩa</div>
-            <p>Quần chúng nhân dân là những giai cấp, tầng lớp xã hội đông đảo; là lực lượng trực tiếp hoặc gián tiếp sản xuất của cải vật chất, tham gia hoạt động chính trị - xã hội và sáng tạo giá trị tinh thần.</p>
-            <p class="text-info"><i class="bi bi-info-circle"></i> Họ không phải là "đám đông vô tổ chức", mà là chủ thể lịch sử có ý thức và lợi ích giai cấp.</p>
+            <div class="content-section-title">Khái niệm QCND</div>
+            <p>QCND là bộ phận có cùng chung lợi ích căn bản, bao gồm những thành phần, tầng lớp, giai cấp liên kết lại thành tập thể dưới sự lãnh đạo của một cá nhân/tổ chức nhằm giải quyết các vấn đề kinh tế, chính trị, xã hội.</p>
+            <p><strong>Nội hàm:</strong></p>
+            <ul>
+                <li>Lao động sản xuất ra của cải vật chất và giá trị tinh thần.</li>
+                <li>Chống lại giai cấp thống trị áp bức, bóc lột.</li>
+                <li>Thúc đẩy sự tiến bộ xã hội.</li>
+            </ul>
 
             <div class="text-center my-3">
                 <img src="assets/images/QuanChungNhanDan.jpg" class="lesson-img" alt="Sức mạnh quần chúng nhân dân">
                 <p class="small text-white-50 fst-italic mt-1">Quần chúng nhân dân là lực lượng đông đảo, quyết định thắng lợi của các cuộc cách mạng.</p>
             </div>
 
-            <div class="content-section-title">Vai trò quyết định lịch sử</div>
+            <div class="content-section-title">Vai trò trong lịch sử</div>
+            <div class="content-highlight-box">
+                <p>QCND là chủ thể sáng tạo chân chính ra lịch sử, lực lượng quyết định sự phát triển của lịch sử.</p>
+            </div>
             <ol>
-                <li><strong>Sáng tạo của cải vật chất:</strong> Là lực lượng lao động chủ yếu, quyết định sự tồn tại và phát triển của xã hội. (Ví dụ: Nông dân, công nhân ).</li>
-                <li><strong>Quyết định các cuộc cách mạng:</strong> Là lực lượng quyết định thành bại. Không có sự tham gia của quần chúng, cách mạng không thể thắng lợi. (Ví dụ: Cách mạng Tháng Tám 1945 thành công nhờ sự vùng dậy của toàn dân ).</li>
-                <li><strong>Sáng tạo giá trị tinh thần:</strong> Văn hóa, ngôn ngữ, phong tục, nghệ thuật dân gian.... (Ví dụ: Ca dao, tục ngữ phản ánh trí tuệ và đời sống lao động).</li>
+                <li><strong>Lực lượng sản xuất cơ bản:</strong> Trực tiếp tạo ra của cải vật chất nuôi sống xã hội.</li>
+                <li><strong>Sáng tạo giá trị tinh thần:</strong> Tác giả của văn hóa dân gian, nghệ thuật, phong tục tập quán.</li>
+                <li><strong>Động lực cơ bản của mọi cuộc cách mạng:</strong> Quyết định thắng lợi của các cuộc đấu tranh xã hội.</li>
             </ol>
 
             <div class="text-center my-3">
                 <img src="assets/images/QuyetDinhLichSu.jpg" class="lesson-img" alt="Sức mạnh quần chúng nhân dân">
                 <p class="small text-white-50 fst-italic mt-1"></p>
             </div>
+
+            <div class="p-3 bg-dark border border-secondary rounded mt-2">
+                <strong>Ví dụ:</strong> Nông dân Việt Nam vừa là lực lượng sản xuất lúa gạo (vật chất), vừa sáng tạo ra dân ca, hò vè (tinh thần), và là nòng cốt trong các cuộc kháng chiến giữ nước (cách mạng).
+            </div>
+
+            <div class="text-center my-3">
+                <img src="assets/images/NDVN.jpg" class="lesson-img" alt="Sức mạnh quần chúng nhân dân">
+                <p class="small text-white-50 fst-italic mt-1"></p>
+            </div>
+
+
         `
     },
     {
         id: "bai4",
         title: "Vai trò của Lãnh tụ",
         content: `
-            <h2 class="content-title">Lãnh tụ trong Lịch sử</h2>
+            <h2 class="content-title">4. Vai trò của Lãnh tụ</h2>
 
-            <div class="content-section-title">Khái niệm Lãnh tụ</div>
+            <div class="content-section-title">Khái niệm</div>
+            <ul>
+                <li><strong>Vĩ nhân:</strong> Những cá nhân kiệt xuất trong các lĩnh vực chính trị, kinh tế, khoa học, nghệ thuật...</li>
+                <li><strong>Lãnh tụ:</strong> Những cá nhân kiệt xuất do phong trào cách mạng của QCND tạo nên, gắn bó mật thiết với QCND.</li>
+            </ul>
             <div class="content-highlight-box">
-                <p>Lãnh tụ là cá nhân kiệt xuất trong lịch sử, đại diện cho lợi ích căn bản của giai cấp, dân tộc.</p>
+                <p><strong>Phẩm chất của Lãnh tụ:</strong></p>
+                <ul>
+                    <li>Có tri thức khoa học uyên bác, nắm bắt xu thế thời đại.</li>
+                    <li>Có năng lực tập hợp, thống nhất ý chí và hành động của QCND.</li>
+                    <li>Gắn bó mật thiết, hy sinh vì lợi ích của QCND.</li>
+                </ul>
             </div>
-            <p><strong>Năng lực cần có:</strong> Nhận thức đúng quy luật lịch sử, đề ra đường lối đúng đắn, và có khả năng tổ chức, dẫn dắt quần chúng.</p>
 
             <div class="text-center my-3">
                 <img src="assets/images/R.jpg" class="lesson-img" alt="Lãnh tụ Lênin">
-                <p class="small text-white-50 fst-italic mt-1">V.I. Lênin - Lãnh tụ thiên tài của giai cấp vô sản, người dẫn đường cho Cách mạng Tháng Mười.</p>
+                <p class="small text-white-50 fst-italic mt-1">V.I. Lênin - Lãnh tụ thiên tài của giai cấp vô sản.</p>
             </div>
 
             <div class="content-section-title">Vai trò của Lãnh tụ</div>
             <ul>
-                <li>Định hướng mục tiêu, đường lối cách mạng.</li>
-                <li>Tập hợp, tổ chức, giáo dục quần chúng.</li>
-                <li>Kết nối sức mạnh của quần chúng thành hành động thống nhất.</li>
+                <li><strong>Thúc đẩy:</strong> Nếu hành động theo quy luật khách quan, họ thúc đẩy sự phát triển của phong trào và xã hội.</li>
+                <li><strong>Kìm hãm:</strong> Nếu hành động trái quy luật, họ có thể kìm hãm hoặc làm lịch sử phát triển quanh co.</li>
+                <li><strong>Tổ chức:</strong> Sáng lập và điều hành các tổ chức quần chúng.</li>
             </ul>
 
             <div class="text-center my-3">
                 <img src="assets/images/LanhTu_MacLenin.jpg" class="lesson-img" alt="Lãnh tụ Lênin">
                 <p class="small text-white-50 fst-italic mt-1"></p>
             </div>
-
-            <p><strong>Ví dụ:</strong> Chủ tịch Hồ Chí Minh đã tìm ra con đường cứu nước đúng đắn và lãnh đạo nhân dân Việt Nam giành độc lập.</p>
             
-            <div class="alert alert-warning mt-3">
-                <i class="bi bi-exclamation-triangle-fill"></i> <strong>Lưu ý:</strong> Lãnh tụ không thể thay thế quần chúng. Vai trò lãnh tụ chỉ phát huy khi gắn bó với nhân dân.
+            <div class="p-3 bg-dark border border-secondary rounded mt-2">
+                <strong>Ví dụ:</strong> Chủ tịch Hồ Chí Minh đã nắm bắt đúng xu thế thời đại (giải phóng dân tộc gắn liền với CNXH), tập hợp toàn dân tộc và đưa cách mạng Việt Nam đến thắng lợi.
             </div>
 
             <div class="text-center my-3">
@@ -402,6 +439,9 @@ const textbookData = [
                 <p class="small text-white-50 fst-italic mt-1"></p>
             </div>
 
+            <div class="alert alert-warning mt-3">
+                <i class="bi bi-exclamation-triangle-fill"></i> <strong>Lưu ý:</strong> Lãnh tụ không thể thay thế quần chúng. Vai trò lãnh tụ chỉ phát huy khi gắn bó với nhân dân.
+            </div>
         `
     },
     {
