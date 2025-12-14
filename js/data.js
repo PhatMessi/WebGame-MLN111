@@ -1,11 +1,10 @@
 // --- FILE: js/data.js ---
-
 // 1. CÂU HỎI KHỞI ĐẦU (PHASE 1)
 const initialQuestions = [
     {
         id: 1,
         title: "Tình huống 1: Bản chất con người",
-        content: "Đại dịch bùng phát, lương thực khan hiếm. Hàng xóm già yếu đang thiếu thuốc. Bạn sẽ làm gì?",
+        content: "Bạn là sinh viên. Một đợt dịch bệnh bùng phát trong khu phố. Lệnh phong tỏa được ban bố, lương thực khan hiếm. Bản năng sinh tồn trỗi dậy, nhưng hàng xóm của bạn (người già yếu) đang thiếu thuốc. Bạn sẽ làm gì?",
         source: "Lý luận: Con người là thực thể thống nhất giữa mặt sinh vật và mặt xã hội (Trang 465).",
         options: [
             { 
@@ -28,7 +27,7 @@ const initialQuestions = [
     {
         id: 2,
         title: "Tình huống 2: Quan hệ Cá nhân và Tập thể",
-        content: "Bạn giỏi nhất nhóm, nhưng các thành viên khác làm chậm tiến độ. Bạn chọn:",
+        content: "Trong một dự án nhóm tại trường/công ty, bạn là người giỏi nhất. Tuy nhiên, các thành viên khác làm việc rất chậm chạp và sai sót, có nguy cơ kéo tụt điểm số/thành tích của bạn xuống. Bạn chọn:",
         source: "Lý luận: Tránh khuynh hướng cực đoan trong quan hệ cá nhân - xã hội (Trang 469).",
         options: [
             { 
@@ -51,7 +50,7 @@ const initialQuestions = [
     {
         id: 3,
         title: "Tình huống 3: Nguồn gốc Lịch sử",
-        content: "Theo bạn, yếu tố nào quyết định sự phát triển của đất nước?",
+        content: "Bạn tham gia một cuộc tranh luận về việc tại sao đất nước phát triển được như hôm nay. Bạn bè đưa ra các ý kiến khác nhau, bạn ủng hộ quan điểm nào?",
         source: "Lý luận: Vai trò của Quần chúng nhân dân (Trang 473).",
         options: [
             { 
@@ -74,7 +73,7 @@ const initialQuestions = [
     {
         id: 4,
         title: "Tình huống 4: Tính Giai cấp",
-        content: "Thấy ông chủ giàu có chèn ép người lao động nghèo, bạn sẽ:",
+        content: "Khu phố bạn sống có một ông chủ giàu có chèn ép người lao động nghèo (trả lương thấp, bắt làm việc quá sức). Bạn là người có tri thức, bạn sẽ làm gì?",
         source: "Lý luận: Tính giai cấp và tính nhân loại (Trang 467).",
         options: [
             { 
@@ -97,7 +96,7 @@ const initialQuestions = [
     {
         id: 5,
         title: "Tình huống 5: Xuất hiện Lãnh tụ",
-        content: "Tổ chức đang hoảng loạn, mất phương hướng. Bạn sẽ:",
+        content: "Nhóm/Cộng đồng của bạn đang rơi vào bế tắc (lạc đường, dự án thất bại, hoặc bị chèn ép). Mọi người bắt đầu than vãn, hỗn loạn và mất phương hướng. Không ai chịu đứng ra nhận trách nhiệm. Bạn sẽ:",
         source: "Lý luận: Lãnh tụ xuất hiện từ phong trào quần chúng (Trang 475).",
         options: [
             { 
@@ -477,10 +476,29 @@ const textbookData = [
             <h2 class="content-title">Hiểu câu nói: "Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển tự do của tất cả mọi người."</h2>
 
             <div class="content-section-title">Giải thích nội dung câu nói</div>
-
+            <p>Câu nói phản ánh mối quan hệ biện chứng, thống nhất giữa <strong>Cá nhân</strong> và <strong>Xã hội</strong>:</p>
+            <ul>
+                <li><strong>"Sự phát triển tự do của mỗi cá nhân":</strong> Là việc mỗi con người cụ thể được giải phóng khỏi áp bức, bóc lột, nghèo nàn; được tạo điều kiện để phát triển toàn diện về năng lực, trí tuệ và phẩm chất.</li>
+                <li><strong>"Điều kiện cho sự phát triển tự do của tất cả":</strong> Xã hội là tập hợp của các cá nhân. Một xã hội không thể tự do nếu mỗi thành viên trong đó còn bị kìm hãm. Sự phát triển lành mạnh của từng tế bào (cá nhân) là tiền đề để cơ thể (xã hội) khỏe mạnh.</li>
+            </ul>
             <div class="content-section-title">Ý nghĩa Triết học</div>
-
+            <ul>
+                <li><strong>Bác bỏ quan điểm sai lầm:</strong> Phủ nhận quan điểm cho rằng Chủ nghĩa xã hội coi nhẹ cá nhân, hoặc "san bằng" cá tính. Ngược lại, CNXH tôn trọng và phát huy cá tính sáng tạo.</li>
+                <li><strong>Khẳng định bản chất xã hội:</strong> Tự do của cá nhân không phải là tách rời cộng đồng (chủ nghĩa cá nhân cực đoan), mà là tự do trong sự kết nối, cống hiến và thụ hưởng cùng cộng đồng.</li>
+            </ul>
+                        <div class="text-center my-3">
+                <img src="assets/images/YNG1.jpg" class="lesson-img" alt="Lãnh tụ Lênin">
+                <p class="small text-white-50 fst-italic mt-1"></p>
+            </div>
             <div class="content-section-title">Ý nghĩa thực tiễn hiện nay</div>
+            <div class="p-3 bg-dark border border-secondary rounded mt-2">
+                <strong>Vận dụng tại Việt Nam:</strong>
+                <ul class="mb-0 mt-2">
+                    <li><strong>Về chính sách:</strong> Nhà nước tạo cơ chế để "Dân giàu" (cá nhân phát triển) thì "Nước mới mạnh" (xã hội phát triển).</li>
+                    <li><strong>Về giáo dục:</strong> Chuyển từ truyền thụ kiến thức một chiều sang phát triển năng lực, phẩm chất người học (như mô hình Đại học FPT khuyến khích tư duy tự chủ).</li>
+                    <li><strong>Về ứng xử:</strong> Mỗi sinh viên cần nỗ lực học tập (phát triển cá nhân) để sau này đóng góp giá trị cho đất nước (phát triển xã hội), tránh lối sống vị kỷ hoặc ỷ lại vào tập thể.</li>
+                </ul>
+            </div>
 
         `
     }
