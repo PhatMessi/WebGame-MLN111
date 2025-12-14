@@ -288,7 +288,7 @@ const textbookData = [
                 <img src="assets/images/XaHoi.jpg" class="lesson-img" alt="Hình ảnh các nhà kinh điển Mác-Lênin">
                 <p class="small text-white-50 fst-italic mt-1"></p>
             </div>
-            
+
             <div class="p-3 bg-dark border border-secondary rounded mt-2">
                 <strong>Ví dụ:</strong> Trường Đại học (xã hội thu nhỏ) được tạo thành từ hàng ngàn sinh viên, giảng viên và cán bộ nhân viên. Không có những con người này thì không có trường Đại học.
             </div>
@@ -395,7 +395,7 @@ const textbookData = [
     },
     {
         id: "bai4",
-        title: "Vai trò của Lãnh tụ",
+        title: "Vai trò của Lãnh tụ và Mối quan hệ biện chứng QCND & Lãnh tụ",
         content: `
             <h2 class="content-title">4. Vai trò của Lãnh tụ</h2>
 
@@ -441,6 +441,32 @@ const textbookData = [
 
             <div class="alert alert-warning mt-3">
                 <i class="bi bi-exclamation-triangle-fill"></i> <strong>Lưu ý:</strong> Lãnh tụ không thể thay thế quần chúng. Vai trò lãnh tụ chỉ phát huy khi gắn bó với nhân dân.
+            </div>
+
+            <h2 class="content-title">Mối quan hệ thống nhất biện chứng</h2>
+
+            <div class="content-section-title">Nội dung mối quan hệ:</div>
+            <div class="text-center my-3">
+                <img src="assets/images/bc.png" class="lesson-img" alt="Sự gắn kết cá nhân và tập thể">
+            </div>
+            <ol>
+                <li>Mục đích và lợi ích của QCND và lãnh tụ là thống nhất.</li>
+                <li>QCND và phong trào của họ tạo nên các lãnh tụ; tạo điều kiện, tiền đề khách quan để lãnh tụ xuất hiện và hoàn thành nhiệm vụ.</li>
+                <li>Lãnh tụ là sản phẩm của thời đại, của cộng đồng. Sự xuất hiện và khả năng giải quyết nhiệm vụ của họ sẽ thúc đẩy (nhanh/chậm) sự vận động của phong trào QCND.</li>
+            </ol>
+
+            <div class="text-center my-3">
+                <img src="assets/images/QHBC2.jpg" class="lesson-img" alt="Sự thống nhất ý chí">
+                <p class="small text-white-50 fst-italic mt-1">Lãnh tụ và Quần chúng hòa làm một trong niềm vui chiến thắng.</p>
+            </div>
+
+            <div class="p-3 bg-dark border border-secondary rounded mt-2">
+                <strong>Ví dụ tổng kết:</strong> Chủ tịch Hồ Chí Minh (Lãnh tụ) ra đi tìm đường cứu nước là đáp ứng yêu cầu của lịch sử dân tộc. Người đã tập hợp, giáo dục QCND, thành lập Đảng. Ngược lại, chính sức mạnh đoàn kết của QCND Việt Nam đã hiện thực hóa đường lối của Người, làm nên thắng lợi Cách mạng.
+            </div>
+
+            <div class="text-center my-3">
+                <img src="assets/images/QCNDVN.jpg" class="lesson-img" alt="Lãnh tụ Lênin">
+                <p class="small text-white-50 fst-italic mt-1"></p>
             </div>
         `
     },
