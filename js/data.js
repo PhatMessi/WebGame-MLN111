@@ -477,37 +477,10 @@ const textbookData = [
             <h2 class="content-title">Hiểu câu nói: "Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển tự do của tất cả mọi người."</h2>
 
             <div class="content-section-title">Giải thích nội dung câu nói</div>
-            <p>Quần chúng nhân dân là những giai cấp, tầng lớp xã hội đông đảo; là lực lượng trực tiếp hoặc gián tiếp sản xuất của cải vật chất, tham gia hoạt động chính trị - xã hội và sáng tạo giá trị tinh thần.</p>
-            <p class="text-info"><i class="bi bi-info-circle"></i> Họ không phải là "đám đông vô tổ chức", mà là chủ thể lịch sử có ý thức và lợi ích giai cấp.</p>
-
-            <div class="text-center my-3">
-                <img src="assets/images/QuanChungNhanDan.jpg" class="lesson-img" alt="Sức mạnh quần chúng nhân dân">
-                <p class="small text-white-50 fst-italic mt-1">Quần chúng nhân dân là lực lượng đông đảo, quyết định thắng lợi của các cuộc cách mạng.</p>
-            </div>
 
             <div class="content-section-title">Ý nghĩa Triết học</div>
-            <ol>
-                <li><strong>Sáng tạo của cải vật chất:</strong> Là lực lượng lao động chủ yếu, quyết định sự tồn tại và phát triển của xã hội. (Ví dụ: Nông dân, công nhân ).</li>
-                <li><strong>Quyết định các cuộc cách mạng:</strong> Là lực lượng quyết định thành bại. Không có sự tham gia của quần chúng, cách mạng không thể thắng lợi. (Ví dụ: Cách mạng Tháng Tám 1945 thành công nhờ sự vùng dậy của toàn dân ).</li>
-                <li><strong>Sáng tạo giá trị tinh thần:</strong> Văn hóa, ngôn ngữ, phong tục, nghệ thuật dân gian.... (Ví dụ: Ca dao, tục ngữ phản ánh trí tuệ và đời sống lao động).</li>
-            </ol>
-
-            <div class="text-center my-3">
-                <img src="assets/images/QuyetDinhLichSu.jpg" class="lesson-img" alt="Sức mạnh quần chúng nhân dân">
-                <p class="small text-white-50 fst-italic mt-1"></p>
-            </div>
 
             <div class="content-section-title">Ý nghĩa thực tiễn hiện nay</div>
-            <ol>
-                <li><strong>Sáng tạo của cải vật chất:</strong> Là lực lượng lao động chủ yếu, quyết định sự tồn tại và phát triển của xã hội. (Ví dụ: Nông dân, công nhân ).</li>
-                <li><strong>Quyết định các cuộc cách mạng:</strong> Là lực lượng quyết định thành bại. Không có sự tham gia của quần chúng, cách mạng không thể thắng lợi. (Ví dụ: Cách mạng Tháng Tám 1945 thành công nhờ sự vùng dậy của toàn dân ).</li>
-                <li><strong>Sáng tạo giá trị tinh thần:</strong> Văn hóa, ngôn ngữ, phong tục, nghệ thuật dân gian.... (Ví dụ: Ca dao, tục ngữ phản ánh trí tuệ và đời sống lao động).</li>
-            </ol>
-
-            <div class="text-center my-3">
-                <img src="assets/images/QuyetDinhLichSu.jpg" class="lesson-img" alt="Sức mạnh quần chúng nhân dân">
-                <p class="small text-white-50 fst-italic mt-1"></p>
-            </div>
 
         `
     }
