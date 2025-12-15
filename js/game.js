@@ -121,6 +121,11 @@ function handleAnswer(optionIndex) {
     playerStats.social += (choice.stats.social || 0);
     playerStats.impact += (choice.stats.impact || 0);
 
+    // Chặn không cho chỉ số bị âm. Nếu nhỏ hơn 0 thì gán về 0.
+    if (playerStats.knowledge < 0) playerStats.knowledge = 0;
+    if (playerStats.social < 0) playerStats.social = 0;
+    if (playerStats.impact < 0) playerStats.impact = 0;
+
     // 2. Disable các nút để không chọn lại
     const buttons = document.querySelectorAll('.option-btn');
     buttons.forEach(btn => {
@@ -190,23 +195,27 @@ function nextQuestion() {
 function showPhase1ResultSelection() {
     const container = document.getElementById('game-container');
     
-    // 1. Tính điểm phù hợp cho TẤT CẢ các nghề
-    // Công thức: Difference = |Player_K - Job_K| + |Player_S - Job_S| + |Player_I - Job_I|
-    // Difference càng NHỎ thì càng PHÙ HỢP.
+    // 1. Tính điểm phù hợp (Đã sửa công thức để không bị 0%)
     const scoredCareers = careers.map(career => {
+        // Tính độ lệch giữa điểm người chơi và yêu cầu của nghề
         const diffK = Math.abs(playerStats.knowledge - career.statsReq.knowledge);
         const diffS = Math.abs(playerStats.social - career.statsReq.social);
         const diffI = Math.abs(playerStats.impact - career.statsReq.impact);
         const totalDiff = diffK + diffS + diffI;
         
-        // Tính % phù hợp (giả định sai số tối đa khoảng 20 điểm)
-        const matchPercent = Math.max(0, 100 - (totalDiff * 5)); 
+        // --- SỬA CÔNG THỨC TẠI ĐÂY ---
+        // Công thức cũ: 100 - (totalDiff * 5) -> Quá gắt, dễ bị âm.
+        // Công thức mới: 100 - (totalDiff * 2). Giảm hệ số phạt xuống 2.
+        // Math.max(10, ...) để đảm bảo thấp nhất cũng là 10% (động viên người chơi).
+        let matchPercent = 100 - (totalDiff * 1.5);
+        matchPercent = Math.max(10, matchPercent); // Không bao giờ thấp hơn 10%
+        matchPercent = Math.min(100, matchPercent); // Không bao giờ quá 100%
 
-        return { ...career, diff: totalDiff, match: matchPercent };
+        return { ...career, diff: totalDiff, match: Math.round(matchPercent) };
     });
 
     // 2. Sắp xếp theo độ phù hợp (diff tăng dần) và lấy Top 4
-    scoredCareers.sort((a, b) => a.diff - b.diff);
+    scoredCareers.sort((a, b) => b.match - a.match); // Sắp xếp theo % từ cao xuống thấp
     const top4Careers = scoredCareers.slice(0, 4);
 
     // 3. Render giao diện chọn nghề
@@ -215,7 +224,9 @@ function showPhase1ResultSelection() {
             <div class="glass-card p-4 h-100 hover-scale text-start position-relative border-secondary" style="transition:0.3s">
                 <div class="d-flex justify-content-between mb-2">
                     <h4 class="text-warning mb-0 font-heading">${c.name}</h4>
-                    <span class="badge bg-success bg-opacity-25 text-success border border-success"></span>
+                    <span class="badge ${c.match >= 70 ? 'bg-success' : 'bg-secondary'} bg-opacity-25 border ${c.match >= 70 ? 'border-success text-success' : 'border-secondary text-white-50'}">
+                        ${c.match}% Phù hợp
+                    </span>
                 </div>
                 <p class="text-white-50 small mb-3" style="min-height: 40px">${c.description}</p>
                 
@@ -241,9 +252,14 @@ function showPhase1ResultSelection() {
                     "Dựa trên năng lực (Cái Riêng) và nhu cầu thời đại (Cái Chung), đây là 4 vị trí phù hợp nhất để bạn đóng góp cho xã hội. Hãy chọn một."
                 </p>
                 <div class="mt-3">
-                    <small class="text-white-50 border border-secondary px-3 py-1 rounded-pill">
-                        Chỉ số hiện tại: 🧠 ${playerStats.knowledge} | 🤝 ${playerStats.social} | ⚡ ${playerStats.impact}
-                    </small>
+                    <small class="text-white-50 border border-secondary px-4 py-2 rounded-pill d-inline-flex align-items-center gap-3">
+    <span class="fw-bold text-uppercase me-2" style="font-size: 0.8rem; letter-spacing: 1px;">Hiện tại:</span>
+    <span class="d-flex align-items-center gap-1"><i class="bi bi-cpu text-info fs-6"></i> ${playerStats.knowledge}</span>
+    <div class="vr bg-secondary opacity-50"></div>
+    <span class="d-flex align-items-center gap-1"><i class="bi bi-people text-success fs-6"></i> ${playerStats.social}</span>
+    <div class="vr bg-secondary opacity-50"></div>
+    <span class="d-flex align-items-center gap-1"><i class="bi bi-lightning-charge text-warning fs-6"></i> ${playerStats.impact}</span>
+</small>
                 </div>
             </div>
 
@@ -302,11 +318,23 @@ function showFinalEnding() {
             <div class="p-4 bg-black bg-opacity-25 rounded-3 mb-4 mx-auto" style="max-width: 700px;">
                 <p class="fs-5 text-light fst-italic mb-0 line-height-lg">"${res.content}"</p>
             </div>
-            <div class="row justify-content-center mb-5">
-                <div class="col-auto"><span class="badge bg-dark border border-secondary p-2">🧠 ${knowledge}</span></div>
-                <div class="col-auto"><span class="badge bg-dark border border-secondary p-2">🤝 ${social}</span></div>
-                <div class="col-auto"><span class="badge bg-dark border border-secondary p-2">⚡ ${impact}</span></div>
-            </div>
+            <div class="row justify-content-center mb-5 gap-2">
+    <div class="col-auto">
+        <span class="badge bg-dark border border-info border-opacity-25 p-3 d-flex align-items-center gap-2">
+            <i class="bi bi-cpu text-info fs-5"></i> <span class="fs-6">${knowledge}</span>
+        </span>
+    </div>
+    <div class="col-auto">
+        <span class="badge bg-dark border border-success border-opacity-25 p-3 d-flex align-items-center gap-2">
+            <i class="bi bi-people text-success fs-5"></i> <span class="fs-6">${social}</span>
+        </span>
+    </div>
+    <div class="col-auto">
+        <span class="badge bg-dark border border-warning border-opacity-25 p-3 d-flex align-items-center gap-2">
+            <i class="bi bi-lightning-charge text-warning fs-5"></i> <span class="fs-6">${impact}</span>
+        </span>
+    </div>
+</div>
             <div class="d-flex justify-content-center gap-3">
                 <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" onclick="backToIntro()">Menu</button>
                 <button class="${btnClass} btn-lg px-5 rounded-pill" onclick="startGame()"><i class="bi bi-arrow-repeat me-2"></i> CHƠI LẠI</button>
