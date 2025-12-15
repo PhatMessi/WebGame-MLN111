@@ -5,7 +5,6 @@ const initialQuestions = [
         id: 1,
         title: "Tình huống 1: Bản chất con người",
         content: "Bạn là sinh viên. Một đợt dịch bệnh bùng phát trong khu phố. Lệnh phong tỏa được ban bố, lương thực khan hiếm. Bản năng sinh tồn trỗi dậy, nhưng hàng xóm của bạn (người già yếu) đang thiếu thuốc. Bạn sẽ làm gì?",
-        source: "Lý luận: Con người là thực thể thống nhất giữa mặt sinh vật và mặt xã hội (Trang 465).",
         options: [
             { 
                 text: "Giữ cho mình. 'Quy luật sinh tồn là trên hết'.", 
@@ -28,7 +27,6 @@ const initialQuestions = [
         id: 2,
         title: "Tình huống 2: Quan hệ Cá nhân và Tập thể",
         content: "Trong một dự án nhóm tại trường/công ty, bạn là người giỏi nhất. Tuy nhiên, các thành viên khác làm việc rất chậm chạp và sai sót, có nguy cơ kéo tụt điểm số/thành tích của bạn xuống. Bạn chọn:",
-        source: "Lý luận: Tránh khuynh hướng cực đoan trong quan hệ cá nhân - xã hội (Trang 469).",
         options: [
             { 
                 text: "Tách ra làm riêng cho nhanh.", 
@@ -51,7 +49,6 @@ const initialQuestions = [
         id: 3,
         title: "Tình huống 3: Nguồn gốc Lịch sử",
         content: "Bạn tham gia một cuộc tranh luận về việc tại sao đất nước phát triển được như hôm nay. Bạn bè đưa ra các ý kiến khác nhau, bạn ủng hộ quan điểm nào?",
-        source: "Lý luận: Vai trò của Quần chúng nhân dân (Trang 473).",
         options: [
             { 
                 text: "Do các vĩ nhân, lãnh đạo kiệt xuất dẫn dắt.", 
@@ -74,7 +71,6 @@ const initialQuestions = [
         id: 4,
         title: "Tình huống 4: Tính Giai cấp",
         content: "Khu phố bạn sống có một ông chủ giàu có chèn ép người lao động nghèo (trả lương thấp, bắt làm việc quá sức). Bạn là người có tri thức, bạn sẽ làm gì?",
-        source: "Lý luận: Tính giai cấp và tính nhân loại (Trang 467).",
         options: [
             { 
                 text: "Im lặng, đó là quy luật thị trường.", 
@@ -97,7 +93,6 @@ const initialQuestions = [
         id: 5,
         title: "Tình huống 5: Xuất hiện Lãnh tụ",
         content: "Nhóm/Cộng đồng của bạn đang rơi vào bế tắc (lạc đường, dự án thất bại, hoặc bị chèn ép). Mọi người bắt đầu than vãn, hỗn loạn và mất phương hướng. Không ai chịu đứng ra nhận trách nhiệm. Bạn sẽ:",
-        source: "Lý luận: Lãnh tụ xuất hiện từ phong trào quần chúng (Trang 475).",
         options: [
             { 
                 text: "Chờ xem có ai tài giỏi đứng ra không.", 

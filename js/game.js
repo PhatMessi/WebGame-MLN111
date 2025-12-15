@@ -215,7 +215,7 @@ function showPhase1ResultSelection() {
             <div class="glass-card p-4 h-100 hover-scale text-start position-relative border-secondary" style="transition:0.3s">
                 <div class="d-flex justify-content-between mb-2">
                     <h4 class="text-warning mb-0 font-heading">${c.name}</h4>
-                    <span class="badge bg-success bg-opacity-25 text-success border border-success">${Math.round(c.match)}% Phù hợp</span>
+                    <span class="badge bg-success bg-opacity-25 text-success border border-success"></span>
                 </div>
                 <p class="text-white-50 small mb-3" style="min-height: 40px">${c.description}</p>
                 
