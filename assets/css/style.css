@@ -714,3 +714,47 @@ body {
     margin: 15px 0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
+/* --- BỔ SUNG CSS CHO PHẦN AI USAGE MỚI --- */
+
+/* 1. Tạo điểm nhấn cho các tiêu đề trong thẻ */
+.glass-card h4 {
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* 2. Hiệu ứng nền cho cột Sinh viên để nổi bật vai trò con người (Màu cam nhạt) */
+.human-side-bg {
+    background: linear-gradient(135deg, rgba(252, 163, 17, 0.05) 0%, rgba(252, 163, 17, 0.1) 100%);
+}
+
+/* 3. Icon tròn nhỏ dùng trong bảng so sánh */
+.icon-circle-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* 4. Tinh chỉnh list */
+.glass-card ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.ai-commitment-list {
+    list-style-position: inside;   /* dấu chấm thẳng hàng chữ */
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.ai-commitment-list li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
