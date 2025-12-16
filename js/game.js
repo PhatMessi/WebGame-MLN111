@@ -309,12 +309,20 @@ function showFinalEnding() {
     const btnClass = resultKey === 'true_ending' ? 'btn-success' : 'btn-outline-light';
     const textClass = `text-${res.color}`;
 
+    const imageHTML = res.image ? 
+        `<div class="mb-4 animate-pop">
+            <img src="${res.image}" class="img-fluid rounded shadow-lg border border-secondary" 
+                 style="max-height: 280px; object-fit: cover; width: auto;">
+         </div>` 
+        : '';
+
     const container = document.getElementById('game-container');
     container.innerHTML = `
         <div class="glass-card text-center p-5 animate-pop shadow-lg" style="border: 1px solid rgba(255,255,255,0.1);">
             <div class="mb-3 display-1 animate-bounce">${res.icon}</div>
             <h5 class="text-uppercase text-white-50 ls-2">${res.subtitle}</h5>
             <h1 class="display-4 fw-bold ${textClass} mb-4 font-heading">${res.title}</h1>
+            ${imageHTML}
             <div class="p-4 bg-black bg-opacity-25 rounded-3 mb-4 mx-auto" style="max-width: 700px;">
                 <p class="fs-5 text-light fst-italic mb-0 line-height-lg">"${res.content}"</p>
             </div>

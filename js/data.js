@@ -8,17 +8,17 @@ const initialQuestions = [
         options: [
             { 
                 text: "Giữ cho mình. 'Quy luật sinh tồn là trên hết'.", 
-                stats: { knowledge: 3, social: -6, impact: 0 },
+                stats: { knowledge: 1, social: -2, impact: 0 },
                 explanation: "Bạn đang tuyệt đối hóa phương diện sinh học (bản năng sinh tồn). Tuy nhiên, theo triết học Mác - Lênin: 'Con người là tổng hòa các quan hệ xã hội'. Tách rời cá nhân khỏi xã hội là một sai lầm về mặt phương pháp luận (Trang 466)."
             },
             { 
                 text: "Chia sẻ và kêu gọi xóm giềng giúp đỡ nhau.", 
-                stats: { knowledge: 0, social: 6, impact: 3 },
+                stats: { knowledge: 0, social: 2, impact: 2 },
                 explanation: "Rất tốt. Bạn đã thể hiện đúng bản chất xã hội của con người. Sức mạnh của cộng đồng sẽ giúp từng cá nhân tồn tại tốt hơn. Đây là biểu hiện của tính nhân loại cao cả (Trang 467)."
             },
             { 
                 text: "Nghiên cứu phương án phân phối khoa học để đề xuất.", 
-                stats: { knowledge: 9, social: 0, impact: 3 },
+                stats: { knowledge: 3, social: 0, impact: 1 },
                 explanation: "Bạn sử dụng tư duy lý tính (đặc trưng của con người) để cải biến hoàn cảnh. Con người không chỉ thích nghi thụ động mà còn chủ động cải tạo điều kiện sinh tồn."
             }
         ]
@@ -30,17 +30,17 @@ const initialQuestions = [
         options: [
             { 
                 text: "Tách ra làm riêng cho nhanh.", 
-                stats: { knowledge: 6, social: -6, impact: 0 },
+                stats: { knowledge: 2, social: -2, impact: 0 },
                 explanation: "Bạn đang rơi vào chủ nghĩa cá nhân cực đoan. Giáo trình (Trang 469) chỉ rõ: 'Nếu đặt cá nhân lên trên xã hội... thì đều sai lầm và dẫn đến hệ lụy khó lường'."
             },
             { 
                 text: "Làm giúp phần của họ để cả nhóm cùng qua môn.", 
-                stats: { knowledge: -3, social: 9, impact: 0 },
+                stats: { knowledge: -1, social: 3, impact: 0 },
                 explanation: "Bạn đề cao tập thể nhưng lại triệt tiêu tính năng động của các cá nhân khác. Xã hội phát triển cần sự nỗ lực của từng cá thể."
             },
             { 
                 text: "Tổ chức lại quy trình, phân công người giỏi kèm người yếu.", 
-                stats: { knowledge: 3, social: 6, impact: 9 },
+                stats: { knowledge: 1, social: 0, impact: 3 },
                 explanation: "Chính xác. Đây là sự kết hợp hài hòa: 'Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển của tất cả'. Bạn có tố chất lãnh đạo."
             }
         ]
@@ -52,17 +52,17 @@ const initialQuestions = [
         options: [
             { 
                 text: "Do các vĩ nhân, lãnh đạo kiệt xuất dẫn dắt.", 
-                stats: { knowledge: 3, social: -3, impact: 6 },
+                stats: { knowledge: 1, social: -1, impact: 1 },
                 explanation: "Đây là quan điểm Duy tâm về lịch sử (Trang 470). Lãnh tụ có vai trò quan trọng, nhưng 'cách mạng là sự nghiệp của quần chúng'. Tuyệt đối hóa lãnh tụ dẫn đến tệ sùng bái cá nhân."
             },
             { 
                 text: "Do người lao động sản xuất của cải vật chất hàng ngày.", 
-                stats: { knowledge: 3, social: 9, impact: 0 },
+                stats: { knowledge: 1, social: 2, impact: 0 },
                 explanation: "Chính xác. 'Quần chúng nhân dân là lực lượng sản xuất cơ bản, là người sáng tạo chân chính ra lịch sử' (Trang 473)."
             },
             { 
                 text: "Do sự phát triển tất yếu của khoa học kỹ thuật.", 
-                stats: { knowledge: 9, social: 0, impact: 3 },
+                stats: { knowledge: 3, social: 0, impact: 0 },
                 explanation: "Khoa học kỹ thuật là động lực quan trọng, nhưng chủ thể nắm giữ và sử dụng nó vẫn là con người (quần chúng nhân dân)."
             }
         ]
@@ -74,17 +74,17 @@ const initialQuestions = [
         options: [
             { 
                 text: "Im lặng, đó là quy luật thị trường.", 
-                stats: { knowledge: 0, social: -6, impact: -3 },
+                stats: { knowledge: 0, social: -1, impact: -1 },
                 explanation: "Bạn đang lờ đi 'tính giai cấp' trong các quan hệ xã hội. Trong xã hội có phân chia giai cấp, thái độ trung lập thực chất là ủng hộ giai cấp thống trị."
             },
             { 
                 text: "Viết bài phân tích lên mạng xã hội.", 
-                stats: { knowledge: 9, social: 3, impact: 3 },
+                stats: { knowledge: 2, social: 0, impact: 1 },
                 explanation: "Bạn sử dụng vũ khí lý luận để đấu tranh tư tưởng. Đây là một hình thức đấu tranh giai cấp quan trọng."
             },
             { 
                 text: "Tập hợp người lao động đấu tranh đòi quyền lợi.", 
-                stats: { knowledge: 0, social: 6, impact: 9 },
+                stats: { knowledge: 0, social: 2, impact: 3 },
                 explanation: "Hành động thực tiễn! Bạn đang tham gia trực tiếp vào phong trào quần chúng để giải quyết mâu thuẫn giai cấp."
             }
         ]
@@ -96,17 +96,17 @@ const initialQuestions = [
         options: [
             { 
                 text: "Chờ xem có ai tài giỏi đứng ra không.", 
-                stats: { knowledge: 0, social: -3, impact: -3 },
+                stats: { knowledge: 0, social: -1, impact: -1 },
                 explanation: "Thụ động. Lãnh tụ không tự nhiên sinh ra, mà xuất hiện từ nhu cầu của phong trào quần chúng (Trang 475)."
             },
             { 
                 text: "Tự tìm đường thoát thân cho mình trước.", 
-                stats: { knowledge: 6, social: -9, impact: 0 },
+                stats: { knowledge: 2, social: -3, impact: 0 },
                 explanation: "Ích kỷ. Bạn tách rời lợi ích cá nhân khỏi lợi ích tập thể."
             },
             { 
                 text: "Đứng lên trấn an, vạch kế hoạch và phân công nhiệm vụ.", 
-                stats: { knowledge: 6, social: 6, impact: 12 },
+                stats: { knowledge: 1, social: 2, impact: 3 },
                 explanation: "Tuyệt vời. 'Khi lịch sử đặt ra những nhiệm vụ cần giải quyết... thì từ trong quần chúng sẽ xuất hiện những lãnh tụ' (Trang 475). Bạn chính là nhân tố đó."
             }
         ]
@@ -115,14 +115,14 @@ const initialQuestions = [
 
 // 2. DANH SÁCH 8 NGHỀ NGHIỆP (ĐÃ CẬP NHẬT ĐỦ)
 const careers = [
-    { id: "leader", name: "Nhà Lãnh đạo", description: "Cần trí tuệ vạch chiến lược và ảnh hưởng để dẫn dắt phong trào.", statsReq: { knowledge: 15, social: 10, impact: 20 } },
-    { id: "tech", name: "Công nghệ / Kỹ thuật", description: "Đại diện Lực lượng sản xuất. Tư duy logic sắc bén.", statsReq: { knowledge: 20, social: 5, impact: 10 } },
-    { id: "worker", name: "Lao động Sản xuất", description: "Sức mạnh nằm ở tính tập thể và trực tiếp tạo ra của cải.", statsReq: { knowledge: 5, social: 20, impact: 10 } },
-    { id: "educator", name: "Nhà Giáo dục", description: "Tri thức uyên thâm và khả năng truyền đạt, kết nối con người.", statsReq: { knowledge: 18, social: 15, impact: 5 } },
-    { id: "healthcare", name: "Nhân viên Y tế", description: "Cần chuyên môn nhưng quan trọng nhất là tính nhân loại.", statsReq: { knowledge: 10, social: 18, impact: 10 } },
-    { id: "public_servant", name: "Cán bộ / Công chức", description: "Người điều phối xã hội, cần sự khéo léo và hòa hợp lợi ích.", statsReq: { knowledge: 10, social: 15, impact: 8 } },
-    { id: "artist", name: "Nghệ sĩ / Sáng tạo", description: "Thiên về cái 'Tôi' độc đáo và tư duy trừu tượng.", statsReq: { knowledge: 15, social: 5, impact: 10 } },
-    { id: "activist", name: "Nhà Hoạt động Xã hội", description: "Tập hợp quần chúng và hành động quyết liệt thay đổi thực tại.", statsReq: { knowledge: 8, social: 15, impact: 18 } }
+    { id: "leader", name: "Nhà Lãnh đạo", description: "Cần trí tuệ để vạch chiến lược và khả năng tác động mạnh để dẫn dắt phong trào quần chúng.", statsReq: { knowledge: 3, social: 2, impact: 3 } },
+    { id: "tech", name: "Công nghệ / Kỹ thuật", description: "Đại diện cho Lực lượng sản xuất tiên tiến. Thiên về tư duy logic và công cụ, đôi khi làm việc độc lập (Social thấp).", statsReq: { knowledge: 3, social: 1, impact: 2 } },
+    { id: "worker", name: "Lao động Sản xuất", description: "Sức mạnh nằm ở tính tập thể, đoàn kết giai cấp (Social cao) và trực tiếp tạo ra của cải vật chất (Impact).", statsReq: { knowledge: 1, social: 3, impact: 2 } },
+    { id: "educator", name: "Nhà Giáo dục", description: "Cần tri thức uyên thâm và khả năng truyền đạt, kết nối với người học. Tác động gián tiếp qua việc dạy người khác.", statsReq: { knowledge: 3, social: 3, impact: 1 } },
+    { id: "healthcare", name: "Nhân viên Y tế", description: "Cần chuyên môn (Trí tuệ) nhưng quan trọng nhất là 'tính nhân loại', lòng trắc ẩn và phục vụ con người.", statsReq: { knowledge: 2, social: 3, impact: 2 } },
+    { id: "public_servant", name: "Cán bộ / Công chức", description: "Người điều phối các mối quan hệ xã hội. Cần sự khéo léo và hòa hợp lợi ích (Social cao) hơn là sự đột phá cá nhân.", statsReq: { knowledge: 2, social: 3, impact: 1 } },
+    { id: "artist", name: "Nghệ sĩ / Sáng tạo", description: "Thiên về cái 'Tôi' cá nhân, sự độc đáo và tư duy trừu tượng (Trí tuệ/Cảm xúc). Thường làm việc độc lập.", statsReq: { knowledge: 3, social: 1, impact: 2 } },
+    { id: "activist", name: "Nhà Hoạt động Xã hội", description: "Không cần phải là thiên tài học thuật, nhưng cần khả năng tập hợp quần chúng cực tốt và hành động quyết liệt để thay đổi thực tại.", statsReq: { knowledge: 1, social: 3, impact: 3 } }
 ];
 
 // 3. KỊCH BẢN CHUYÊN MÔN (PHASE 2 - ĐỦ 8 NGHỀ)
@@ -130,80 +130,217 @@ const careerScenarios = {
     leader: [
         {
             title: "Quyết định sống còn",
-            content: "Để phát triển kinh tế, cần giải tỏa đất của dân. Dân phản đối. Bạn làm gì?",
+            content: "Dự án cải cách của bạn đang gặp khó khăn. Để thành công và đạt mục tiêu vĩ mô (tăng trưởng, phát triển), bạn cần cắt giảm phúc lợi của người dân trong ngắn hạn. Dân chúng đang phản đối kịch liệt. Bạn sẽ:",
             options: [
-                { text: "Cưỡng chế ngay! Mục tiêu là trên hết.", stats: { knowledge: 2, social: -5, impact: 2 }, message: "Độc đoán, xa rời quần chúng." },
-                { text: "Đối thoại, đền bù thỏa đáng và thuyết phục dân.", stats: { knowledge: 2, social: 3, impact: 3 }, message: "Thống nhất lợi ích lãnh tụ và quần chúng." }
+                { text: "Mục tiêu là trên hết! Dùng quyền lực trấn áp phản đối và ép buộc thi hành.", stats: { knowledge: 2, social: -5, impact: 1 }, message: "Bạn đang rơi vào 'tệ sùng bái cá nhân' và độc đoán. 'Tuyệt đối hóa vai trò lãnh tụ... sẽ kìm hãm tính năng động sáng tạo của quần chúng'." },
+                { text: "Hủy bỏ dự án, chiều theo ý muốn trước mắt của mọi người để giữ ghế.", stats: { knowledge: -3, social: 2, impact: -2 }, message: "Bạn đang theo đuôi quần chúng (dân túy). Lãnh tụ phải 'nhận thức đúng đắn quy luật khách quan' và 'định hướng phong trào', chứ không phải bị phong trào lôi đi. " },
+                { text: "Tổ chức đối thoại, giải thích rõ lợi ích lâu dài và điều chỉnh kế hoạch để giảm bớt thiệt hại cho dân, dù tiến độ chậm lại.", stats: { knowledge: 2, social: 3, impact: 3 }, message: "Tuyệt vời. Bạn đã tìm thấy sự thống nhất lợi ích giữa lãnh tụ và quần chúng. " }
+            ]
+        },
+        {
+            title: "Dùng người",
+            content: "Bạn cần bổ nhiệm một trợ lý quan trọng cho vị trí then chốt.",
+            options: [
+                { text: "Chọn người nhà/người thân cho tin tưởng.", stats: { knowledge: -2, social: -2, impact: 0 }, message: "Tư duy gia đình trị, lợi ích cục bộ, kìm hãm sự phát triển chung." },
+                { text: "Tổ chức thi tuyển công khai chọn người tài.", stats: { knowledge: 3, social: 2, impact: 0 }, message: "Công bằng xã hội, tạo động lực phát triển cho tập thể." }
+            ]
+        },
+        {
+            title: "Nhận lỗi",
+            content: "Bạn đưa ra một quyết định sai lầm gây thiệt hại cho tập thể.",
+            options: [
+                { text: "Đổ lỗi cho hoàn cảnh hoặc cấp dưới.", stats: { knowledge: 0, social: -4, impact: -2 }, message: "Thiếu bản lĩnh. Lãnh tụ xa rời quần chúng sẽ sớm bị đào thải." },
+                { text: "Công khai xin lỗi và chịu trách nhiệm khắc phục.", stats: { knowledge: 0, social: 4, impact: 2 }, message: "Lãnh tụ gắn bó mật thiết với nhân dân, sai thì sửa. Uy tín tăng lên." }
             ]
         }
     ],
     tech: [
         {
             title: "AI và Con người",
-            content: "AI của bạn giúp tăng lợi nhuận nhưng làm 1000 người thất nghiệp.",
+            content: "Bạn phát triển thành công một AI có khả năng thay thế hoàn toàn 1.000 công nhân trong nhà máy, giúp lợi nhuận tăng vọt nhưng khiến 1.000 người thất nghiệp.",
             options: [
-                { text: "Triển khai ngay, hiệu quả là số 1.", stats: { knowledge: 3, social: -4, impact: 1 }, message: "Phát triển LLSX nhưng phá vỡ QHSX." },
-                { text: "Triển khai kèm kế hoạch đào tạo lại nghề.", stats: { knowledge: 2, social: 3, impact: 2 }, message: "Phát triển vì con người." }
+                { text: "Triển khai ngay! Hiệu quả kinh tế là thước đo duy nhất của sự phát triển.", stats: { knowledge: 4, social: -4, impact: 0 }, message: "Bạn phát triển lực lượng sản xuất nhưng phá vỡ quan hệ xã hội. Sự phát triển này phục vụ lợi ích thiểu số chứ không phải 'tất cả mọi người'. " },
+                { text: "Giấu công nghệ này đi, không công bố để bảo vệ việc làm cho công nhân.", stats: { knowledge: -2, social: 1, impact: -2 }, message: "Bạn đang kìm hãm sự phát triển khách quan. Lực lượng sản xuất luôn vận động và phát triển không ngừng. Cản trở nó là phản tiến bộ." },
+                { text: "Triển khai công nghệ, nhưng đề xuất dùng lợi nhuận tăng thêm để đào tạo lại 1.000 công nhân đó cho các vị trí sáng tạo hơn.", stats: { knowledge: 3, social: 3, impact: 3 }, message: "Đây chính là 'Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển của tất cả'. Bạn dùng máy móc để giải phóng con người khỏi lao động chân tay, giúp họ phát triển lên tầm cao mới. " },
+
+            ]
+        },
+        {
+            title: "Mã nguồn Mở hay Độc quyền?",
+            content: "Bạn viết ra một thuật toán nén dữ liệu cực tốt. Bạn có thể bán độc quyền nó cho một tập đoàn lớn để giàu to, hoặc công khai mã nguồn (Open Source) để cộng đồng lập trình viên cùng phát triển.",
+            options: [
+                { text: "Bán độc quyền cho tập đoàn lớn.", stats: { knowledge: 2, social: -2, impact: 0 }, message: "Coi tri thức là tư hữu, kìm hãm sự lan tỏa tri thức xã hội." },
+                { text: "Công khai mã nguồn cho cộng đồng.", stats: { knowledge: 1, social: 3, impact: 2 }, message: "Tri thức cá nhân từ xã hội mà ra. Chia sẻ tạo điều kiện cho sự phát triển chung." }
+            ]
+        },
+        {
+            title: "Quyền riêng tư dữ liệu",
+            content: "Sếp yêu cầu cài 'cửa sau' để thu thập dữ liệu người dùng trái phép nhằm bán quảng cáo.",
+            options: [
+                { text: "Làm theo lệnh sếp để giữ việc.", stats: { knowledge: 1, social: -3, impact: -1 }, message: "Bạn trở thành công cụ mù quáng, tiếp tay xâm phạm lợi ích quần chúng." },
+                { text: "Từ chối và cảnh báo người dùng.", stats: { knowledge: 0, social: 3, impact: 2 }, message: "Bạn đặt lợi ích con người và đạo đức lên trên lợi nhuận." }
             ]
         }
     ],
     worker: [
         {
-            title: "Sáng kiến hay Tuân thủ?",
-            content: "Bạn tìm ra cách làm mới năng suất gấp đôi nhưng khác quy trình chuẩn.",
+            title: "Sáng kiến hay Quy trình?",
+            content: "Trong quá trình làm việc, bạn phát hiện ra một cách làm mới giúp tăng năng suất gấp đôi nhưng phải thay đổi quy trình cũ kỹ mà quản lý đang áp đặt.",
             options: [
-                { text: "Làm theo quy trình cho lành.", stats: { knowledge: -1, social: 0, impact: -2 }, message: "Thụ động." },
-                { text: "Đề xuất cải tiến với tập thể.", stats: { knowledge: 2, social: 2, impact: 3 }, message: "Quần chúng là nguồn gốc sáng tạo." }
+                { text: "Cứ làm theo chỉ đạo cho xong chuyện, lãnh lương rồi về.", stats: { knowledge: 1, social: 0, impact: -2 }, message: "Bạn đang tự hạ thấp vai trò của mình. Quần chúng nhân dân không chỉ là lực lượng cơ bắp mà còn là 'nguồn mạch cảm hứng vô tận, là nguồn sáng tạo'." },
+                { text: "Âm thầm làm theo cách mới để mình nhàn hơn.", stats: { knowledge: 1, social: -1, impact: 0 }, message: "Lợi ích cá nhân đạt được nhưng không chia sẻ cho tập thể. Đây chưa phải là sự phát triển tự do của 'tất cả mọi người'." },
+                { text: "Mạnh dạn đề xuất cải tiến với tập thể, chấp nhận rủi ro bị bác bỏ để thay đổi quy trình chung.", stats: { knowledge: 2, social: 2, impact: 3 }, message: "Tuyệt vời. Từ hoạt động thực tiễn sản xuất, bạn đã tạo ra thay đổi. Đây là minh chứng cho việc 'Quần chúng nhân dân là động lực phát triển của lịch sử'." }
+            ]
+        },
+        {
+            title: "Tình đồng nghiệp",
+            content: "Một đồng nghiệp lớn tuổi làm việc chậm và sắp bị sa thải. Bạn có kỹ năng làm nhanh hơn.",
+            options: [
+                { text: "Mặc kệ, ai làm nấy hưởng.", stats: { knowledge: 1, social: -2, impact: 0 }, message: "Chủ nghĩa cá nhân cực đoan, thiếu tính giai cấp." },
+                { text: "Dành giờ nghỉ trưa hướng dẫn bác ấy.", stats: { knowledge: 0, social: 3, impact: 1 }, message: "Tinh thần tương trợ giai cấp. Sự phát triển của bạn kéo theo người khác." }
+            ]
+        },
+        {
+            title: "Đình công hay Im lặng?",
+            content: "Nhà máy cắt giảm bảo hộ lao động gây nguy hiểm. Mọi người muốn đình công nhưng sợ.",
+            options: [
+                { text: "Khuyên mọi người cam chịu.", stats: { knowledge: 0, social: -1, impact: -2 }, message: "Thiếu tính đấu tranh, chấp nhận bất công." },
+                { text: "Đứng ra tổ chức, đại diện đàm phán.", stats: { knowledge: 1, social: 2, impact: 3 }, message: "Quần chúng cần người tổ chức để chuyển từ tự phát sang tự giác." }
             ]
         }
     ],
     public_servant: [
         {
-            title: "Quy tắc hay Linh hoạt",
-            content: "Dân nghèo làm thủ tục thiếu 1 giấy tờ nhỏ. Theo luật phải trả hồ sơ.",
+            title: "Quy hoạch và Lòng dân",
+            content: "Cấp trên yêu cầu bạn giải tỏa một khu chợ truyền thống để xây trung tâm thương mại (phát triển kinh tế). Bà con tiểu thương phản đối dữ dội vì mất kế sinh nhai. Bạn đứng giữa hai làn đạn.",
             options: [
-                { text: "Trả hồ sơ, đúng luật mà làm.", stats: { knowledge: 1, social: -3, impact: 0 }, message: "Quan liêu, máy móc." },
-                { text: "Hướng dẫn bổ sung sau, giải quyết trước.", stats: { knowledge: 1, social: 3, impact: 2 }, message: "Vì nhân dân phục vụ." }
+                { text: "Cưỡng chế giải tỏa theo lệnh. Phải hy sinh lợi ích nhỏ để phát triển cái lớn.", stats: { knowledge: 0, social: -5, impact: 2 }, message: "Bạn đang áp đặt duy ý chí. 'Mọi phong trào đều thất bại nếu chưa tìm được lãnh tụ xứng đáng' - và người xứng đáng không phải là người đi ngược lại lợi ích quần chúng." },
+                { text: "Báo cáo sai sự thật lên cấp trên để trì hoãn dự án, giữ yên ổn cho dân.", stats: { knowledge: -2, social: 2, impact: -1 }, message: "Bạn mỵ dân và lừa dối tổ chức. Bạn không giải quyết mâu thuẫn mà chỉ lảng tránh nó. Đây không phải là cách quản lý khoa học." },
+                { text: "Tổ chức đối thoại 3 bên (Dân - Chính quyền - Doanh nghiệp). Đề xuất phương án xây trung tâm thương mại nhưng dành tầng 1 cho tiểu thương thuê giá rẻ.", stats: { knowledge: 3, social: 3, impact: 3 }, message: "Bạn đã giải quyết mâu thuẫn biện chứng! Bạn tìm ra điểm 'thống nhất về lợi ích và hành động' giữa các bên. Xã hội phát triển, cá nhân được đảm bảo." }
+            ]
+        },
+        {
+            title: "Thụ lý hồ sơ",
+            content: "Dân nghèo nộp hồ sơ xin trợ cấp nhưng thiếu giấy tờ phụ. Luật cho phép trả về.",
+            options: [
+                { text: "Trả hồ sơ, làm đúng quy trình.", stats: { knowledge: 1, social: -2, impact: 0 }, message: "Quan liêu, máy móc. Xa rời mục đích phục vụ dân." },
+                { text: "Hướng dẫn bổ sung sau, giải quyết trước.", stats: { knowledge: 0, social: 3, impact: 1 }, message: "Lợi ích của quần chúng thống nhất với người quản lý." }
+            ]
+        },
+        {
+            title: "Bệnh thành tích",
+            content: "Cấp trên muốn bạn báo cáo số liệu 'đẹp' hơn thực tế để đạt thi đua.",
+            options: [
+                { text: "Làm đẹp số liệu.", stats: { knowledge: -1, social: 0, impact: -2 }, message: "Dối trá, tách rời thực tiễn khách quan sẽ dẫn đến sai lầm lâu dài." },
+                { text: "Báo cáo trung thực khó khăn.", stats: { knowledge: 2, social: 0, impact: 2 }, message: "Nhìn thẳng vào sự thật khách quan là điều kiện tiên quyết để phát triển." }
             ]
         }
     ],
     healthcare: [
         {
-            title: "Lựa chọn sinh tử",
-            content: "Chỉ còn 1 máy thở. Bệnh nhân A là nhà tài trợ giàu có, B là công nhân nghèo.",
+            title: "Sự ưu tiên tàn khốc",
+            content: "Trong một đại dịch, bệnh viện quá tải. Bạn chỉ còn 01 máy thở duy nhất. Hai bệnh nhân đang nguy kịch: Một là vị chủ tịch tập đoàn giàu có (người đã tài trợ thiết bị cho bệnh viện), hai là một công nhân lao động nghèo (trụ cột của gia đình 5 người). Giám đốc bệnh viện gây áp lực phải cứu người giàu.",
             options: [
-                { text: "Cứu nhà tài trợ vì lợi ích viện.", stats: { knowledge: 1, social: -4, impact: 1 }, message: "Tính giai cấp lấn át nhân đạo." },
-                { text: "Cứu dựa trên chỉ số y học, không phân biệt.", stats: { knowledge: 2, social: 3, impact: 2 }, message: "Công bằng và nhân văn." }
+                { text: "Cứu vị chủ tịch. Đây là quy luật kinh tế, họ có tiền và quyền lực chi phối.", stats: { knowledge: 2, social: -4, impact: 1 }, message: "Bạn để 'tính giai cấp' lấn át 'tính nhân loại'. Bạn phục vụ lợi ích của giai cấp thống trị thay vì giá trị con người phổ quát." },
+                { text: "Cứu người công nhân. Vì họ là đại diện cho quần chúng lao động - lực lượng sản xuất chính.", stats: { knowledge: -1, social: 3, impact: 1 }, message: "Bạn đứng về phía quần chúng. Tuy nhiên, nếu chỉ dựa vào cảm tính giai cấp mà thiếu biện pháp giải quyết vấn đề thiếu hụt vật tư (cái chung) thì cũng chưa trọn vẹn." },
+                { text: "Kiên quyết từ chối áp lực, đánh giá dựa trên chỉ số sinh tồn y học (ai có cơ hội sống cao hơn thì cứu), đồng thời công khai sự thiếu thốn vật tư để kêu gọi xã hội hỗ trợ.", stats: { knowledge: 3, social: 2, impact: 3 }, message: "Đây là sự thống nhất giữa Khoa học (Khách quan) và Đạo đức (Nhân văn). Bạn tôn trọng 'tính nhân loại' là nền tảng cuộc sống, đồng thời dùng ảnh hưởng để tác động lại xã hội." }
+            ]
+        },
+        {
+            title: "Thuốc đắt hay rẻ?",
+            content: "Trình dược viên đề nghị hoa hồng lớn nếu kê thuốc đắt tiền (tác dụng như thuốc rẻ).",
+            options: [
+                { text: "Kê thuốc đắt, mình cũng cần sống.", stats: { knowledge: 1, social: -4, impact: 0 }, message: "Lợi ích cá nhân chà đạp lên lợi ích quần chúng. Tha hóa đạo đức." },
+                { text: "Kê thuốc rẻ và hiệu quả.", stats: { knowledge: 0, social: 3, impact: 1 }, message: "Phục vụ nhân dân là mục đích tối thượng." }
+            ]
+        },
+        {
+            title: "Đi tuyến dưới",
+            content: "Bệnh viện kêu gọi tình nguyện về vùng sâu vùng xa 2 năm.",
+            options: [
+                { text: "Từ chối, ở phố mới có danh tiếng.", stats: { knowledge: 2, social: -1, impact: 0 }, message: "Quan điểm danh vọng cá nhân, xa rời thực tiễn." },
+                { text: "Đăng ký đi.", stats: { knowledge: 1, social: 3, impact: 3 }, message: "Hòa mình vào thực tiễn đời sống quần chúng để rèn luyện nhân cách." }
             ]
         }
     ],
     educator: [
         {
-            title: "Tư duy phản biện",
-            content: "Học sinh hỏi câu hỏi nhạy cảm trái với giáo trình.",
+            title: "Chương trình giảng dạy",
+            content: "Nhà trường yêu cầu bạn dạy học sinh theo hướng 'ngoan ngoãn, vâng lời' để dễ quản lý và ổn định xã hội. Nhưng bạn biết rằng tư duy phản biện mới giúp xã hội phát triển.",
             options: [
-                { text: "Gạt đi, yêu cầu học thuộc lòng.", stats: { knowledge: -2, social: -1, impact: -1 }, message: "Giáo điều." },
-                { text: "Khuyến khích thảo luận đa chiều.", stats: { knowledge: 3, social: 2, impact: 2 }, message: "Phát triển tư duy tự do." }
+                { text: "Dạy theo giáo trình 100%. Ổn định là trên hết.", stats: { knowledge: -1, social: 1, impact: -2 }, message: "Bạn tạo ra những 'cỗ máy' biết nói. Bạn đang kìm hãm 'cái riêng, cái đơn nhất, độc đáo' của mỗi học sinh." },
+                { text: "Bí mật dạy học sinh tư duy tự do, bất chấp quy định.", stats: { knowledge: 3, social: -2, impact: 0 }, message: "Bạn đang tạo ra mâu thuẫn đối kháng. Cá nhân tốt nhưng tách rời môi trường xã hội thì cũng khó tồn tại." },
+                { text: "Khéo léo lồng ghép tư duy phản biện vào bài giảng, đồng thời thuyết phục ban giám hiệu đổi mới phương pháp.", stats: { knowledge: 2, social: 2, impact: 2 }, message: "Bạn đang tác động biện chứng. Bạn thay đổi ý thức xã hội dần dần thông qua giáo dục, tạo điều kiện cho sự phát triển tự do của thế hệ sau." }
+            ]
+        },
+        {
+            title: "Học trò cá biệt",
+            content: "Một học sinh thông minh nhưng hay cãi lại, bị coi là cá biệt. Nhà trường muốn đuổi.",
+            options: [
+                { text: "Đồng ý đuổi cho lớp yên ổn.", stats: { knowledge: -1, social: -2, impact: 0 }, message: "Giáo dục rập khuôn giết chết sự sáng tạo và khác biệt." },
+                { text: "Kiên nhẫn đối thoại, định hướng tư duy.", stats: { knowledge: 2, social: 2, impact: 0 }, message: "Tôn trọng cái Riêng trong cái Chung." }
+            ]
+        },
+        {
+            title: "Chảy máu chất xám",
+            content: "Bạn được mời sang nước ngoài làm việc lương cao gấp 10 lần.",
+            options: [
+                { text: "Đi ngay, ở đây không phát triển được.", stats: { knowledge: 3, social: 0, impact: -1 }, message: "Ưu tiên phát triển cá nhân, tách rời hoàn cảnh quê hương." },
+                { text: "Đi nhưng cam kết đem công nghệ về nước.", stats: { knowledge: 0, social: 2, impact: 3 }, message: "Cá nhân gắn bó và đóng góp cho cộng đồng dân tộc." }
             ]
         }
     ],
     artist: [
         {
-            title: "Nghệ thuật vị nhân sinh",
-            content: "Nhà tài trợ muốn bạn vẽ tranh ca ngợi giới thượng lưu xa hoa.",
+            title: "Hiện thực hay Hư ảo?",
+            content: "Bạn nhận được lời mời tài trợ khủng để làm một tác phẩm nghệ thuật tôn vinh lối sống xa hoa, thoát ly thực tại. Trong khi đó, ngoài kia xã hội đang đầy rẫy những bất công cần tiếng nói phản biện.",
             options: [
-                { text: "Vẽ thôi, có tiền là được.", stats: { knowledge: 0, social: -3, impact: 1 }, message: "Nghệ thuật thoát ly thực tại." },
-                { text: "Vẽ về cuộc sống người lao động bình dị.", stats: { knowledge: 2, social: 3, impact: 2 }, message: "Nghệ thuật bắt nguồn từ đời sống." }
+                { text: "Nhận lời làm nghệ thuật giải trí thuần túy. Nghệ thuật là tự do cá nhân, không cần dính dáng chính trị.", stats: { knowledge: 2, social: -3, impact: 0 }, message: "Bạn rơi vào 'Tháp ngà nghệ thuật'. Bạn quên rằng 'Văn hóa, tinh thần... đều do quần chúng nhân dân sáng tạo ra' và bạn chỉ là người chắt lọc. Tách rời nguồn mạch này, nghệ thuật sẽ khô héo." },
+                { text: "Từ chối tài trợ, làm một tác phẩm cực đoan chửi bới xã hội để thỏa mãn cái tôi nổi loạn.", stats: { knowledge: 1, social: -2, impact: -1 }, message: "Bạn đề cao quá mức cái 'Tôi' (Cá nhân) đối lập với xã hội. Đây là sự phản kháng tiêu cực, thiếu tính xây dựng." },
+                { text: "Dùng tài năng của mình để sáng tác về cuộc sống thực của người dân, phản ánh nguyện vọng của họ, biến nỗi đau của quần chúng thành tác phẩm lay động nhân tâm.", stats: { knowledge: 2, social: 4, impact: 3 }, message: "Tuyệt vời. Bạn đã để quần chúng là 'người gạn lọc, lưu giữ và truyền bá' giá trị của bạn. Bạn hòa cái Riêng của mình vào cái Chung của thời đại." }
+            ]
+        },
+        {
+            title: "Bảo tồn hay Phá bỏ?",
+            content: "Bạn được giao cải tạo khu di tích cũ kỹ.",
+            options: [
+                { text: "Đập bỏ xây mới hiện đại.", stats: { knowledge: 2, social: -3, impact: 0 }, message: "Phủ nhận quá khứ, tách rời truyền thống dân tộc." },
+                { text: "Phục dựng trên nền tảng cũ, kết hợp cái mới.", stats: { knowledge: 2, social: 2, impact: 0 }, message: "Kế thừa biện chứng. Quần chúng là người lưu giữ giá trị văn hóa." }
+            ]
+        },
+        {
+            title: "Tác phẩm kén khán giả",
+            content: "Bạn sáng tác bài hát sâu sắc nhưng khó nghe, ít người hiểu.",
+            options: [
+                { text: "Chê khán giả trình độ thấp, chỉ hát cho giới thượng lưu.", stats: { knowledge: 1, social: -3, impact: 0 }, message: "Tự cô lập mình khỏi đại chúng." },
+                { text: "Tìm cách biểu diễn bình dân hơn để lan tỏa.", stats: { knowledge: 0, social: 3, impact: 2 }, message: "Văn hóa phải đi vào đời sống quần chúng mới có sức sống." }
             ]
         }
     ],
     activist: [
         {
             title: "Phương pháp đấu tranh",
-            content: "Nhà máy xả thải gây ô nhiễm. Chính quyền chậm giải quyết.",
+            content: "Bạn phát hiện một nhà máy đang xả thải gây ung thư cho cả làng. Chính quyền địa phương đang làm ngơ. Bạn cần hành động để thay đổi thực trạng này.",
             options: [
-                { text: "Kích động đập phá nhà máy.", stats: { knowledge: -2, social: -4, impact: 2 }, message: "Manh động, vô chính phủ." },
-                { text: "Thu thập bằng chứng, kiện ra tòa.", stats: { knowledge: 3, social: 2, impact: 3 }, message: "Đấu tranh hợp pháp, khoa học." }
+                { text: "Một mình đột nhập phá hoại đường ống xả thải để gây chú ý.", stats: { knowledge: -1, social: -3, impact: 1 }, message: "Chủ nghĩa anh hùng cá nhân manh động. Bạn tách mình khỏi quần chúng và vi phạm pháp luật, dễ dẫn đến bị cô lập hoặc bắt giữ." },
+                { text: "Chỉ trích người dân là ngu dốt, nhu nhược vì không chịu đứng lên, rồi bỏ đi nơi khác sống.", stats: { knowledge: 1, social: -5, impact: 0 }, message: "Thái độ khinh miệt quần chúng. Bạn quên rằng 'Quần chúng nhân dân luôn là người thầy vĩ đại của các cá nhân'." },
+                { text: "Kiên trì thu thập bằng chứng khoa học, đi từng nhà vận động người dân hiểu rõ tác hại, và đại diện họ gửi đơn kiến nghị pháp lý.", stats: { knowledge: 3, social: 4, impact: 4 }, message: "Bạn đóng vai trò là 'nhân tố thúc đẩy'. Bạn giúp quần chúng chuyển từ 'tự phát' sang 'tự giác'. Lãnh tụ và quần chúng hòa làm một dòng chảy cách mạng." }
+            ]
+        },
+        {
+            title: "Nguồn quỹ đen",
+            content: "Công ty gây ô nhiễm muốn tài trợ cho tổ chức của bạn để 'tẩy trắng'.",
+            options: [
+                { text: "Nhận tiền để duy trì tổ chức.", stats: { knowledge: -1, social: -4, impact: 0 }, message: "Thỏa hiệp nguyên tắc, đánh mất mục đích vì lợi ích trước mắt." },
+                { text: "Từ chối và công khai hành vi mua chuộc.", stats: { knowledge: 0, social: 2, impact: 3 }, message: "Giữ vững lập trường cách mạng." }
+            ]
+        },
+        {
+            title: "Từ thiện",
+            content: "Bạn đi làm từ thiện. Cách làm nào đúng đắn?",
+            options: [
+                { text: "Phát tiền quà, chụp ảnh rồi về.", stats: { knowledge: 0, social: 1, impact: 0 }, message: "Hình thức, không giải quyết gốc rễ vấn đề." },
+                { text: "Hướng dẫn cách làm ăn mới để thoát nghèo bền vững.", stats: { knowledge: 2, social: 0, impact: 4 }, message: "Giúp quần chúng phát huy nội lực tự thân." }
             ]
         }
     ],
@@ -223,29 +360,33 @@ const careerScenarios = {
 const finalEndings = {
     true_ending: {
         title: "NHÀ KIẾN TẠO LỊCH SỬ",
-        subtitle: "True Ending",
-        content: "Chúc mừng! Bạn đã đạt đến sự thống nhất biện chứng. Bạn hiểu rằng 'Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển của tất cả'. Bạn vừa có tài năng (Cái Riêng), vừa gắn bó máu thịt với quần chúng (Cái Chung).",
+        image: "assets/images/TE_LS.png",
+        subtitle: "True Ending: SỰ THỐNG NHẤT BIỆN CHỨNG",
+        content: "Chúc mừng! Bạn đã đạt đến cảnh giới cao nhất của nhận thức. Bạn không chỉ phát triển năng lực cá nhân rực rỡ (Cái Riêng) mà còn hòa mình vào dòng chảy của thời đại (Cái Chung). Bạn hiểu rằng lãnh tụ và quần chúng phải thống nhất về ý chí và hành động. Sự thành công của bạn hôm nay là minh chứng hùng hồn cho luận điểm: 'Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển tự do của tất cả mọi người'.",
         color: "success",
         icon: "🏆"
     },
     bad_ending_isolation: {
         title: "THIÊN TÀI CÔ ĐỘC",
-        subtitle: "Bad Ending: Xa rời quần chúng",
-        content: "Bạn có trí tuệ xuất chúng nhưng lại rơi vào chủ nghĩa cá nhân cực đoan. Bạn cô đơn trên đỉnh cao vì đã quên rằng: Con người là tổng hòa các mối quan hệ xã hội.",
+        image: "assets/images/BE_TTCD.png",
+        subtitle: "Bad Ending 1: SỰ THA HÓA CÁ NHÂN",
+        content: "Bạn rất xuất sắc, nhưng bạn đã thất bại về mặt triết học. Bạn đã rơi vào khuynh hướng 'Tuyệt đối hóa vai trò cá nhân', đặt cá nhân lên trên xã hội. Bạn quên rằng bản chất con người là 'tổng hòa các mối quan hệ xã hội'. Trí tuệ của bạn không phục vụ quần chúng, và vì thế, nó sẽ sớm bị lịch sử đào thải. Sự tự do của bạn là ích kỷ và cô lập.",
         color: "warning",
         icon: '<i class="bi bi-cloud-drizzle-fill"></i>'
     },
     bad_ending_passive: {
-        title: "CỖ MÁY VÔ HỒN",
-        subtitle: "Bad Ending: Thiếu bản lĩnh",
-        content: "Bạn hòa đồng nhưng thiếu tư duy phản biện. Bạn bị dòng chảy lịch sử cuốn đi thay vì định hướng nó. Bạn cần rèn luyện thêm tính chủ động của chủ thể.",
+        title: "NGƯỜI THỪA HÀNH THỤ ĐỘNG",
+        image: "assets/images/BE_CMCH.png",
+        subtitle: "Bad Ending 2: CỖ MÁY VÔ HỒN",
+        content: "Bạn là một người tốt, hòa đồng, nhưng thiếu bản lĩnh. Bạn đã hòa tan cái 'Tôi' của mình vào tập thể đến mức đánh mất bản sắc. Tuy quần chúng là người sáng tạo lịch sử, nhưng lịch sử cũng cần những cá nhân kiệt xuất để 'nhận thức quy luật và vạch ra định hướng'. Sự phát triển của xã hội cần những cú hích từ những cá nhân dám nghĩ dám làm, điều mà bạn đã từ chối thực hiện.",
         color: "secondary",
         icon: '<i class="bi bi-robot"></i>'
     },
     bad_ending_tyrant: {
-        title: "KẺ ĐỘC TÀI DUY Ý CHÍ",
-        subtitle: "Bad Ending: Phản dân chủ",
-        content: "Bạn có quyền lực nhưng đi ngược lại lợi ích nhân dân. 'Cách mạng là sự nghiệp của quần chúng', thiếu sự ủng hộ của họ, quyền lực của bạn chỉ là lâu đài trên cát.",
+        title: "KẺ ĐỘC ĐOÁN",
+        image: "assets/images/BE_KDTDC.png",
+        subtitle: "Bad Ending 3: KẺ ĐỘC TÀI DUY Ý CHÍ",
+        content: "Bạn có quyền lực và tầm ảnh hưởng, nhưng bạn đã đi ngược lại lợi ích của nhân dân. Sai lầm của bạn là 'Thần thánh hóa vai trò lãnh tụ', coi nhẹ quần chúng. Bạn áp đặt ý chí chủ quan lên thực tiễn khách quan. Hãy nhớ: 'Cách mạng là sự nghiệp của quần chúng'. Không có sự ủng hộ của họ, mọi quyền lực của bạn chỉ là lâu đài xây trên cát.",
         color: "danger",
         icon: '<i class="bi bi-person-x-fill"></i>'
     }
