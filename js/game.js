@@ -70,6 +70,15 @@ function renderQuestion(questionData) {
         </div>
     `;
 
+    const imageHTML = questionData.image ? `
+        <div class="text-center mb-4 animate-fade-in">
+            <img src="${questionData.image}" 
+                 class="img-fluid rounded shadow border border-secondary" 
+                 style="max-height: 500px; width: 100%; object-fit: cover;" 
+                 alt="Minh họa tình huống">
+        </div>
+    ` : '';
+
     const cardHTML = `
         <div class="glass-card p-4 p-md-5 animate-pop mt-2">
             <div class="d-flex justify-content-between align-items-center mb-3 border-bottom border-secondary pb-2">
@@ -83,6 +92,9 @@ function renderQuestion(questionData) {
             </div>
 
             <h3 class="game-question-title mb-3 text-white">${questionData.title}</h3>
+
+            ${imageHTML}
+
             <p class="lead mb-4 text-light-50">${questionData.content}</p>
             
             ${questionData.source ? `

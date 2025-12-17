@@ -4,6 +4,7 @@ const initialQuestions = [
     {
         id: 1,
         title: "Tình huống 1: Bản chất con người",
+        image: "assets/images/TH1_P1.png",
         content: "Bạn là sinh viên. Một đợt dịch bệnh bùng phát trong khu phố. Lệnh phong tỏa được ban bố, lương thực khan hiếm. Bản năng sinh tồn trỗi dậy, nhưng hàng xóm của bạn (người già yếu) đang thiếu thuốc. Bạn sẽ làm gì?",
         options: [
             { 
@@ -26,6 +27,7 @@ const initialQuestions = [
     {
         id: 2,
         title: "Tình huống 2: Quan hệ Cá nhân và Tập thể",
+        image: "assets/images/TH2_P1.png",
         content: "Trong một dự án nhóm tại trường/công ty, bạn là người giỏi nhất. Tuy nhiên, các thành viên khác làm việc rất chậm chạp và sai sót, có nguy cơ kéo tụt điểm số/thành tích của bạn xuống. Bạn chọn:",
         options: [
             { 
@@ -48,6 +50,7 @@ const initialQuestions = [
     {
         id: 3,
         title: "Tình huống 3: Nguồn gốc Lịch sử",
+        image: "assets/images/TH3_P1.png",
         content: "Bạn tham gia một cuộc tranh luận về việc tại sao đất nước phát triển được như hôm nay. Bạn bè đưa ra các ý kiến khác nhau, bạn ủng hộ quan điểm nào?",
         options: [
             { 
@@ -70,6 +73,7 @@ const initialQuestions = [
     {
         id: 4,
         title: "Tình huống 4: Tính Giai cấp",
+        image: "assets/images/TH4_P1.png",
         content: "Khu phố bạn sống có một ông chủ giàu có chèn ép người lao động nghèo (trả lương thấp, bắt làm việc quá sức). Bạn là người có tri thức, bạn sẽ làm gì?",
         options: [
             { 
@@ -92,6 +96,7 @@ const initialQuestions = [
     {
         id: 5,
         title: "Tình huống 5: Xuất hiện Lãnh tụ",
+        image: "assets/images/TH5_P1.png",
         content: "Nhóm/Cộng đồng của bạn đang rơi vào bế tắc (lạc đường, dự án thất bại, hoặc bị chèn ép). Mọi người bắt đầu than vãn, hỗn loạn và mất phương hướng. Không ai chịu đứng ra nhận trách nhiệm. Bạn sẽ:",
         options: [
             { 
