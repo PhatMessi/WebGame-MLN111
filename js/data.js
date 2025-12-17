@@ -7,18 +7,18 @@ const initialQuestions = [
         image: "assets/images/TH1_P1.png",
         content: "Bạn là sinh viên. Một đợt dịch bệnh bùng phát trong khu phố. Lệnh phong tỏa được ban bố, lương thực khan hiếm. Bản năng sinh tồn trỗi dậy, nhưng hàng xóm của bạn (người già yếu) đang thiếu thuốc. Bạn sẽ làm gì?",
         options: [
-            { 
-                text: "Giữ cho mình. 'Quy luật sinh tồn là trên hết'.", 
+            {
+                text: "Giữ cho mình. 'Quy luật sinh tồn là trên hết'.",
                 stats: { knowledge: 1, social: -2, impact: 0 },
                 explanation: "Bạn đang tuyệt đối hóa phương diện sinh học (bản năng sinh tồn). Tuy nhiên, theo triết học Mác - Lênin: 'Con người là tổng hòa các quan hệ xã hội'. Tách rời cá nhân khỏi xã hội là một sai lầm về mặt phương pháp luận (Trang 466)."
             },
-            { 
-                text: "Chia sẻ và kêu gọi xóm giềng giúp đỡ nhau.", 
+            {
+                text: "Chia sẻ và kêu gọi xóm giềng giúp đỡ nhau.",
                 stats: { knowledge: 0, social: 2, impact: 2 },
                 explanation: "Rất tốt. Bạn đã thể hiện đúng bản chất xã hội của con người. Sức mạnh của cộng đồng sẽ giúp từng cá nhân tồn tại tốt hơn. Đây là biểu hiện của tính nhân loại cao cả (Trang 467)."
             },
-            { 
-                text: "Nghiên cứu phương án phân phối khoa học để đề xuất.", 
+            {
+                text: "Nghiên cứu phương án phân phối khoa học để đề xuất.",
                 stats: { knowledge: 3, social: 0, impact: 1 },
                 explanation: "Bạn sử dụng tư duy lý tính (đặc trưng của con người) để cải biến hoàn cảnh. Con người không chỉ thích nghi thụ động mà còn chủ động cải tạo điều kiện sinh tồn."
             }
@@ -30,18 +30,18 @@ const initialQuestions = [
         image: "assets/images/TH2_P1.png",
         content: "Trong một dự án nhóm tại trường/công ty, bạn là người giỏi nhất. Tuy nhiên, các thành viên khác làm việc rất chậm chạp và sai sót, có nguy cơ kéo tụt điểm số/thành tích của bạn xuống. Bạn chọn:",
         options: [
-            { 
-                text: "Tách ra làm riêng cho nhanh.", 
+            {
+                text: "Tách ra làm riêng cho nhanh.",
                 stats: { knowledge: 2, social: -2, impact: 0 },
                 explanation: "Bạn đang rơi vào chủ nghĩa cá nhân cực đoan. Giáo trình (Trang 469) chỉ rõ: 'Nếu đặt cá nhân lên trên xã hội... thì đều sai lầm và dẫn đến hệ lụy khó lường'."
             },
-            { 
-                text: "Làm giúp phần của họ để cả nhóm cùng qua môn.", 
+            {
+                text: "Làm giúp phần của họ để cả nhóm cùng qua môn.",
                 stats: { knowledge: -1, social: 3, impact: 0 },
                 explanation: "Bạn đề cao tập thể nhưng lại triệt tiêu tính năng động của các cá nhân khác. Xã hội phát triển cần sự nỗ lực của từng cá thể."
             },
-            { 
-                text: "Tổ chức lại quy trình, phân công người giỏi kèm người yếu.", 
+            {
+                text: "Tổ chức lại quy trình, phân công người giỏi kèm người yếu.",
                 stats: { knowledge: 1, social: 0, impact: 3 },
                 explanation: "Chính xác. Đây là sự kết hợp hài hòa: 'Sự phát triển tự do của mỗi cá nhân là điều kiện cho sự phát triển của tất cả'. Bạn có tố chất lãnh đạo."
             }
@@ -53,18 +53,18 @@ const initialQuestions = [
         image: "assets/images/TH3_P1.png",
         content: "Bạn tham gia một cuộc tranh luận về việc tại sao đất nước phát triển được như hôm nay. Bạn bè đưa ra các ý kiến khác nhau, bạn ủng hộ quan điểm nào?",
         options: [
-            { 
-                text: "Do các vĩ nhân, lãnh đạo kiệt xuất dẫn dắt.", 
+            {
+                text: "Do các vĩ nhân, lãnh đạo kiệt xuất dẫn dắt.",
                 stats: { knowledge: 1, social: -1, impact: 1 },
                 explanation: "Đây là quan điểm Duy tâm về lịch sử (Trang 470). Lãnh tụ có vai trò quan trọng, nhưng 'cách mạng là sự nghiệp của quần chúng'. Tuyệt đối hóa lãnh tụ dẫn đến tệ sùng bái cá nhân."
             },
-            { 
-                text: "Do người lao động sản xuất của cải vật chất hàng ngày.", 
+            {
+                text: "Do người lao động sản xuất của cải vật chất hàng ngày.",
                 stats: { knowledge: 1, social: 2, impact: 0 },
                 explanation: "Chính xác. 'Quần chúng nhân dân là lực lượng sản xuất cơ bản, là người sáng tạo chân chính ra lịch sử' (Trang 473)."
             },
-            { 
-                text: "Do sự phát triển tất yếu của khoa học kỹ thuật.", 
+            {
+                text: "Do sự phát triển tất yếu của khoa học kỹ thuật.",
                 stats: { knowledge: 3, social: 0, impact: 0 },
                 explanation: "Khoa học kỹ thuật là động lực quan trọng, nhưng chủ thể nắm giữ và sử dụng nó vẫn là con người (quần chúng nhân dân)."
             }
@@ -76,18 +76,18 @@ const initialQuestions = [
         image: "assets/images/TH4_P1.png",
         content: "Khu phố bạn sống có một ông chủ giàu có chèn ép người lao động nghèo (trả lương thấp, bắt làm việc quá sức). Bạn là người có tri thức, bạn sẽ làm gì?",
         options: [
-            { 
-                text: "Im lặng, đó là quy luật thị trường.", 
+            {
+                text: "Im lặng, đó là quy luật thị trường.",
                 stats: { knowledge: 0, social: -1, impact: -1 },
                 explanation: "Bạn đang lờ đi 'tính giai cấp' trong các quan hệ xã hội. Trong xã hội có phân chia giai cấp, thái độ trung lập thực chất là ủng hộ giai cấp thống trị."
             },
-            { 
-                text: "Viết bài phân tích lên mạng xã hội.", 
+            {
+                text: "Viết bài phân tích lên mạng xã hội.",
                 stats: { knowledge: 2, social: 0, impact: 1 },
                 explanation: "Bạn sử dụng vũ khí lý luận để đấu tranh tư tưởng. Đây là một hình thức đấu tranh giai cấp quan trọng."
             },
-            { 
-                text: "Tập hợp người lao động đấu tranh đòi quyền lợi.", 
+            {
+                text: "Tập hợp người lao động đấu tranh đòi quyền lợi.",
                 stats: { knowledge: 0, social: 2, impact: 3 },
                 explanation: "Hành động thực tiễn! Bạn đang tham gia trực tiếp vào phong trào quần chúng để giải quyết mâu thuẫn giai cấp."
             }
@@ -99,18 +99,18 @@ const initialQuestions = [
         image: "assets/images/TH5_P1.png",
         content: "Nhóm/Cộng đồng của bạn đang rơi vào bế tắc (lạc đường, dự án thất bại, hoặc bị chèn ép). Mọi người bắt đầu than vãn, hỗn loạn và mất phương hướng. Không ai chịu đứng ra nhận trách nhiệm. Bạn sẽ:",
         options: [
-            { 
-                text: "Chờ xem có ai tài giỏi đứng ra không.", 
+            {
+                text: "Chờ xem có ai tài giỏi đứng ra không.",
                 stats: { knowledge: 0, social: -1, impact: -1 },
                 explanation: "Thụ động. Lãnh tụ không tự nhiên sinh ra, mà xuất hiện từ nhu cầu của phong trào quần chúng (Trang 475)."
             },
-            { 
-                text: "Tự tìm đường thoát thân cho mình trước.", 
+            {
+                text: "Tự tìm đường thoát thân cho mình trước.",
                 stats: { knowledge: 2, social: -3, impact: 0 },
                 explanation: "Ích kỷ. Bạn tách rời lợi ích cá nhân khỏi lợi ích tập thể."
             },
-            { 
-                text: "Đứng lên trấn an, vạch kế hoạch và phân công nhiệm vụ.", 
+            {
+                text: "Đứng lên trấn an, vạch kế hoạch và phân công nhiệm vụ.",
                 stats: { knowledge: 1, social: 2, impact: 3 },
                 explanation: "Tuyệt vời. 'Khi lịch sử đặt ra những nhiệm vụ cần giải quyết... thì từ trong quần chúng sẽ xuất hiện những lãnh tụ' (Trang 475). Bạn chính là nhân tố đó."
             }
@@ -144,18 +144,34 @@ const careerScenarios = {
         },
         {
             title: "Dùng người",
-            content: "Bạn cần bổ nhiệm một trợ lý quan trọng cho vị trí then chốt.",
+            content: "Bạn cần bổ nhiệm một trợ lý quan trọng cho vị trí then chốt, người sẽ ảnh hưởng trực tiếp đến hiệu quả công việc và uy tín của tập thể trong thời gian dài.",
             options: [
-                { text: "Chọn người nhà/người thân cho tin tưởng.", stats: { knowledge: -2, social: -2, impact: 0 }, message: "Tư duy gia đình trị, lợi ích cục bộ, kìm hãm sự phát triển chung." },
-                { text: "Tổ chức thi tuyển công khai chọn người tài.", stats: { knowledge: 3, social: 2, impact: 0 }, message: "Công bằng xã hội, tạo động lực phát triển cho tập thể." }
+                {
+                    text: "Chọn người nhà hoặc người thân vì tin tưởng.",
+                    stats: { knowledge: -2, social: -2, impact: 0 },
+                    message: "Tư duy gia đình trị và lợi ích cục bộ làm suy yếu nguyên tắc công bằng, dẫn đến sử dụng sai nguồn lực và kìm hãm sự phát triển chung của tổ chức."
+                },
+                {
+                    text: "Tổ chức thi tuyển công khai để chọn người có năng lực.",
+                    stats: { knowledge: 3, social: 2, impact: 0 },
+                    message: "Việc lựa chọn dựa trên năng lực và cống hiến thể hiện công bằng xã hội, phát huy vai trò con người – yếu tố quyết định của sự phát triển."
+                }
             ]
         },
         {
             title: "Nhận lỗi",
-            content: "Bạn đưa ra một quyết định sai lầm gây thiệt hại cho tập thể.",
+            content: "Một quyết định do bạn đưa ra gây thiệt hại cho tập thể, ảnh hưởng đến quyền lợi chung và niềm tin của những người xung quanh.",
             options: [
-                { text: "Đổ lỗi cho hoàn cảnh hoặc cấp dưới.", stats: { knowledge: 0, social: -4, impact: -2 }, message: "Thiếu bản lĩnh. Lãnh tụ xa rời quần chúng sẽ sớm bị đào thải." },
-                { text: "Công khai xin lỗi và chịu trách nhiệm khắc phục.", stats: { knowledge: 0, social: 4, impact: 2 }, message: "Lãnh tụ gắn bó mật thiết với nhân dân, sai thì sửa. Uy tín tăng lên." }
+                {
+                    text: "Đổ lỗi cho hoàn cảnh khách quan hoặc cấp dưới.",
+                    stats: { knowledge: 0, social: -4, impact: -2 },
+                    message: "Trốn tránh trách nhiệm thể hiện sự thiếu bản lĩnh. Khi người lãnh đạo xa rời quần chúng và né tránh sai lầm, uy tín và vai trò lãnh đạo sẽ dần bị suy giảm."
+                },
+                {
+                    text: "Công khai nhận lỗi và chịu trách nhiệm khắc phục.",
+                    stats: { knowledge: 0, social: 4, impact: 2 },
+                    message: "Dám nhận sai và sửa sai thể hiện bản lĩnh chính trị, gắn bó với tập thể. Uy tín không mất đi mà được củng cố thông qua hành động thực tiễn."
+                }
             ]
         }
     ],
@@ -171,19 +187,35 @@ const careerScenarios = {
             ]
         },
         {
-            title: "Mã nguồn Mở hay Độc quyền?",
-            content: "Bạn viết ra một thuật toán nén dữ liệu cực tốt. Bạn có thể bán độc quyền nó cho một tập đoàn lớn để giàu to, hoặc công khai mã nguồn (Open Source) để cộng đồng lập trình viên cùng phát triển.",
+            title: "Mã nguồn mở hay độc quyền?",
+            content: "Bạn phát triển được một thuật toán nén dữ liệu vượt trội. Một tập đoàn lớn đề nghị mua độc quyền với giá rất cao, đổi lại thuật toán sẽ không được công bố. Ngược lại, bạn có thể công khai mã nguồn (Open Source) để cộng đồng lập trình viên cùng sử dụng và phát triển.",
             options: [
-                { text: "Bán độc quyền cho tập đoàn lớn.", stats: { knowledge: 2, social: -2, impact: 0 }, message: "Coi tri thức là tư hữu, kìm hãm sự lan tỏa tri thức xã hội." },
-                { text: "Công khai mã nguồn cho cộng đồng.", stats: { knowledge: 1, social: 3, impact: 2 }, message: "Tri thức cá nhân từ xã hội mà ra. Chia sẻ tạo điều kiện cho sự phát triển chung." }
+                {
+                    text: "Bán độc quyền cho tập đoàn lớn.",
+                    stats: { knowledge: 2, social: -2, impact: 0 },
+                    message: "Khi tri thức bị biến thành tư hữu độc quyền, khả năng lan tỏa và phát triển chung của xã hội bị hạn chế, dù cá nhân có thể hưởng lợi trước mắt."
+                },
+                {
+                    text: "Công khai mã nguồn cho cộng đồng.",
+                    stats: { knowledge: 1, social: 3, impact: 2 },
+                    message: "Tri thức hình thành từ thực tiễn xã hội. Việc chia sẻ và hợp tác giúp tri thức tiếp tục phát triển, phục vụ lợi ích chung và thúc đẩy tiến bộ lâu dài."
+                }
             ]
         },
         {
             title: "Quyền riêng tư dữ liệu",
-            content: "Sếp yêu cầu cài 'cửa sau' để thu thập dữ liệu người dùng trái phép nhằm bán quảng cáo.",
+            content: "Sếp yêu cầu bạn cài đặt một 'cửa sau' trong hệ thống để thu thập dữ liệu người dùng trái phép, nhằm khai thác cho mục đích quảng cáo và lợi nhuận.",
             options: [
-                { text: "Làm theo lệnh sếp để giữ việc.", stats: { knowledge: 1, social: -3, impact: -1 }, message: "Bạn trở thành công cụ mù quáng, tiếp tay xâm phạm lợi ích quần chúng." },
-                { text: "Từ chối và cảnh báo người dùng.", stats: { knowledge: 0, social: 3, impact: 2 }, message: "Bạn đặt lợi ích con người và đạo đức lên trên lợi nhuận." }
+                {
+                    text: "Làm theo chỉ đạo để giữ vị trí công việc.",
+                    stats: { knowledge: 1, social: -3, impact: -1 },
+                    message: "Khi người lao động trí óc hành động như một công cụ mù quáng, tri thức bị tha hóa và trở thành phương tiện xâm phạm quyền lợi chính đáng của quần chúng."
+                },
+                {
+                    text: "Từ chối và cảnh báo người dùng.",
+                    stats: { knowledge: 0, social: 3, impact: 2 },
+                    message: "Đặt con người và quyền lợi xã hội lên trên lợi nhuận thể hiện trách nhiệm của người làm công nghệ đối với cộng đồng và sự phát triển bền vững."
+                }
             ]
         }
     ],
@@ -199,18 +231,34 @@ const careerScenarios = {
         },
         {
             title: "Tình đồng nghiệp",
-            content: "Một đồng nghiệp lớn tuổi làm việc chậm và sắp bị sa thải. Bạn có kỹ năng làm nhanh hơn.",
+            content: "Một đồng nghiệp lớn tuổi làm việc chậm do khó thích nghi với công nghệ mới và đang đứng trước nguy cơ bị sa thải. Bạn có kỹ năng tốt hơn và hoàn thành công việc nhanh hơn.",
             options: [
-                { text: "Mặc kệ, ai làm nấy hưởng.", stats: { knowledge: 1, social: -2, impact: 0 }, message: "Chủ nghĩa cá nhân cực đoan, thiếu tính giai cấp." },
-                { text: "Dành giờ nghỉ trưa hướng dẫn bác ấy.", stats: { knowledge: 0, social: 3, impact: 1 }, message: "Tinh thần tương trợ giai cấp. Sự phát triển của bạn kéo theo người khác." }
+                {
+                    text: "Mặc kệ, ai làm tốt thì người đó hưởng.",
+                    stats: { knowledge: 1, social: -2, impact: 0 },
+                    message: "Đề cao lợi ích cá nhân một cách tuyệt đối làm suy yếu tinh thần đoàn kết. Khi con người bị tách rời khỏi tập thể, sức mạnh chung của giai cấp lao động bị phân tán."
+                },
+                {
+                    text: "Dành thời gian hướng dẫn và hỗ trợ trong giờ nghỉ.",
+                    stats: { knowledge: 0, social: 3, impact: 1 },
+                    message: "Tinh thần tương trợ và đoàn kết giúp nâng cao năng lực chung. Sự phát triển của cá nhân gắn liền với sự phát triển của tập thể."
+                }
             ]
         },
         {
-            title: "Đình công hay Im lặng?",
-            content: "Nhà máy cắt giảm bảo hộ lao động gây nguy hiểm. Mọi người muốn đình công nhưng sợ.",
+            title: "Đình công hay im lặng?",
+            content: "Nhà máy cắt giảm trang bị bảo hộ lao động, làm tăng nguy cơ tai nạn. Nhiều công nhân bức xúc nhưng lo sợ mất việc nên do dự trước ý định đình công.",
             options: [
-                { text: "Khuyên mọi người cam chịu.", stats: { knowledge: 0, social: -1, impact: -2 }, message: "Thiếu tính đấu tranh, chấp nhận bất công." },
-                { text: "Đứng ra tổ chức, đại diện đàm phán.", stats: { knowledge: 1, social: 2, impact: 3 }, message: "Quần chúng cần người tổ chức để chuyển từ tự phát sang tự giác." }
+                {
+                    text: "Khuyên mọi người im lặng để giữ việc.",
+                    stats: { knowledge: 0, social: -1, impact: -2 },
+                    message: "Cam chịu trước bất công khiến điều kiện lao động ngày càng xấu đi. Thiếu đấu tranh đồng nghĩa với việc chấp nhận thiệt thòi kéo dài."
+                },
+                {
+                    text: "Đứng ra tổ chức và đại diện tập thể đàm phán.",
+                    stats: { knowledge: 1, social: 2, impact: 3 },
+                    message: "Khi quần chúng được tổ chức và dẫn dắt, hành động đấu tranh chuyển từ tự phát sang tự giác, tạo ra sức mạnh thay đổi thực tiễn."
+                }
             ]
         }
     ],
@@ -226,18 +274,18 @@ const careerScenarios = {
         },
         {
             title: "Thụ lý hồ sơ",
-            content: "Dân nghèo nộp hồ sơ xin trợ cấp nhưng thiếu giấy tờ phụ. Luật cho phép trả về.",
+            content: "Một người dân nghèo nộp hồ sơ xin trợ cấp xã hội nhưng thiếu một số giấy tờ phụ do hoàn cảnh khó khăn, đi lại không thuận tiện. Theo quy định pháp luật hiện hành, cán bộ được phép trả hồ sơ để yêu cầu bổ sung đầy đủ",
             options: [
-                { text: "Trả hồ sơ, làm đúng quy trình.", stats: { knowledge: 1, social: -2, impact: 0 }, message: "Quan liêu, máy móc. Xa rời mục đích phục vụ dân." },
-                { text: "Hướng dẫn bổ sung sau, giải quyết trước.", stats: { knowledge: 0, social: 3, impact: 1 }, message: "Lợi ích của quần chúng thống nhất với người quản lý." }
+                { text: "Trả lại hồ sơ, thực hiện đúng quy trình và quy định pháp luật.", stats: { knowledge: 1, social: -2, impact: 0 }, message: "Quan liêu, máy móc. Xa rời mục đích phục vụ dân." },
+                { text: "Hướng dẫn người dân bổ sung sau, ưu tiên giải quyết để họ sớm nhận được trợ cấp.", stats: { knowledge: 0, social: 3, impact: 1 }, message: "Lợi ích của quần chúng thống nhất với người quản lý." }
             ]
         },
         {
             title: "Bệnh thành tích",
-            content: "Cấp trên muốn bạn báo cáo số liệu 'đẹp' hơn thực tế để đạt thi đua.",
+            content: "Trong quá trình tổng hợp báo cáo, cấp trên gợi ý bạn điều chỉnh số liệu theo hướng 'đẹp' hơn thực tế để đơn vị đạt chỉ tiêu thi đua, tránh bị đánh giá thấp và ảnh hưởng đến thành tích chung.",
             options: [
-                { text: "Làm đẹp số liệu.", stats: { knowledge: -1, social: 0, impact: -2 }, message: "Dối trá, tách rời thực tiễn khách quan sẽ dẫn đến sai lầm lâu dài." },
-                { text: "Báo cáo trung thực khó khăn.", stats: { knowledge: 2, social: 0, impact: 2 }, message: "Nhìn thẳng vào sự thật khách quan là điều kiện tiên quyết để phát triển." }
+                { text: "Điều chỉnh số liệu theo yêu cầu.", stats: { knowledge: -1, social: 0, impact: -2 }, message: "Việc bóp méo sự thật khách quan có thể mang lại lợi ích ngắn hạn, nhưng về lâu dài sẽ dẫn đến nhận thức sai lệch, quyết sách thiếu chính xác và làm trầm trọng thêm bệnh thành tích." },
+                { text: "Báo cáo trung thực những khó khăn thực tế.", stats: { knowledge: 2, social: 0, impact: 2 }, message: "Tôn trọng sự thật khách quan là nguyên tắc cơ bản của nhận thức khoa học, giúp cấp trên thấy rõ vấn đề để điều chỉnh chính sách và thúc đẩy sự phát triển bền vững." }
             ]
         }
     ],
@@ -253,18 +301,18 @@ const careerScenarios = {
         },
         {
             title: "Thuốc đắt hay rẻ?",
-            content: "Trình dược viên đề nghị hoa hồng lớn nếu kê thuốc đắt tiền (tác dụng như thuốc rẻ).",
+            content: "Bạn là bác sĩ trong một bệnh viện công. Trình dược viên đề nghị hoa hồng lớn nếu bạn kê thuốc giá cao cho bệnh nhân. Trên thực tế, thuốc này không vượt trội rõ rệt so với thuốc rẻ hơn, nhưng mang lại lợi ích kinh tế cho bạn và bệnh viện.",
             options: [
-                { text: "Kê thuốc đắt, mình cũng cần sống.", stats: { knowledge: 1, social: -4, impact: 0 }, message: "Lợi ích cá nhân chà đạp lên lợi ích quần chúng. Tha hóa đạo đức." },
-                { text: "Kê thuốc rẻ và hiệu quả.", stats: { knowledge: 0, social: 3, impact: 1 }, message: "Phục vụ nhân dân là mục đích tối thượng." }
+                { text: "Kê thuốc giá cao để tăng thu nhập và giúp bệnh viện có thêm nguồn tài chính.", stats: { knowledge: 1, social: -4, impact: 0 }, message: "Lợi ích cá nhân chà đạp lên lợi ích quần chúng. Tha hóa đạo đức." },
+                { text: "Ưu tiên kê thuốc phù hợp và hiệu quả, giảm gánh nặng chi phí cho người bệnh.", stats: { knowledge: 0, social: 3, impact: 1 }, message: "Phục vụ nhân dân là mục đích tối thượng." }
             ]
         },
         {
             title: "Đi tuyến dưới",
-            content: "Bệnh viện kêu gọi tình nguyện về vùng sâu vùng xa 2 năm.",
+            content: "Bệnh viện kêu gọi bác sĩ, nhân viên y tế tình nguyện về vùng sâu, vùng xa trong 2 năm để hỗ trợ chăm sóc sức khỏe cho người dân thiếu điều kiện y tế. Tuy nhiên, làm việc ở thành phố giúp bạn có nhiều cơ hội thăng tiến, danh tiếng và thu nhập ổn định hơn.",
             options: [
-                { text: "Từ chối, ở phố mới có danh tiếng.", stats: { knowledge: 2, social: -1, impact: 0 }, message: "Quan điểm danh vọng cá nhân, xa rời thực tiễn." },
-                { text: "Đăng ký đi.", stats: { knowledge: 1, social: 3, impact: 3 }, message: "Hòa mình vào thực tiễn đời sống quần chúng để rèn luyện nhân cách." }
+                { text: "Từ chối, ở lại thành phố để phát triển sự nghiệp cá nhân.", stats: { knowledge: 2, social: -1, impact: 0 }, message: "Quan điểm danh vọng cá nhân, xa rời thực tiễn." },
+                { text: "Đăng ký đi tuyến dưới để góp phần cải thiện y tế cho cộng đồng khó khăn.", stats: { knowledge: 1, social: 3, impact: 3 }, message: "Hòa mình vào thực tiễn đời sống quần chúng để rèn luyện nhân cách." }
             ]
         }
     ],
@@ -280,18 +328,18 @@ const careerScenarios = {
         },
         {
             title: "Học trò cá biệt",
-            content: "Một học sinh thông minh nhưng hay cãi lại, bị coi là cá biệt. Nhà trường muốn đuổi.",
+            content: "Một học sinh thông minh, thường xuyên đặt câu hỏi phản biện và tranh luận với giáo viên, khiến lớp học mất trật tự theo quan điểm nhà trường. Dù có năng lực, em bị coi là “cá biệt” và đề xuất cho thôi học để giữ kỷ luật chung.",
             options: [
-                { text: "Đồng ý đuổi cho lớp yên ổn.", stats: { knowledge: -1, social: -2, impact: 0 }, message: "Giáo dục rập khuôn giết chết sự sáng tạo và khác biệt." },
-                { text: "Kiên nhẫn đối thoại, định hướng tư duy.", stats: { knowledge: 2, social: 2, impact: 0 }, message: "Tôn trọng cái Riêng trong cái Chung." }
+                { text: "Đồng ý cho thôi học để đảm bảo trật tự và tính thống nhất trong giáo dục.", stats: { knowledge: -1, social: -2, impact: 0 }, message: "Giáo dục rập khuôn giết chết sự sáng tạo và khác biệt." },
+                { text: "Kiên nhẫn đối thoại, định hướng tư duy phản biện theo hướng tích cực.", stats: { knowledge: 2, social: 2, impact: 0 }, message: "Tôn trọng cái Riêng trong cái Chung." }
             ]
         },
         {
             title: "Chảy máu chất xám",
-            content: "Bạn được mời sang nước ngoài làm việc lương cao gấp 10 lần.",
+            content: "Bạn là giảng viên trẻ có năng lực, được mời sang nước ngoài làm việc với mức lương cao gấp nhiều lần. Trong khi đó, trong nước đang thiếu đội ngũ trí thức chất lượng cao để đào tạo thế hệ sau.",
             options: [
-                { text: "Đi ngay, ở đây không phát triển được.", stats: { knowledge: 3, social: 0, impact: -1 }, message: "Ưu tiên phát triển cá nhân, tách rời hoàn cảnh quê hương." },
-                { text: "Đi nhưng cam kết đem công nghệ về nước.", stats: { knowledge: 0, social: 2, impact: 3 }, message: "Cá nhân gắn bó và đóng góp cho cộng đồng dân tộc." }
+                { text: "Chấp nhận ra nước ngoài vì cơ hội phát triển cá nhân tốt hơn.", stats: { knowledge: 3, social: 0, impact: -1 }, message: "Ưu tiên phát triển cá nhân, tách rời hoàn cảnh quê hương." },
+                { text: "Ra nước ngoài học hỏi nhưng hướng tới quay về hoặc chuyển giao tri thức cho trong nước.", stats: { knowledge: 0, social: 2, impact: 3 }, message: "Cá nhân gắn bó và đóng góp cho cộng đồng dân tộc." }
             ]
         }
     ],
@@ -306,21 +354,38 @@ const careerScenarios = {
             ]
         },
         {
-            title: "Bảo tồn hay Phá bỏ?",
-            content: "Bạn được giao cải tạo khu di tích cũ kỹ.",
+            title: "Bảo tồn hay phá bỏ?",
+            content: "Bạn được giao nhiệm vụ cải tạo một khu di tích cũ đã xuống cấp. Một phương án là phá bỏ hoàn toàn để xây dựng công trình mới hiện đại, phương án khác là phục dựng dựa trên nền tảng cũ và bổ sung các yếu tố mới phù hợp với đời sống hiện đại.",
             options: [
-                { text: "Đập bỏ xây mới hiện đại.", stats: { knowledge: 2, social: -3, impact: 0 }, message: "Phủ nhận quá khứ, tách rời truyền thống dân tộc." },
-                { text: "Phục dựng trên nền tảng cũ, kết hợp cái mới.", stats: { knowledge: 2, social: 2, impact: 0 }, message: "Kế thừa biện chứng. Quần chúng là người lưu giữ giá trị văn hóa." }
+                {
+                    text: "Đập bỏ để xây mới hoàn toàn.",
+                    stats: { knowledge: 2, social: -3, impact: 0 },
+                    message: "Việc phủ nhận sạch trơn quá khứ làm đứt gãy mạch phát triển văn hóa, khiến công trình mới tách rời truyền thống và ký ức chung của cộng đồng."
+                },
+                {
+                    text: "Phục dựng trên nền tảng cũ, kết hợp yếu tố hiện đại.",
+                    stats: { knowledge: 2, social: 2, impact: 0 },
+                    message: "Kế thừa một cách biện chứng giúp bảo tồn giá trị lịch sử, đồng thời tạo điều kiện để văn hóa tiếp tục phát triển gắn với đời sống của quần chúng."
+                }
             ]
         },
         {
             title: "Tác phẩm kén khán giả",
-            content: "Bạn sáng tác bài hát sâu sắc nhưng khó nghe, ít người hiểu.",
+            content: "Bạn sáng tác một tác phẩm âm nhạc có chiều sâu tư tưởng nhưng hình thức thể hiện khó tiếp cận, khiến phần lớn khán giả cảm thấy xa lạ và khó cảm thụ.",
             options: [
-                { text: "Chê khán giả trình độ thấp, chỉ hát cho giới thượng lưu.", stats: { knowledge: 1, social: -3, impact: 0 }, message: "Tự cô lập mình khỏi đại chúng." },
-                { text: "Tìm cách biểu diễn bình dân hơn để lan tỏa.", stats: { knowledge: 0, social: 3, impact: 2 }, message: "Văn hóa phải đi vào đời sống quần chúng mới có sức sống." }
+                {
+                    text: "Chỉ sáng tác cho số ít người hiểu, bỏ qua số đông.",
+                    stats: { knowledge: 1, social: -3, impact: 0 },
+                    message: "Khi nghệ thuật tự tách mình khỏi đời sống quần chúng, nó dần mất đi chức năng xã hội và sức ảnh hưởng rộng rãi."
+                },
+                {
+                    text: "Điều chỉnh cách thể hiện để dễ tiếp cận hơn.",
+                    stats: { knowledge: 0, social: 3, impact: 2 },
+                    message: "Văn hóa và nghệ thuật chỉ thực sự có sức sống khi gắn bó với quần chúng, phản ánh và phục vụ nhu cầu tinh thần của xã hội."
+                }
             ]
         }
+
     ],
     activist: [
         {
@@ -334,28 +399,52 @@ const careerScenarios = {
         },
         {
             title: "Nguồn quỹ đen",
-            content: "Công ty gây ô nhiễm muốn tài trợ cho tổ chức của bạn để 'tẩy trắng'.",
+            content: "Một doanh nghiệp từng gây ô nhiễm môi trường đề nghị tài trợ một khoản tiền lớn cho tổ chức của bạn, với mục đích cải thiện hình ảnh và che giấu các hành vi sai trái trước dư luận.",
             options: [
-                { text: "Nhận tiền để duy trì tổ chức.", stats: { knowledge: -1, social: -4, impact: 0 }, message: "Thỏa hiệp nguyên tắc, đánh mất mục đích vì lợi ích trước mắt." },
-                { text: "Từ chối và công khai hành vi mua chuộc.", stats: { knowledge: 0, social: 2, impact: 3 }, message: "Giữ vững lập trường cách mạng." }
+                {
+                    text: "Nhận tài trợ để duy trì hoạt động tổ chức.",
+                    stats: { knowledge: -1, social: -4, impact: 0 },
+                    message: "Việc thỏa hiệp với những hành vi gây hại cho xã hội làm tổ chức đánh mất tính độc lập và mục đích ban đầu, dẫn đến sự suy giảm niềm tin của quần chúng."
+                },
+                {
+                    text: "Từ chối và công khai hành vi mua chuộc.",
+                    stats: { knowledge: 0, social: 2, impact: 3 },
+                    message: "Giữ vững lập trường và nguyên tắc giúp bảo vệ lợi ích chung, khẳng định vai trò của tổ chức trong việc đại diện và bảo vệ quyền lợi của cộng đồng."
+                }
             ]
         },
         {
             title: "Từ thiện",
-            content: "Bạn đi làm từ thiện. Cách làm nào đúng đắn?",
+            content: "Bạn tham gia một hoạt động từ thiện nhằm hỗ trợ người nghèo và những nhóm yếu thế trong xã hội. Câu hỏi đặt ra là nên giúp đỡ theo cách nào để mang lại hiệu quả lâu dài.",
             options: [
-                { text: "Phát tiền quà, chụp ảnh rồi về.", stats: { knowledge: 0, social: 1, impact: 0 }, message: "Hình thức, không giải quyết gốc rễ vấn đề." },
-                { text: "Hướng dẫn cách làm ăn mới để thoát nghèo bền vững.", stats: { knowledge: 2, social: 0, impact: 4 }, message: "Giúp quần chúng phát huy nội lực tự thân." }
+                {
+                    text: "Trao quà và tiền hỗ trợ ngắn hạn rồi kết thúc hoạt động.",
+                    stats: { knowledge: 0, social: 1, impact: 0 },
+                    message: "Cách làm mang tính hình thức có thể giúp xoa dịu khó khăn trước mắt, nhưng không giải quyết được nguyên nhân sâu xa của nghèo đói."
+                },
+                {
+                    text: "Hỗ trợ kiến thức, kỹ năng và mô hình sinh kế bền vững.",
+                    stats: { knowledge: 2, social: 0, impact: 4 },
+                    message: "Giúp quần chúng phát huy nội lực và khả năng tự vươn lên mới là con đường tạo ra sự thay đổi bền vững trong đời sống xã hội."
+                }
             ]
         }
     ],
     default: [
         {
             title: "Thử thách chung",
-            content: "Bạn gặp khó khăn trong công việc. Bạn sẽ:",
+            content: "Trong quá trình làm việc, bạn gặp một khó khăn vượt quá dự tính. Vấn đề có thể giải quyết một mình, nhưng sẽ tốn nhiều thời gian và dễ sai sót, hoặc có thể nhờ sự hỗ trợ từ đồng nghiệp.",
             options: [
-                { text: "Tự mình giải quyết.", stats: { knowledge: 1, social: -1, impact: 0 }, message: "Độc lập." },
-                { text: "Nhờ đồng nghiệp hỗ trợ.", stats: { knowledge: 0, social: 2, impact: 1 }, message: "Hợp tác." }
+                {
+                    text: "Tự mình tìm cách giải quyết.",
+                    stats: { knowledge: 1, social: -1, impact: 0 },
+                    message: "Tinh thần tự lực giúp bạn rèn luyện năng lực cá nhân, nhưng nếu tách rời khỏi tập thể sẽ hạn chế sức mạnh chung và hiệu quả lâu dài."
+                },
+                {
+                    text: "Chủ động trao đổi và nhờ đồng nghiệp hỗ trợ.",
+                    stats: { knowledge: 0, social: 2, impact: 1 },
+                    message: "Hợp tác và chia sẻ kinh nghiệm giúp phát huy sức mạnh tập thể, cho thấy con người chỉ phát triển toàn diện trong các mối quan hệ xã hội."
+                }
             ]
         }
     ]
