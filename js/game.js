@@ -287,11 +287,20 @@ function selectCareer(careerId) {
     
     // Tìm thông tin nghề để hiển thị thông báo chuyển cảnh
     const career = careers.find(c => c.id === careerId);
+
+    const careerImageHTML = career.image ? `
+        <div class="mb-4 animate-pop">
+            <img src="${career.image}" 
+                 class="img-fluid rounded-circle shadow-lg border border-warning" 
+                 style="width: 200px; height: 200px; object-fit: cover; border-width: 3px !important;"
+                 alt="${career.name}">
+        </div>
+    ` : '<div class="mb-4"><i class="bi bi-check-circle-fill text-success display-1"></i></div>';
     
     const container = document.getElementById('game-container');
     container.innerHTML = `
         <div class="glass-card text-center p-5 animate-fade-in" style="margin-top: 10vh;">
-            <div class="mb-4"><i class="bi bi-check-circle-fill text-success display-1"></i></div>
+            ${careerImageHTML}
             <h2 class="text-white mb-3">BẠN ĐÃ TRỞ THÀNH: <br><span class="text-warning display-4 font-heading">${career.name.toUpperCase()}</span></h2>
             <p class="lead text-white-50 mb-5">
                 "Bây giờ, hãy dùng vai trò này để giải quyết các mâu thuẫn thực tiễn."
