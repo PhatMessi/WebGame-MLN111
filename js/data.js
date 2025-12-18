@@ -135,6 +135,7 @@ const careerScenarios = {
     leader: [
         {
             title: "Quyết định sống còn",
+            image: "assets/images/Q1_Lead.png",
             content: "Dự án cải cách của bạn đang gặp khó khăn. Để thành công và đạt mục tiêu vĩ mô (tăng trưởng, phát triển), bạn cần cắt giảm phúc lợi của người dân trong ngắn hạn. Dân chúng đang phản đối kịch liệt. Bạn sẽ:",
             options: [
                 { text: "Mục tiêu là trên hết! Dùng quyền lực trấn áp phản đối và ép buộc thi hành.", stats: { knowledge: 2, social: -5, impact: 1 }, message: "Bạn đang rơi vào 'tệ sùng bái cá nhân' và độc đoán. 'Tuyệt đối hóa vai trò lãnh tụ... sẽ kìm hãm tính năng động sáng tạo của quần chúng'." },
@@ -144,6 +145,7 @@ const careerScenarios = {
         },
         {
             title: "Dùng người",
+            image: "assets/images/Q2_Lead.png",
             content: "Bạn cần bổ nhiệm một trợ lý quan trọng cho vị trí then chốt, người sẽ ảnh hưởng trực tiếp đến hiệu quả công việc và uy tín của tập thể trong thời gian dài.",
             options: [
                 {
@@ -160,6 +162,7 @@ const careerScenarios = {
         },
         {
             title: "Nhận lỗi",
+            image: "assets/images/Q3_Lead.png",
             content: "Một quyết định do bạn đưa ra gây thiệt hại cho tập thể, ảnh hưởng đến quyền lợi chung và niềm tin của những người xung quanh.",
             options: [
                 {
@@ -178,6 +181,7 @@ const careerScenarios = {
     tech: [
         {
             title: "AI và Con người",
+            image: "assets/images/Q1_AI.png",
             content: "Bạn phát triển thành công một AI có khả năng thay thế hoàn toàn 1.000 công nhân trong nhà máy, giúp lợi nhuận tăng vọt nhưng khiến 1.000 người thất nghiệp.",
             options: [
                 { text: "Triển khai ngay! Hiệu quả kinh tế là thước đo duy nhất của sự phát triển.", stats: { knowledge: 4, social: -4, impact: 0 }, message: "Bạn phát triển lực lượng sản xuất nhưng phá vỡ quan hệ xã hội. Sự phát triển này phục vụ lợi ích thiểu số chứ không phải 'tất cả mọi người'. " },
@@ -188,6 +192,7 @@ const careerScenarios = {
         },
         {
             title: "Mã nguồn mở hay độc quyền?",
+            image: "assets/images/Q2_AI.png",
             content: "Bạn phát triển được một thuật toán nén dữ liệu vượt trội. Một tập đoàn lớn đề nghị mua độc quyền với giá rất cao, đổi lại thuật toán sẽ không được công bố. Ngược lại, bạn có thể công khai mã nguồn (Open Source) để cộng đồng lập trình viên cùng sử dụng và phát triển.",
             options: [
                 {
@@ -204,6 +209,7 @@ const careerScenarios = {
         },
         {
             title: "Quyền riêng tư dữ liệu",
+            image: "assets/images/Q3_AI.png",
             content: "Sếp yêu cầu bạn cài đặt một 'cửa sau' trong hệ thống để thu thập dữ liệu người dùng trái phép, nhằm khai thác cho mục đích quảng cáo và lợi nhuận.",
             options: [
                 {
@@ -222,6 +228,7 @@ const careerScenarios = {
     worker: [
         {
             title: "Sáng kiến hay Quy trình?",
+            image: "assets/images/Q1_Worker.png",
             content: "Trong quá trình làm việc, bạn phát hiện ra một cách làm mới giúp tăng năng suất gấp đôi nhưng phải thay đổi quy trình cũ kỹ mà quản lý đang áp đặt.",
             options: [
                 { text: "Cứ làm theo chỉ đạo cho xong chuyện, lãnh lương rồi về.", stats: { knowledge: 1, social: 0, impact: -2 }, message: "Bạn đang tự hạ thấp vai trò của mình. Quần chúng nhân dân không chỉ là lực lượng cơ bắp mà còn là 'nguồn mạch cảm hứng vô tận, là nguồn sáng tạo'." },
@@ -231,6 +238,7 @@ const careerScenarios = {
         },
         {
             title: "Tình đồng nghiệp",
+            image: "assets/images/Q2_Worker.png",
             content: "Một đồng nghiệp lớn tuổi làm việc chậm do khó thích nghi với công nghệ mới và đang đứng trước nguy cơ bị sa thải. Bạn có kỹ năng tốt hơn và hoàn thành công việc nhanh hơn.",
             options: [
                 {
@@ -247,6 +255,7 @@ const careerScenarios = {
         },
         {
             title: "Đình công hay im lặng?",
+            image: "assets/images/Q3_Worker.png",
             content: "Nhà máy cắt giảm trang bị bảo hộ lao động, làm tăng nguy cơ tai nạn. Nhiều công nhân bức xúc nhưng lo sợ mất việc nên do dự trước ý định đình công.",
             options: [
                 {
@@ -265,6 +274,7 @@ const careerScenarios = {
     public_servant: [
         {
             title: "Quy hoạch và Lòng dân",
+            image: "assets/images/Q1_CChuc.png",
             content: "Cấp trên yêu cầu bạn giải tỏa một khu chợ truyền thống để xây trung tâm thương mại (phát triển kinh tế). Bà con tiểu thương phản đối dữ dội vì mất kế sinh nhai. Bạn đứng giữa hai làn đạn.",
             options: [
                 { text: "Cưỡng chế giải tỏa theo lệnh. Phải hy sinh lợi ích nhỏ để phát triển cái lớn.", stats: { knowledge: 0, social: -5, impact: 2 }, message: "Bạn đang áp đặt duy ý chí. 'Mọi phong trào đều thất bại nếu chưa tìm được lãnh tụ xứng đáng' - và người xứng đáng không phải là người đi ngược lại lợi ích quần chúng." },
@@ -274,6 +284,7 @@ const careerScenarios = {
         },
         {
             title: "Thụ lý hồ sơ",
+            image: "assets/images/Q2_CChuc.jpg",
             content: "Một người dân nghèo nộp hồ sơ xin trợ cấp xã hội nhưng thiếu một số giấy tờ phụ do hoàn cảnh khó khăn, đi lại không thuận tiện. Theo quy định pháp luật hiện hành, cán bộ được phép trả hồ sơ để yêu cầu bổ sung đầy đủ",
             options: [
                 { text: "Trả lại hồ sơ, thực hiện đúng quy trình và quy định pháp luật.", stats: { knowledge: 1, social: -2, impact: 0 }, message: "Quan liêu, máy móc. Xa rời mục đích phục vụ dân." },
@@ -282,6 +293,7 @@ const careerScenarios = {
         },
         {
             title: "Bệnh thành tích",
+            image: "assets/images/Q3_CChuc.jpg",
             content: "Trong quá trình tổng hợp báo cáo, cấp trên gợi ý bạn điều chỉnh số liệu theo hướng 'đẹp' hơn thực tế để đơn vị đạt chỉ tiêu thi đua, tránh bị đánh giá thấp và ảnh hưởng đến thành tích chung.",
             options: [
                 { text: "Điều chỉnh số liệu theo yêu cầu.", stats: { knowledge: -1, social: 0, impact: -2 }, message: "Việc bóp méo sự thật khách quan có thể mang lại lợi ích ngắn hạn, nhưng về lâu dài sẽ dẫn đến nhận thức sai lệch, quyết sách thiếu chính xác và làm trầm trọng thêm bệnh thành tích." },
@@ -292,6 +304,7 @@ const careerScenarios = {
     healthcare: [
         {
             title: "Sự ưu tiên tàn khốc",
+            image: "assets/images/Q1_Doctor.png",
             content: "Trong một đại dịch, bệnh viện quá tải. Bạn chỉ còn 01 máy thở duy nhất. Hai bệnh nhân đang nguy kịch: Một là vị chủ tịch tập đoàn giàu có (người đã tài trợ thiết bị cho bệnh viện), hai là một công nhân lao động nghèo (trụ cột của gia đình 5 người). Giám đốc bệnh viện gây áp lực phải cứu người giàu.",
             options: [
                 { text: "Cứu vị chủ tịch. Đây là quy luật kinh tế, họ có tiền và quyền lực chi phối.", stats: { knowledge: 2, social: -4, impact: 1 }, message: "Bạn để 'tính giai cấp' lấn át 'tính nhân loại'. Bạn phục vụ lợi ích của giai cấp thống trị thay vì giá trị con người phổ quát." },
@@ -301,6 +314,7 @@ const careerScenarios = {
         },
         {
             title: "Thuốc đắt hay rẻ?",
+            image: "assets/images/Q2_Doctor.jpg",
             content: "Bạn là bác sĩ trong một bệnh viện công. Trình dược viên đề nghị hoa hồng lớn nếu bạn kê thuốc giá cao cho bệnh nhân. Trên thực tế, thuốc này không vượt trội rõ rệt so với thuốc rẻ hơn, nhưng mang lại lợi ích kinh tế cho bạn và bệnh viện.",
             options: [
                 { text: "Kê thuốc giá cao để tăng thu nhập và giúp bệnh viện có thêm nguồn tài chính.", stats: { knowledge: 1, social: -4, impact: 0 }, message: "Lợi ích cá nhân chà đạp lên lợi ích quần chúng. Tha hóa đạo đức." },
@@ -309,6 +323,7 @@ const careerScenarios = {
         },
         {
             title: "Đi tuyến dưới",
+            image: "assets/images/Q3_Doctor.jpg",
             content: "Bệnh viện kêu gọi bác sĩ, nhân viên y tế tình nguyện về vùng sâu, vùng xa trong 2 năm để hỗ trợ chăm sóc sức khỏe cho người dân thiếu điều kiện y tế. Tuy nhiên, làm việc ở thành phố giúp bạn có nhiều cơ hội thăng tiến, danh tiếng và thu nhập ổn định hơn.",
             options: [
                 { text: "Từ chối, ở lại thành phố để phát triển sự nghiệp cá nhân.", stats: { knowledge: 2, social: -1, impact: 0 }, message: "Quan điểm danh vọng cá nhân, xa rời thực tiễn." },
@@ -319,6 +334,7 @@ const careerScenarios = {
     educator: [
         {
             title: "Chương trình giảng dạy",
+            image: "assets/images/Q1_Teacher.jpg",
             content: "Nhà trường yêu cầu bạn dạy học sinh theo hướng 'ngoan ngoãn, vâng lời' để dễ quản lý và ổn định xã hội. Nhưng bạn biết rằng tư duy phản biện mới giúp xã hội phát triển.",
             options: [
                 { text: "Dạy theo giáo trình 100%. Ổn định là trên hết.", stats: { knowledge: -1, social: 1, impact: -2 }, message: "Bạn tạo ra những 'cỗ máy' biết nói. Bạn đang kìm hãm 'cái riêng, cái đơn nhất, độc đáo' của mỗi học sinh." },
@@ -328,6 +344,7 @@ const careerScenarios = {
         },
         {
             title: "Học trò cá biệt",
+            image: "assets/images/Q2_Teacher.jpg",
             content: "Một học sinh thông minh, thường xuyên đặt câu hỏi phản biện và tranh luận với giáo viên, khiến lớp học mất trật tự theo quan điểm nhà trường. Dù có năng lực, em bị coi là “cá biệt” và đề xuất cho thôi học để giữ kỷ luật chung.",
             options: [
                 { text: "Đồng ý cho thôi học để đảm bảo trật tự và tính thống nhất trong giáo dục.", stats: { knowledge: -1, social: -2, impact: 0 }, message: "Giáo dục rập khuôn giết chết sự sáng tạo và khác biệt." },
@@ -336,6 +353,7 @@ const careerScenarios = {
         },
         {
             title: "Chảy máu chất xám",
+            image: "assets/images/Q3_Teacher.jpg",
             content: "Bạn là giảng viên trẻ có năng lực, được mời sang nước ngoài làm việc với mức lương cao gấp nhiều lần. Trong khi đó, trong nước đang thiếu đội ngũ trí thức chất lượng cao để đào tạo thế hệ sau.",
             options: [
                 { text: "Chấp nhận ra nước ngoài vì cơ hội phát triển cá nhân tốt hơn.", stats: { knowledge: 3, social: 0, impact: -1 }, message: "Ưu tiên phát triển cá nhân, tách rời hoàn cảnh quê hương." },
@@ -346,6 +364,7 @@ const careerScenarios = {
     artist: [
         {
             title: "Hiện thực hay Hư ảo?",
+            image: "assets/images/Q1_NSi.jpg",
             content: "Bạn nhận được lời mời tài trợ khủng để làm một tác phẩm nghệ thuật tôn vinh lối sống xa hoa, thoát ly thực tại. Trong khi đó, ngoài kia xã hội đang đầy rẫy những bất công cần tiếng nói phản biện.",
             options: [
                 { text: "Nhận lời làm nghệ thuật giải trí thuần túy. Nghệ thuật là tự do cá nhân, không cần dính dáng chính trị.", stats: { knowledge: 2, social: -3, impact: 0 }, message: "Bạn rơi vào 'Tháp ngà nghệ thuật'. Bạn quên rằng 'Văn hóa, tinh thần... đều do quần chúng nhân dân sáng tạo ra' và bạn chỉ là người chắt lọc. Tách rời nguồn mạch này, nghệ thuật sẽ khô héo." },
@@ -355,6 +374,7 @@ const careerScenarios = {
         },
         {
             title: "Bảo tồn hay phá bỏ?",
+            image: "assets/images/Q2_NSi.jpg",
             content: "Bạn được giao nhiệm vụ cải tạo một khu di tích cũ đã xuống cấp. Một phương án là phá bỏ hoàn toàn để xây dựng công trình mới hiện đại, phương án khác là phục dựng dựa trên nền tảng cũ và bổ sung các yếu tố mới phù hợp với đời sống hiện đại.",
             options: [
                 {
@@ -371,6 +391,7 @@ const careerScenarios = {
         },
         {
             title: "Tác phẩm kén khán giả",
+            image: "assets/images/Q3_NSi.jpg",
             content: "Bạn sáng tác một tác phẩm âm nhạc có chiều sâu tư tưởng nhưng hình thức thể hiện khó tiếp cận, khiến phần lớn khán giả cảm thấy xa lạ và khó cảm thụ.",
             options: [
                 {
@@ -390,6 +411,7 @@ const careerScenarios = {
     activist: [
         {
             title: "Phương pháp đấu tranh",
+            image: "assets/images/Q1_NHDXH.jpg",
             content: "Bạn phát hiện một nhà máy đang xả thải gây ung thư cho cả làng. Chính quyền địa phương đang làm ngơ. Bạn cần hành động để thay đổi thực trạng này.",
             options: [
                 { text: "Một mình đột nhập phá hoại đường ống xả thải để gây chú ý.", stats: { knowledge: -1, social: -3, impact: 1 }, message: "Chủ nghĩa anh hùng cá nhân manh động. Bạn tách mình khỏi quần chúng và vi phạm pháp luật, dễ dẫn đến bị cô lập hoặc bắt giữ." },
@@ -399,6 +421,7 @@ const careerScenarios = {
         },
         {
             title: "Nguồn quỹ đen",
+            image: "assets/images/Q2_NHDXH.jpg",
             content: "Một doanh nghiệp từng gây ô nhiễm môi trường đề nghị tài trợ một khoản tiền lớn cho tổ chức của bạn, với mục đích cải thiện hình ảnh và che giấu các hành vi sai trái trước dư luận.",
             options: [
                 {
@@ -415,6 +438,7 @@ const careerScenarios = {
         },
         {
             title: "Từ thiện",
+            image: "assets/images/Q3_NHDXH.jpg",
             content: "Bạn tham gia một hoạt động từ thiện nhằm hỗ trợ người nghèo và những nhóm yếu thế trong xã hội. Câu hỏi đặt ra là nên giúp đỡ theo cách nào để mang lại hiệu quả lâu dài.",
             options: [
                 {
